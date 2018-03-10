@@ -14,11 +14,9 @@
         android:background="?attr/colorPrimary"
         android:gravity="center_vertical"
         android:minHeight="?attr/actionBarSize"
-        app:navigationIcon="@drawable/icon_back"
         android:theme="@style/ToolbarTheme">
         <EditText
             android:drawablePadding="@dimen/view_padding_margin_12dp"
-            android:drawableStart="@drawable/icon_search"
             android:id="@+id/et_filter"
             android:textSize="@dimen/text_size_small_12sp"
             android:paddingTop="@dimen/view_padding_margin_8dp"
@@ -32,7 +30,7 @@
     </android.support.v7.widget.Toolbar>
 
     <!--添加一条分割线-->
-    <com.acchain.community.view.DividerView
+    <com.common.template.view.DividerView
         android:layout_width="match_parent"
         android:layout_height="@dimen/divider_line_width_1px"/>
 

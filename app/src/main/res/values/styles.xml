@@ -11,7 +11,6 @@
                 <item name="android:navigationBarColor">@color/navigationBarColor</item>-->
         <item name="colorAccent">@color/text_label_hacker</item>
         <item name="android:background">@color/transparent</item>
-        <item name="android:windowBackground">@drawable/window_bg</item>
         <item name="android:actionMenuTextColor">@color/blue_text_color</item>
         <item name="android:textColor">@color/white_selected_1</item>
         <item name="android:windowActionBar">false</item>
@@ -42,7 +41,6 @@
 
     <!--ratingBar的样式-->
     <style name="customRatingBar" parent="@android:style/Widget.RatingBar">
-        <item name="android:progressDrawable">@drawable/layer_rating_bar</item>
         <item name="android:minHeight">@dimen/view_height_20dp</item>
         <item name="android:maxHeight">@dimen/view_height_20dp</item>
     </style>
@@ -229,9 +227,6 @@
         <item name="android:textSize">17sp</item>
     </style>
 
-    <style name="style_Btn_default">
-       <item name="android:background">@drawable/btn_bg</item>
-    </style>
 
     <!--=========================dialog动画=========================-->
     <!--dialog默认动画,从中间往四周散开-->

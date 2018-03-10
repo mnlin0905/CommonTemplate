@@ -11,3 +11,4 @@
 /.idea/dbnavigator.xml
 /PushSDK/build/
 .svn/
+/.idea/kotlinc.xml

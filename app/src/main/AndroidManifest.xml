@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
-          package="com.acchain.community">
+          package="com.common.template">
 
     <!-- Normal Permission -->
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
@@ -79,10 +79,10 @@
     <uses-permission android:name="android.permission.BIND_ACCESSIBILITY_SERVICE"/>
 
     <!-- 自定义权限 -->
-    <permission android:name="acchain.permission.community"/>
+    <permission android:name="common.permission.template"/>
 
     <!-- 使用自定义权限 -->
-    <uses-permission android:name="acchain.permission.community"/>
+    <uses-permission android:name="common.permission.template"/>
 
     <uses-feature
         android:name="android.hardware.camera2"
@@ -106,14 +106,6 @@
         tools:ignore="HardcodedDebugMode"
         tools:replace="android:icon,android:allowBackup">
 
-        <!-- 设计稿尺寸，自适应布局 -->
-        <meta-data
-            android:name="design_width"
-            android:value="750"/>
-        <meta-data
-            android:name="design_height"
-            android:value="1334"/>
-
         <!-- 友盟统计 -->
         <meta-data
             android:name="UMENG_APPKEY"
@@ -125,8 +117,10 @@
         <meta-data
             android:name="UMENG_MESSAGE_SECRET"
             android:value="319bcfe1b565b268b3a0dffd9d5e2034"/>
+
         <!-- 渠道包 -->
         <!-- <mdataSetdata android:name="UMENG_CHANNEL" android:value="${UMENG_CHANNEL_VALUE}"/> -->
+
         <meta-data
             android:name="com.amap.api.v2.apikey"
             android:value="291d950bed33cbda392e61bfa2f3e1d1"/>
@@ -134,421 +128,14 @@
         <activity
             android:name=".activity.other.SelectFunctionActivity"
             android:label="@string/label_select_function_activity">
-        </activity>
-        <activity
-            android:name=".activity.other.MainActivity"
-            android:alwaysRetainTaskState="false"
-            android:clearTaskOnLaunch="false"
-            android:label="@string/app_name"
-            android:noHistory="false"
-            android:windowSoftInputMode="adjustNothing|stateAlwaysHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
 
-        <!-- 首页相关界面 -->
         <activity
-            android:name=".activity.index.PanicActivity"
-            android:label="@string/label_limit_panic_buy"/>
-        <activity android:name=".activity.index.PanicGoodsActivity"/>
-        //商品，详情
-        <activity
-            android:name=".activity.index.ConfirmPanicOrderActivity"
-            android:label="@string/label_confirm_order"
-            android:windowSoftInputMode="stateHidden"/>
-        <activity
-            android:name=".activity.index.ConfirmCartPanicOrderActivity"
-            android:label="@string/label_confirm_order"
-            android:windowSoftInputMode="stateHidden"/>
-        <activity
-            android:name=".activity.index.ShoppingCartActivity"
-            android:label="@string/action_shopping_cart"
-            android:windowSoftInputMode="stateHidden"/>
-        <activity
-            android:name=".activity.index.PreSellActivity"
-            android:label="@string/action_pre_sell"/>
-        <activity android:name=".activity.index.PreSellGoodsActivity"/>
-        //商品，详情，溯源
-        <activity
-            android:name=".activity.index.PreSellNewsActivity"
-            android:label="@string/label_pre_sell_news"/>
-        <activity
-            android:name=".activity.index.PreSellRecordActivity"
-            android:label="@string/label_pre_sell_record"/>
-        <activity
-            android:name=".activity.index.ConfirmPreSellOrderActivity"
-            android:label="@string/label_confirm_pre_sell_order"
-            android:windowSoftInputMode="stateHidden"/>
-        <activity
-            android:name=".activity.index.ConfirmCartPreOrderActivity"
-            android:label="@string/label_confirm_pre_sell_order"
-            android:windowSoftInputMode="stateHidden"/>
-        <activity
-            android:name=".activity.index.AdoptActivity"
-            android:label="@string/label_adopt"/>
-        <activity android:name=".activity.index.AdoptGoodsActivity"/>
-
-        <activity android:name=".activity.index.ConfirmAdoptOrderActivity"
-            android:label="@string/label_confirm_adopt_order"/>
-
-        <activity
-            android:name=".activity.index.ConfirmCartAdoptOrderActivity"
-            android:label="@string/label_confirm_adopt_order"/>
-
-        <activity android:name=".activity.index.ChooseBaseActivity"/>
-
-        <activity
-            android:name=".activity.index.AdoptBaseActivity"
-            android:label="@string/label_adopt_base"/>
-        <activity
-            android:name=".activity.index.ExerciseActivity"
-            android:label="@string/label_exercise"/>
-        <activity android:name=".activity.index.ExerciseGoodsActivity"/>
-        <activity android:name=".activity.index.ConfirmExerciseOrderActivity"
-            android:label="@string/label_confirm_exercise_order"
-            />
-        <activity
-            android:name=".activity.wallet.WalletRecordActivity"
-            android:label="@string/label_wallet_record"/>
-        <activity
-            android:name=".activity.friend.ChatActivity"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden|adjustResize">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-
-                <category android:name="android.intent.category.DEFAULT"/>
-
-                <data
-                    android:host="com.acchain.community"
-                    android:pathPrefix="/conversation/"
-                    android:scheme="rong"/>
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".activity.person.LoginActivity"
-            android:label="@string/label_login"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity
-            android:name=".activity.person.RegisterActivity"
-            android:label="@string/label_register"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity
-            android:name=".activity.wallet.TakeInCurrencyActivity"
-            android:label="@string/label_take_in_currency"/>
-        <activity
-            android:name=".activity.wallet.TakeInCurrencyDetailActivity"
-            android:label="@string/label_take_in_currency_detail"/>
-        <activity
-            android:name=".activity.wallet.TakeInCurrencyRecordActivity"
-            android:label="@string/label_take_in_currency_record"/>
-        <activity
-            android:name=".activity.wallet.TakeInRecordDetailActivity"
-            android:label="@string/label_take_in_record_detail"/>
-        <activity
-            android:name=".activity.wallet.BunkersCurrencyActivity"
-            android:label="@string/label_bunkers_currency"/>
-        <activity
-            android:name=".activity.wallet.BunkersFlowRecordActivity"
-            android:label="@string/label_bunkers_consume_record"/>
-        <activity
-            android:name=".activity.wallet.BunkersConsumeDeclareActivity"
-            android:label="@string/label_bunkers_consume_declare"/>
-        <activity
-            android:name=".activity.wallet.TakeOutCurrencyActivity"
-            android:label="@string/label_take_out_currency"/>
-        <activity
-            android:name=".activity.wallet.TakeOutPlatformActivity"
-            android:label="@string/label_take_out_platform"/>
-        <activity
-            android:noHistory="true"
-            android:name=".activity.wallet.TakeOutFriendActivity"
-            android:label="@string/label_take_out_friend">
-        </activity>
-        <activity
-            android:name=".activity.wallet.TakeOutCurrencyRecordActivity"
-            android:label="@string/label_take_out_currency_record"/>
-        <activity
-            android:name=".activity.wallet.TakeOutRecordDetailActivity"
-            android:label="@string/label_take_out_record_detail"/>
-        <activity
-            android:noHistory="true"
-            android:name=".activity.wallet.TakeOutSelectFriendActivity"
-            android:label="@string/label_take_out_select_friend"/>
-        <activity
-            android:name=".activity.wallet.TakeFlowRecordActivity"
-            android:label="@string/label_take_flow_record"/>
-        <activity
-            android:name=".activity.friend.ShareCircleActivity"
-            android:label="@string/share_circle"/>
-        <activity
-            android:name=".activity.person.SoftSettingActivity"
-            android:label="@string/label_soft_setting"/>
-        <activity
-            android:name=".activity.person.PersonInformationActivity"
-            android:label="@string/label_person_information"/>
-        <activity
-            android:name=".activity.person.QRAndCommandActivity"
-            android:label="@string/label_qr_and_command"/>
-        <activity
-            android:name=".activity.person.ChangeDeliveryAddressActivity"
-            android:label="@string/label_change_delivery_address"/>
-        <activity
-            android:name=".activity.person.ChangeLocationActivity"
-            android:label="@string/label_change_location"/>
-        <activity
-            android:name=".activity.person.ChangeNickNameActivity"
-            android:label="@string/label_change_nick_name"/>
-        <activity
-            android:name=".activity.person.ChangeSexActivity"
-            android:label="@string/label_change_sex"/>
-        <activity
-            android:name=".activity.friend.ContactActivity"
-            android:label="@string/contract"/>
-        <activity
-            android:name=".activity.person.EditDeliveryAddressActivity"
-            android:label="@string/label_edit_delivery_address"/>
-        <activity android:name=".activity.friend.AddNewFriendActivity"/>
-        <activity android:name=".activity.friend.NewFriendActivity"/>
-        <activity
-            android:name=".activity.person.BeginCertificationActivity"
-            android:label="@string/label_begin_certification"/>
-        <activity
-            android:name=".activity.person.UploadCertificationPhotoActivity"
-            android:label="@string/label_upload_certification_photo"/>
-        <activity
-            android:name=".activity.person.ShowCertificationResultActivity"
-            android:label="@string/label_show_certification_result"/>
-        <activity
-            android:name=".activity.person.EditProfessionCardActivity"
-            android:label="@string/label_edit_profession_card"/>
-        <activity
-            android:name=".activity.person.CompanyIntroduceActivity"
-            android:label="@string/label_company_introduce"/>
-        <activity
-            android:name=".activity.friend.CardListActivity"
-            android:label="@string/carte"
-            android:windowSoftInputMode="adjustResize|stateHidden"/>
-        <activity
-            android:name=".activity.friend.CardDetailActivity"
-            android:label="@string/cardDetil"/>
-        <activity
-            android:name=".activity.person.ForgetPasswordActivity"
-            android:label="@string/label_forget_password"/>
-        <activity
-            android:name=".activity.person.FindPasswordActivity"
-            android:label="@string/label_find_password"/>
-        <activity
-            android:name=".activity.person.ResetPasswordActivity"
-            android:label="@string/label_reset_password"/>
-        <activity
-            android:name=".activity.person.MessageSettingsActivity"
-            android:label="@string/label_message_settings"/>
-        <activity
-            android:name=".activity.person.SafetyProtectionActivity"
-            android:label="@string/label_safety_protection"/>
-        <activity
-            android:name=".activity.person.ChangePasswordActivity"
-            android:label="@string/label_change_password"/>
-        <activity
-            android:name=".activity.person.SelectChangeTransPasswordTypeActivity"
-            android:label="@string/label_select_change_trans_password_type"/>
-        <activity
-            android:name=".activity.person.SetTransactionPasswordActivity"
-            android:label="@string/label_set_transaction_password"/>
-        <activity
-            android:name=".activity.friend.RedPacketDetailActivity"
-            android:label="@string/wm_redPacket"/>
-        <activity
-            android:name=".activity.person.BindEmailActivity"
-            android:label="@string/label_bind_email"/>
-        <activity
-            android:name=".activity.person.ChangeEmailActivity"
-            android:label="@string/label_change_email"/>
-        <activity
-            android:name=".activity.person.ChangeMobileActivity"
-            android:label="@string/label_change_mobile"/>
-        <activity
-            android:name=".activity.person.ShowEmailActivity"
-            android:label="@string/label_show_email"/>
-        <activity
-            android:name=".activity.person.ShowMobileActivity"
-            android:label="@string/label_show_mobile"/>
-        <activity
-            android:name=".activity.person.BindMobileActivity"
-            android:label="@string/label_bind_mobile"/>
-        <activity
-            android:name=".activity.person.HelpActivity"
-            android:label="@string/label_help"/>
-        <activity
-            android:name=".activity.person.FeedbackActivity"
-            android:label="@string/label_feedback"/>
-        <activity
-            android:name=".activity.person.QuestionActivity"
-            android:label="@string/label_question"
-            android:launchMode="singleTop"/>
-        <activity
-            android:name=".activity.person.QuestionListActivity"
-            android:label="@string/label_question_list"/>
-        <activity
-            android:name=".activity.person.AboutActivity"
-            android:label="@string/label_about"/>
-        <activity
-            android:name=".activity.person.CopyrightInformationActivity"
-            android:label="@string/label_copyright_information"/>
-        <activity
-            android:name=".activity.person.ServiceAgreementActivity"
-            android:label="@string/label_service_agreement"/>
-        <activity
-            android:name=".activity.person.PrivacyActivity"
-            android:label="@string/label_privacy"/>
-        <activity
-            android:name=".activity.person.PrivacyDeclareActivity"
-            android:label="@string/label_privacy_declare"/>
-        <activity
-            android:name=".activity.person.NewsActivity"
-            android:label="@string/label_news"/>
-        <activity
-            android:name=".activity.person.NewsListActivity"
-            android:label="@string/label_news_list"/>
-        <activity
-            android:name=".activity.person.GoodsCollectionActivity"
-            android:label="@string/label_goods_collection"/>
-        <activity
-            android:name=".activity.person.FootHistoryActivity"
-            android:label="@string/label_foot_history"/>
-        <activity
-            android:name=".activity.person.TransactionRecordActivity"
-            android:label="@string/label_transaction_record"/>
-        <activity
-            android:name=".activity.person.TransactionDetailActivity"
-            android:label="@string/label_transaction_detail"/>
-        <activity
-            android:name=".activity.friend.FriendAddActivity"
-            android:label="@string/detail"/>
-        <activity
-            android:name=".activity.friend.SetFriendRemarkActivity"
-            android:label="@string/setRemark"/>
-        <activity
-            android:name=".activity.friend.SendAddFriendRequestActivity"
-            android:label="@string/friend_verification"/>
-        <activity
-            android:name=".activity.friend.AddPhoneContactActivity"
-            android:label="@string/phone_contact"/>
-        <activity
-            android:name=".activity.friend.ChatDetailActivity"
-            android:label="@string/chat_detail"/>
-        <activity
-            android:name=".activity.person.OrderFormRecordActivity"
-            android:label="@string/label_order_form_record"/>
-        <activity
-            android:name=".activity.person.OrderFormDetailActivity"
-            android:label="@string/label_order_form_detail"/>
-        <activity
-            android:name=".activity.person.ApplyForRefundActivity"
-            android:label="@string/label_apply_for_refund"/>
-        <activity
-            android:name=".activity.person.SelectRefundServiceActivity"
-            android:label="@string/label_select_refund_service"/>
-        <activity
-            android:name=".activity.person.BanCommandActivity"
-            android:label="@string/label_ban_command"/>
-        <activity
-            android:name=".activity.friend.SendRedPacketActivity"
-            android:label="@string/send_red_packet"/>
-        <activity
-            android:name=".activity.friend.SendRedPacketDetailActivity"
-            android:label="@string/wm_redPacket"/>
-        <activity
-            android:name=".activity.friend.RedPacketRecordActivity"
-            android:label="@string/red_packet_record"/>
-        <activity
-            android:name=".activity.person.InputOldTransPasswordActivity"
-            android:label="@string/label_input_old_trans_password"/>
-        <activity
-            android:name=".activity.person.ChangeTransPasswordActivity"
-            android:label="@string/label_change_trans_password"
-            android:noHistory="true"/>
-        <activity
-            android:name=".activity.person.VerityIDWhenChangeTransActivity"
-            android:label="@string/label_verity_id_when_change_trans"/>
-        <activity
-            android:name=".activity.person.ChangeTransSuccessActivity"
-            android:label="@string/label_change_trans_success"/>
-        <activity
-            android:noHistory="true"
-            android:name=".activity.person.StaffServiceChangeTransActivity"
-            android:label="@string/label_staff_service_change_trans"/>
-        <activity
-            android:name=".activity.person.InputPhoneTransPasswordActivity"
-            android:label="@string/label_input_phone_trans_password"
-            android:noHistory="true"/>
-        <activity
-            android:name=".activity.person.UploadPictureTransPwdActivity"
-            android:label="@string/label_upload_picture_trans_pwd"/>
-        <activity
-            android:name=".activity.person.ChangeTransResultActivity"
-            android:label="@string/label_change_trans_result"
-            android:noHistory="true"/>
-        <activity
-            android:name=".activity.person.CheckLogisticsActivity"
-            android:label="@string/label_check_logistics"/>
-        <activity
-            android:name=".activity.person.RefundAftermarketActivity"
-            android:label="@string/label_refund_aftermarket"/>
-        <activity
-            android:name=".activity.person.RefundAftermarketDetailActivity"
-            android:label="@string/label_refund_aftermarket_detail"/>
-        <activity
-            android:name=".activity.person.NegotiationHistoryActivity"
-            android:label="@string/label_negotiation_history"/>
-        <activity
-            android:name=".activity.person.BeginReturnLogisticsActivity"
-            android:label="@string/label_begin_return_logistics"/>
-        <activity
-            android:name=".activity.friend.TransferDetailActivity"
-            android:label="@string/tranferDetail"/>
-        <activity
-            android:name=".activity.person.EvaluationOrderActivity"
-            android:label="@string/label_evaluation_order"/>
-        <activity
-            android:name=".activity.person.EvaluationOrderSuccessActivity"
-            android:label="@string/label_evaluation_order_success"/>
-        <activity
-            android:label="@string/label_search_filter"
             android:name=".activity.other.SearchFilterActivity"/>
-        <!--微信支付-->
-        <activity android:name=".wxapi.WXPayEntryActivity"
-            android:exported="true"
-            android:launchMode="singleTop"
-            >
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <data android:scheme="wx05de913a165f4d9c"/>
-            </intent-filter>
-        </activity>
-
-        <!--支付宝支付-->
-        <activity
-            android:name="com.alipay.sdk.app.H5PayActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
-            android:exported="false"
-            android:screenOrientation="behind"
-            android:windowSoftInputMode="adjustResize|stateHidden" >
-        </activity>
-        <activity
-            android:name="com.alipay.sdk.app.H5AuthActivity"
-            android:configChanges="orientation|keyboardHidden|navigation"
-            android:exported="false"
-            android:screenOrientation="behind"
-            android:windowSoftInputMode="adjustResize|stateHidden" >
-        </activity>
 
     </application>
 

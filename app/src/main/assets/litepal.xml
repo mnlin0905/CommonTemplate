@@ -9,8 +9,7 @@
     <!--创建表-->
     <list>
         <!--表对应的实体对象-->
-        <mapping class="com.acchain.community.bean.Friend"/>
-        <mapping class="com.acchain.community.bean.ContactAddRequest"/>
+        <mapping class="com.common.template.bean.Friend"/>
     </list>
 
     <!--keep表示按照类和字段名大小写作为表名和列名-->

@@ -7,7 +7,7 @@
     <item
         android:id="@+id/action_message"
         android:orderInCategory="100"
-        android:icon="@drawable/message"
+        android:icon="@drawable/icon_message"
         android:title="@string/action_message"
         app:showAsAction="ifRoom"/>
 </menu>

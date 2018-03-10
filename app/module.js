@@ -8,7 +8,7 @@ app.name='mall';
 app.version='1.0.0';
 
 //项目打包时候的应用id
-app.applicationId='com.acchain.community';
+app.applicationId='com.common.template';
 
 //最低支持的SDK版本号
 app.minSdkVersion=16;
@@ -183,7 +183,7 @@ app.catalogs={
             introduce:'项目中所使用的资源文件,包括xml,图片等'
         },
         {
-            path:'/com/acchain/community',
+            path:'/com/common/template',
             introduce:'路径为包名,之下包含所有的java源码',
             sub:[
                 {

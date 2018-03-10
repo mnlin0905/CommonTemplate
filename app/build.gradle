@@ -4,14 +4,13 @@ android {
     compileSdkVersion 26
     buildToolsVersion '27.0.1'
 
-    /*签名打包时过滤掉英文国际化*/
     lintOptions {
         checkReleaseBuilds false
         abortOnError false
     }
 
     defaultConfig {
-        applicationId "com.acchain.community"
+        applicationId "com.common.template"
         minSdkVersion 19
         targetSdkVersion 25
         versionCode 100
@@ -41,17 +40,12 @@ android {
     }
     signingConfigs {
         debug {
-            keyAlias 'acchain'
-            keyPassword 'password1'
-            storeFile file('/digital_mall.jks')
-            storePassword 'password1'
-            v2SigningEnabled false
         }
         release {
-            keyAlias 'acchain'
-            keyPassword 'password1'
-            storeFile file('/digital_mall.jks')
-            storePassword 'password1'
+            keyAlias '***'
+            keyPassword '11111111'
+            storeFile file('/kkkk.jks')
+            storePassword '11111111'
             v2SigningEnabled true
         }
     }
@@ -336,8 +330,8 @@ class GenerateMVPActivity extends DefaultTask {
     String domain
     String uiPath
     private String rootPath = project.getRootDir().getAbsolutePath()
-    private String basePath = '/app/src/main/java/com/acchain/community'
-    private String packageName = "com.acchain.community"
+    private String basePath = '/app/src/main/java/com/common/template'
+    private String packageName = "com.common.template"
 
     static def releaseTime() {
         return new Date().format("yyyy/MM/dd HH:mm:ss (Z)", TimeZone.getTimeZone("UTC"))
@@ -358,7 +352,7 @@ class GenerateMVPActivity extends DefaultTask {
                 "/**\n" +
                 " * function---- ${contractName}\n" +
                 " * <p>\n" +
-                " * Created(Gradle default create) by ACChain on ${releaseTime()}.\n" +
+                " * Created(Gradle default create) by MNLIN on ${releaseTime()}.\n" +
                 " */\n" +
                 "public interface ${contractName} {\n" +
                 "    interface Presenter{\n" +
@@ -394,7 +388,7 @@ class GenerateMVPActivity extends DefaultTask {
                 "/**\n" +
                 " * function---- ${presenterName}\n" +
                 " * <p>\n" +
-                " * Created(Gradle default create) by ACChain on ${releaseTime()}.\n" +
+                " * Created(Gradle default create) by MNLIN on ${releaseTime()}.\n" +
                 " */\n" +
                 "public class ${presenterName} extends BasePresenter<${domain}Activity> implements ${domain}Contract.Presenter{\n" +
                 "    @Inject\n" +
@@ -426,7 +420,7 @@ class GenerateMVPActivity extends DefaultTask {
                 "/**\n" +
                 " * function---- ${activityName}\n" +
                 " * <p>\n" +
-                " * Created(Gradle default create) by ACChain on ${releaseTime()}.\n" +
+                " * Created(Gradle default create) by MNLIN on ${releaseTime()}.\n" +
                 " */\n" +
                 "@Route(path = ARouterConst.Activity_${activityName})" +
                 "\n" +
@@ -456,8 +450,8 @@ class GenerateMVPFragment extends DefaultTask {
     String domain
     String uiPath
     private String rootPath = project.getRootDir().getAbsolutePath()
-    private String basePath = '/app/src/main/java/com/acchain/community'
-    private String packageName = "com.acchain.community"
+    private String basePath = '/app/src/main/java/com/common/template'
+    private String packageName = "com.common.template"
 
     static def releaseTime() {
         return new Date().format("yyyy/MM/dd HH:mm:ss (Z)", TimeZone.getTimeZone("UTC"))
@@ -478,7 +472,7 @@ class GenerateMVPFragment extends DefaultTask {
                 "/**\n" +
                 " * function---- ${contractName}\n" +
                 " * <p>\n" +
-                " * Created(Gradle default create) by ACChain on ${releaseTime()}.\n" +
+                " * Created(Gradle default create) by MNLIN on ${releaseTime()}.\n" +
                 " */\n" +
                 "public interface ${contractName} {\n" +
                 "    interface Presenter{\n" +
@@ -514,7 +508,7 @@ class GenerateMVPFragment extends DefaultTask {
                 "/**\n" +
                 " * function---- ${presenterName}\n" +
                 " * <p>\n" +
-                " * Created(Gradle default create) by ACChain on ${releaseTime()}.\n" +
+                " * Created(Gradle default create) by MNLIN on ${releaseTime()}.\n" +
                 " */\n" +
                 "public class ${presenterName} extends BasePresenter<${domain}Fragment> implements ${domain}Contract.Presenter{\n" +
                 "    @Inject\n" +
@@ -546,7 +540,7 @@ class GenerateMVPFragment extends DefaultTask {
                 "/**\n" +
                 " * function---- ${fragmentName}\n" +
                 " * <p>\n" +
-                " * Created(Gradle default create) by ACChain on ${releaseTime()}.\n" +
+                " * Created(Gradle default create) by MNLIN on ${releaseTime()}.\n" +
                 " */\n" +
                 "@Route(path = ARouterConst.Fragment_${fragmentName})" +
                 "\n" +

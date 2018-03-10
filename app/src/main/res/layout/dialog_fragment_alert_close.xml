@@ -20,7 +20,6 @@
             android:paddingLeft="@dimen/view_padding_margin_16dp"
             android:paddingTop="@dimen/view_padding_margin_12dp"
             android:paddingBottom="@dimen/view_padding_margin_16dp"
-            android:src="@drawable/icon_close_gray"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
 

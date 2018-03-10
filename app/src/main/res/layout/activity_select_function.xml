@@ -47,5 +47,4 @@
         app:headerLayout="@layout/layout_slide_header"
         app:menu="@menu/menu_home_end_slide_bar"/>
 
-
 </android.support.v4.widget.DrawerLayout>

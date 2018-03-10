@@ -9,7 +9,8 @@
 
     <TextView
         android:id="@+id/text"
-        android:text="@string/content_select_function_content"
+        android:text="内容部分"
+        android:padding="@dimen/view_padding_margin_16dp"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         app:layout_constraintBottom_toBottomOf="parent"

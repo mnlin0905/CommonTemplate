@@ -189,8 +189,8 @@
     @retrofit.http.* <methods>;
 }
 
--keep class com.acchain.community.bean.**{*;}
--dontwarn com.acchain.community.bean.**
+-keep class com.common.template.bean.**{*;}
+-dontwarn com.common.template.bean.**
 -keep class android.support.**{*;}
 -dontwarn android.support.**
 -keep class sun.misc.Unsafe { *; }
@@ -372,9 +372,9 @@ public static java.lang.String TABLENAME;
 -keep class * implements com.alibaba.android.arouter.facade.template.IProvider
 
 # 混淆局部存储
--keep class com.acchain.community.util.DefaultPreferenceUtil{*;}
--keep class com.acchain.community.base.*{*;}
--keep class com.acchain.community.events.*{*;}
+-keep class com.common.template.util.DefaultPreferenceUtil{*;}
+-keep class com.common.template.base.*{*;}
+-keep class com.common.template.events.*{*;}
 
 #微信支付
 -keep class com.tencent.mm.opensdk.** {*;}

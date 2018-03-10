@@ -2,9 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="@dimen/prefer_slide_header_height"
-              android:background="@drawable/placeholder"
-              android:fitsSystemWindows="true"
               android:gravity="left|bottom"
+              android:background="@drawable/placeholder"
               android:orientation="vertical">
 
     <de.hdodenhof.circleimageview.CircleImageView
