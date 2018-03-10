@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--透明色-->
+    <color name="transparent">#00000000</color>
+
+    <!--选中(系统默认的字体颜色)/未选中的白色-->
+    <color name="white_selected_1">#ffffff</color>
+    <color name="white_no_selected_40">#66ffffff</color>
+
+    <!--分割线颜色,取白色,透明度为40%(竖直方向的分割线,drawable类型),15%或者5%-->
+    <color name="white_color_divider_vertical_40">#66FFFFFF</color>
+    <color name="white_color_divider_1px_15">#26FFFFFF</color>
+    <color name="white_color_divider_6dp_5">#0DFFFFFF</color>
+
+    <!--白色字体,透明度不同-->
+    <color name="white_text_alpha_60">#99FFFFFF</color>
+    <color name="white_text_alpha_80">#CCFFFFFF</color>
+    <color name="white_text_alpha_20">#33FFFFFF</color>
+    <color name="white_text_bbbad0">#bbbad0</color>
+    <color name="white_background_5">#0dffffff</color>
+    <color name="white_background_66">#66ffffff</color>
+
+    <!--黑色/灰色字体/背景-->
+    <color name="black_text_333_1">#FF333333</color>
+    <color name="black_text_666_1">#FF666666</color>
+    <color name="black_text_999_1">#FF999999</color>
+    <color name="gray_background_e5_1">#FFE5E5E5</color>
+    <color name="gray_background_f2">#f2f2f2</color>
+    <color name="gray_background_404156">#404156</color>
+    <color name="gray_color_33e2e2e2">#33e2e2e2</color>
+
+    <!--绿色字体-->
+    <color name="green_text_1">#FF52ff87</color>
+    <color name="green_text_9952ff78">#9952ff87</color>
+
+    <!--搜索框中文字颜色,背景颜色,偏蓝-->
+    <color name="blue_text_color">#4076fe</color>
+    <color name="blue_text_2e59cd">#2E59CD</color>
+    <color name="blue_text_5293FF">#5293FF</color>
+    <color name="blue_search_background">#267357fd</color>
+
+    <!--着重显示的字体颜色,偏蓝,一般用于标题等醒目的位置-->
+    <color name="blue_label_title_selected_pressed_markedness">#3F7EFD</color>
+
+    <!--比着重字体微暗,用于降价的价格显示等,偏蓝-->
+    <color name="blue_label_low_level_markedness">#3A48B2</color>
+
+    <!--边框蓝色-->
+    <color name="blue_background_transparent_border">#4076fe</color>
+    <color name="blue_background_7d">#FF7D95FF</color>
+    <color name="blue_background_49">#FF4962FE</color>
+
+    <!--底部导航栏背景颜色值-->
+    <color name="blue_bottom_navigation_background">#161938</color>
+
+    <!--发光字体背部渐变颜色值,透明度为81%-->
+    <color name="light_text_gradient_color_start">#CEFF8A00</color>
+    <color name="light_text_gradient_color_end">#00FF8A00</color>
+
+    <!--黄色字体颜色-->
+    <color name="yellow_text_color_ff">#ff7800</color>
+    <color name="yellow_text_color_60">#99ff7800</color>
+    <color name="yellow_text_color_FD">#FD7701</color>
+
+    <!--***************************-->
+    <!--**********之后部分暂未使用(非本项目中使用)***********-->
+    <!--***************************-->
+
+    <!--一般情况下 系统默认的toolbar的属性属性-->
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+
+    <!--dark模式下,toolbar的属性颜色-->
+    <color name="colorPrimaryHacker">#373B3E</color>
+    <color name="colorPrimaryDarkHacker">#2D3134</color>
+    <color name="colorAccentHacker">#4c4a48</color>
+
+    <!--正常控件的颜色-->
+    <color name="colorControlNormal">#333333</color>
+
+    <!--屏幕底部navigationBar颜色-->
+    <color name="navigationBarColor">#4C4C4C</color>
+
+    <!--弹窗时,黑色遮罩-->
+    <color name="black_overlay">#66000000</color>
+    <color name="amount_view_line">#e0e3e7</color>
+    <!--文本黑,light模式下文本颜色-->
+    <color name="text_black">#ff1c1d16</color>
+    <color name="color_black">#FF111111</color>
+    <color name="gray">#ffaaaaaa</color>
+    <color name="text_link_hacker">#589DF6</color>
+    <color name="text_label_hacker">#009688</color>
+    <color name="little_gray">#FFEEEEEE</color>
+    <color name="dark_gray">#4C4C4C</color>
+    <color name="red">#ffff0000</color>
+    <color name="text_hint_hacker">#aaffffff</color>
+    <color name="transparent_gray">#aaaaaaaa</color>
+    <color name="gray_background_progress">#26aaaaaa</color>
+    <color name="transparent_little_gray">#AAEEEEEE</color>
+    <color name="dark">#2c2d26</color>
+    <color name="color_green">#2EC047</color>
+    <color name="color_yellow">#EE8527</color>
+    <color name="color_blue">#50ABF6</color>
+    <color name="text_color_gray">#888992</color>
+
+    <!--黑色-->
+    <color name="black_48">#484e5a</color>
+    <color name="black_33">#333333</color>
+
+    <!--白色-->
+    <color name="white">#ffffff</color>
+    <color name="white_0d">#0dffffff</color>
+    <color name="white_66">#66ffffff</color>
+    <color name="white_99">#99ffffff</color>
+    <color name="white_cc">#ccffffff</color>
+    <color name="white_33">#33ffffff</color>
+    <color name="white_4d">#4dffffff</color>
+    <color name="white_8E" >#8EFFFFFF</color>
+
+    <!--分割线-->
+    <color name="divider_26">#26c5e1fd</color>
+    <color name="divider_ff">#ffd2d2d2</color>
+    <color name="divider_e5">#e5e5e5</color>
+    <color name="divider_1a">#1a88aefc</color>
+    <!--蓝色-->
+    <color name="blue">#3a48b2</color>
+    <color name="blue_15">#150e33</color>
+    <color name="blue_17">#171c4a</color>
+    <color name="blue_25">#252b5b</color>
+    <color name="blue_40">#4076fe</color>
+    <color name="blue_923BFF">#923BFF</color>
+    <color name="blue_723bff">#723bff</color>
+    <color name="blue_4962fe">#4962fe</color>
+    <color name="blue_49">#4962fe</color>
+    <color name="blue_27">#275dfe</color>
+    <color name="blue_3f">#3f7efd</color>
+    <color name="blue_7c">#7ca1fe</color>
+    <color name="yellow">#ff7800</color>
+    <color name="color_33">#333333</color>
+    <color name="color_99">#999999</color>
+</resources>

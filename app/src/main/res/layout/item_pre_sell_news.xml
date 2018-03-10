@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="4px">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="33px"
+        android:layout_marginLeft="34px"
+        android:layout_marginRight="28px"
+        android:layout_marginTop="40px"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="新闻标题文案新闻标题文案新闻标题文案新闻标题文
+案新闻标题文案"
+            android:textColor="@color/white"
+            android:textSize="30px" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34px"
+            android:layout_marginBottom="30px"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="藏茶阁"
+                android:textColor="@color/white_99"
+                android:textSize="24px" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="2017-11-26"
+                android:layout_marginRight="24px"
+                android:textColor="@color/white_99"
+                android:textSize="24px" />
+        </RelativeLayout>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1px"
+            android:background="@color/divider_26"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

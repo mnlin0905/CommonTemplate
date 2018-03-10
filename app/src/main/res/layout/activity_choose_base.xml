@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/base_bg"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:navigationIcon="@drawable/icon_back"
+        android:theme="@style/ToolbarTheme"
+        />
+
+    <TextView
+        android:id="@+id/tv_base1"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:textSize="24px"
+        android:textColor="@color/black_33"
+        android:layout_marginTop="140px"
+        android:layout_marginLeft="420px"
+        />
+    <TextView
+        android:id="@+id/tv_base2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:textSize="24px"
+        android:textColor="@color/black_33"
+        android:layout_marginTop="240px"
+        android:layout_marginLeft="160px"
+        />
+    <TextView
+        android:id="@+id/tv_base3"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:textSize="24px"
+        android:textColor="@color/black_33"
+        android:layout_marginTop="100px"
+        android:layout_marginLeft="370px"
+        />
+</LinearLayout>

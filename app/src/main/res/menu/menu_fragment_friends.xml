@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_group_chat"
+        android:icon="@drawable/icon_scan"
+        android:title="@string/action_group_chat"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_add_friends"
+        android:icon="@drawable/icon_scan"
+        android:title="@string/action_add_friends"
+        app:showAsAction="never|withText"/>
+    <item
+        android:id="@+id/action_contacts"
+        android:icon="@drawable/icon_scan"
+        android:title="@string/action_contacts"
+        app:showAsAction="never|withText"/>
+</menu>

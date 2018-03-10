@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <!---->
+    <include layout="@layout/layout_top_bar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--状态-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_order_form_detail_status"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingEnd="@dimen/view_padding_margin_16dp"
+                android:paddingStart="@dimen/view_padding_margin_16dp">
+
+                <TextView
+                    android:id="@+id/tv_order_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_large_20sp"
+                    tools:text="请退货并填写物流信息"/>
+
+                <TextView
+                    android:id="@+id/tv_order_brief"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/view_padding_margin_8dp"
+                    android:textSize="@dimen/text_size_title_15sp"
+                    tools:text="还剩2天23小时59分钟"/>
+            </LinearLayout>
+
+            <!--申请状态-->
+            <TextView
+                style="@style/TextViewStandard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_background_5"
+                android:lineSpacingMultiplier="@fraction/edit_text_multiplier"
+                android:paddingBottom="@dimen/view_padding_margin_16dp"
+                android:paddingTop="@dimen/view_padding_margin_16dp"
+                android:textSize="@dimen/text_size_title_15sp"
+                android:visibility="gone"
+                tools:text="您已撤销本次退款申请，如问题仍未解决，您可以重新发起申请。"
+                tools:visibility="visible"/>
+
+            <com.acchain.community.view.DividerView
+                android:id="@+id/dv_divider1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_line_width_1px"/>
+
+            <!--退款退货位置/目的地址-->
+            <include layout="@layout/viewstub_flow_des_address"/>
+
+            <com.acchain.community.view.DividerView
+                android:id="@+id/dv_divider2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_line_width_1px"/>
+
+            <!--提示信息-->
+            <TextView
+                style="@style/TextViewStandard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_background_5"
+                android:lineSpacingMultiplier="@fraction/edit_text_multiplier"
+                android:paddingBottom="@dimen/view_padding_margin_16dp"
+                android:paddingTop="@dimen/view_padding_margin_16dp"
+                android:textColor="@color/white_text_alpha_60"
+                android:textSize="@dimen/text_size_13sp"
+                android:visibility="gone"
+                tools:text="·未与商家协商一致，请勿使用到付或平邮，以免商家拒签货物
+·请填写真实退货物流信息，逾期未填写，退货申请将关闭"
+                tools:visibility="visible"/>
+
+            <com.acchain.community.view.DividerView
+                android:id="@+id/dv_divider3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_line_width_1px"/>
+
+            <!--功能菜单-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white_background_5"
+                android:gravity="end"
+                android:paddingBottom="@dimen/view_padding_margin_12dp"
+                android:paddingEnd="@dimen/view_padding_margin_16dp"
+                android:paddingStart="@dimen/view_padding_margin_16dp"
+                android:paddingTop="@dimen/view_padding_margin_12dp">
+
+                <TextView
+                    android:id="@+id/tv_cancel_apply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/view_padding_margin_20dp"
+                    android:background="@drawable/shape_transparent_border_blue_radius_5dp"
+                    android:paddingBottom="@dimen/view_padding_margin_8dp"
+                    android:paddingEnd="@dimen/view_padding_margin_12dp"
+                    android:paddingStart="@dimen/view_padding_margin_12dp"
+                    android:paddingTop="@dimen/view_padding_margin_8dp"
+                    android:text="撤销申请"
+                    android:textSize="@dimen/text_size_title_15sp"
+                    android:visibility="gone"
+                    tools:visibility="visible"/>
+
+                <TextView
+                    android:id="@+id/tv_change_apply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/view_padding_margin_20dp"
+                    android:background="@drawable/shape_transparent_border_blue_radius_5dp"
+                    android:paddingBottom="@dimen/view_padding_margin_8dp"
+                    android:paddingEnd="@dimen/view_padding_margin_12dp"
+                    android:paddingStart="@dimen/view_padding_margin_12dp"
+                    android:paddingTop="@dimen/view_padding_margin_8dp"
+                    android:text="修改申请"
+                    android:textSize="@dimen/text_size_title_15sp"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tv_fill_logistics_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/view_padding_margin_20dp"
+                    android:background="@drawable/shape_transparent_border_blue_radius_5dp"
+                    android:paddingBottom="@dimen/view_padding_margin_8dp"
+                    android:paddingEnd="@dimen/view_padding_margin_12dp"
+                    android:paddingStart="@dimen/view_padding_margin_12dp"
+                    android:paddingTop="@dimen/view_padding_margin_8dp"
+                    android:text="填写物流单号"
+                    android:textSize="@dimen/text_size_title_15sp"
+                    android:visibility="gone"
+                    tools:visibility="visible"/>
+            </LinearLayout>
+            <com.acchain.community.view.DividerView
+                android:id="@+id/dv_divider4"
+                android:background="@color/white_background_5"
+                android:paddingStart="@dimen/view_padding_margin_16dp"
+                android:paddingEnd="@dimen/view_padding_margin_16dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_line_width_1px"/>
+
+            <!--退款总额,退回钱包-->
+            <com.acchain.community.view.LineMenuView
+                android:id="@+id/lmv_refund_money"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_background_5"
+                android:paddingEnd="@dimen/view_padding_margin_16dp"
+                android:paddingStart="@dimen/view_padding_margin_16dp"
+                android:visibility="gone"
+                app:LineMenuView_brief_text_color="@color/yellow_text_color_ff"
+                app:LineMenuView_brief_text_size="@dimen/text_size_title_15sp"
+                app:LineMenuView_menu="退款总额"
+                app:LineMenuView_menu_text_size="@dimen/text_size_title_15sp"
+                app:LineMenuView_plugin="text"
+                tools:LineMenuView_brief="20 NHGH"
+                tools:visibility="visible"/>
+
+            <com.acchain.community.view.DividerView
+                android:id="@+id/dv_divider5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_line_width_1px"
+                android:background="@color/white_background_5"
+                android:paddingEnd="@dimen/view_padding_margin_16dp"
+                android:paddingStart="@dimen/view_padding_margin_16dp"/>
+
+            <com.acchain.community.view.LineMenuView
+                android:id="@+id/lmv_back_wallet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_background_5"
+                android:paddingEnd="@dimen/view_padding_margin_16dp"
+                android:paddingStart="@dimen/view_padding_margin_16dp"
+                android:visibility="gone"
+                app:LineMenuView_brief_text_size="@dimen/text_size_title_15sp"
+                app:LineMenuView_menu="退回钱包"
+                app:LineMenuView_menu_text_size="@dimen/text_size_title_15sp"
+                app:LineMenuView_plugin="text"
+                android:layout_marginBottom="@dimen/view_padding_margin_minus_12dp"
+                tools:LineMenuView_brief="20 NHGH"
+                tools:visibility="visible"/>
+
+            <com.acchain.community.view.DividerView
+                android:id="@+id/dv_divider6"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_line_width_1px"/>
+
+            <!--协商历史-->
+            <com.acchain.community.view.LineMenuView
+                android:id="@+id/lmv_pay_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/view_padding_margin_12dp"
+                android:background="@color/white_background_5"
+                android:paddingEnd="@dimen/view_padding_margin_16dp"
+                android:paddingStart="@dimen/view_padding_margin_16dp"
+                app:LineMenuView_menu="协商历史"
+                app:LineMenuView_menu_text_size="@dimen/text_size_title_15sp"
+                app:LineMenuView_navigation="@drawable/icon_arrow_right"
+                app:LineMenuView_plugin="text"
+                tools:visibility="visible"/>
+
+            <!--商品展示-->
+            <TextView
+                android:layout_marginTop="@dimen/view_padding_margin_12dp"
+                android:background="@color/white_background_5"
+                style="@style/TextViewStandard"
+                android:id="@+id/lmv_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="退款信息"
+                android:textSize="@dimen/text_size_title_15sp"/>
+            <com.acchain.community.view.DividerView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_line_width_1px"/>
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/view_padding_margin_12dp"
+                android:paddingBottom="@dimen/view_padding_margin_12dp"
+                android:background="@color/white_background_5">
+                <!--头部类型-->
+                <ImageView
+                    android:id="@+id/iv_icon"
+                    android:layout_width="@dimen/view_height_90dp"
+                    android:layout_height="@dimen/view_height_90dp"
+                    android:layout_marginBottom="@dimen/view_padding_margin_16dp"
+                    android:layout_marginStart="@dimen/view_padding_margin_16dp"
+                    android:layout_marginTop="@dimen/view_padding_margin_16dp"
+                    android:src="@drawable/background_goods_collection"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/divider"/>
+
+                <!--名称-->
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/view_padding_margin_8dp"
+                    android:layout_marginTop="@dimen/view_padding_margin_8dp"
+                    android:textColor="@color/blue_3f"
+                    android:textSize="@dimen/text_size_16sp"
+                    app:layout_constraintStart_toEndOf="@id/iv_icon"
+                    app:layout_constraintTop_toTopOf="@id/iv_icon"
+                    tools:text="长白野山参"/>
+
+                <!--简介-->
+                <TextView
+                    android:layout_marginTop="@dimen/view_padding_margin_8dp"
+                    android:id="@+id/tv_introduce"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingEnd="@dimen/view_padding_margin_16dp"
+                    android:textColor="@color/white_text_alpha_60"
+                    android:textSize="@dimen/text_size_normal_14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tv_name"
+                    app:layout_constraintTop_toBottomOf="@id/tv_name"
+                    tools:text="集长白之精华，采天地之集长白之精华，采天地之集长白之精华，采天地之.."/>
+            </android.support.constraint.ConstraintLayout>
+            <com.acchain.community.view.DividerView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_line_width_1px"/>
+
+            <!--订单详情-->
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:background="@color/white_background_5"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/view_padding_margin_16dp">
+
+                <TextView
+                    android:id="@+id/label_refund_reason"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="退款原因："
+                    android:textColor="@color/white_text_alpha_60"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tv_order_id"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/view_padding_margin_8dp"
+                    android:textColor="@color/white_text_alpha_60"
+                    app:layout_constraintBaseline_toBaselineOf="@id/label_refund_reason"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/label_refund_reason"
+                    tools:text="订单号"/>
+
+                <TextView
+                    android:layout_marginTop="@dimen/view_padding_margin_8dp"
+                    android:id="@+id/label_refund_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="退款金额："
+                    android:textColor="@color/white_text_alpha_60"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/label_refund_reason"/>
+
+                <TextView
+                    android:id="@+id/tv_transaction_id"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/view_padding_margin_8dp"
+                    android:textColor="@color/white_text_alpha_60"
+                    app:layout_constraintBaseline_toBaselineOf="@id/label_refund_money"
+                    app:layout_constraintEnd_toEndOf="@id/tv_order_id"
+                    app:layout_constraintStart_toEndOf="@id/label_refund_money"
+                    tools:text="订单号"/>
+
+                <TextView
+                    android:id="@+id/label_apply_time"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="@dimen/view_padding_margin_8dp"
+                    android:layout_height="wrap_content"
+                    android:text="申请时间："
+                    android:textColor="@color/white_text_alpha_60"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/label_refund_money"/>
+
+                <TextView
+                    android:id="@+id/tv_create_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/view_padding_margin_8dp"
+                    android:textColor="@color/white_text_alpha_60"
+                    app:layout_constraintBaseline_toBaselineOf="@id/label_apply_time"
+                    app:layout_constraintEnd_toEndOf="@id/tv_transaction_id"
+                    app:layout_constraintStart_toEndOf="@id/label_apply_time"
+                    tools:text="订单号"/>
+
+                <TextView
+                    android:id="@+id/label_refund_serial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/view_padding_margin_8dp"
+                    android:text="退款编号："
+                    android:textColor="@color/white_text_alpha_60"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/label_apply_time"/>
+
+                <TextView
+                    android:id="@+id/tv_pay_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/view_padding_margin_8dp"
+                    android:textColor="@color/white_text_alpha_60"
+                    app:layout_constraintBaseline_toBaselineOf="@id/label_refund_serial"
+                    app:layout_constraintEnd_toEndOf="@id/tv_create_time"
+                    app:layout_constraintStart_toEndOf="@id/label_refund_serial"
+                    tools:text="订单号"/>
+
+            </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

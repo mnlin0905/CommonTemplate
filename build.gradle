@@ -1,0 +1,29 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+//buildscript里是gradle脚本执行所需依赖，分别是对应的maven库和插件
+buildscript {
+    repositories {
+        jcenter()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.0'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.4.1'
+    }
+}
+
+//allprojects里是项目本身需要的依赖
+allprojects {
+    repositories {
+        //https://jcenter.bintray.com
+        jcenter()
+        maven { url "https://jitpack.io" }
+        //maven { url "https://dl.bintray.com/lovingning/maven"}
+        google()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

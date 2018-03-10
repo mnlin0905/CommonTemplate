@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_background_5"
+    android:padding="@dimen/view_padding_margin_16dp">
+    <ImageView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_address_location"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_person_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/view_padding_margin_16dp"
+        android:textSize="@dimen/text_size_16sp"
+        app:layout_constraintStart_toEndOf="@id/location"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="张三"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/view_padding_margin_16dp"
+        android:textSize="@dimen/text_size_16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_person_name"
+        tools:text="185****5123"/>
+
+    <TextView
+        android:id="@+id/label_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/view_padding_margin_12dp"
+        android:text="@string/activity_order_form_detail_label_address"
+        android:textColor="@color/white_text_alpha_60"
+        android:textSize="@dimen/text_size_small_12sp"
+        app:layout_constraintStart_toStartOf="@id/tv_person_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_person_name"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/white_text_alpha_60"
+        android:textSize="@dimen/text_size_small_12sp"
+        app:layout_constraintStart_toEndOf="@id/label_address"
+        app:layout_constraintTop_toTopOf="@id/label_address"
+        tools:text="深圳市南山区科技园高新南六道16号泰邦科技大厦608"/>
+</android.support.constraint.ConstraintLayout>

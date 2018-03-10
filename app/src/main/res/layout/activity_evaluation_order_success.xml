@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!---->
+    <include layout="@layout/layout_top_bar"/>
+
+    <!--状态-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_order_form_detail_status"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:paddingStart="@dimen/view_padding_margin_16dp">
+
+        <TextView
+            android:id="@+id/tv_order_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="你的评价将帮助更多人做购物决策"
+            android:textSize="@dimen/text_size_title_15sp"/>
+
+        <TextView
+            android:id="@+id/tv_check_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_padding_margin_16dp"
+            android:background="@drawable/shape_white_radius_5dp"
+            android:paddingBottom="@dimen/view_padding_margin_8dp"
+            android:paddingEnd="@dimen/view_padding_margin_12dp"
+            android:paddingStart="@dimen/view_padding_margin_12dp"
+            android:paddingTop="@dimen/view_padding_margin_8dp"
+            android:text="查看我的评价"
+            android:textColor="@color/blue_3f"
+            android:textSize="@dimen/text_size_small_12sp"/>
+    </LinearLayout>
+
+    <!--其他可评论信息-->
+    <LinearLayout
+        android:background="@color/white_background_5"
+        style="@style/TextViewStandard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/view_padding_margin_12dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="———— "
+            android:textSize="@dimen/text_size_title_15sp"
+            android:textColor="@color/white_no_selected_40"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="接着评下去吧"
+            android:textSize="@dimen/text_size_title_15sp"/>
+
+        <TextView
+            android:textSize="@dimen/text_size_title_15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" ————"
+            android:textColor="@color/white_no_selected_40"/>
+    </LinearLayout>
+
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:background="@color/white_background_5"
+        android:id="@+id/xrv_record"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

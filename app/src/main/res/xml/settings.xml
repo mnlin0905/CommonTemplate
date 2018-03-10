@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="settings_y"
+        android:title="硬件加速"/>
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="settings_z"
+        android:switchTextOff="夜间"
+        android:switchTextOn="白天"
+        android:title="模式切换"/>
+
+    <EditTextPreference
+        android:defaultValue="有限"
+        android:key="settings_x"
+        android:title="网络类型"/>
+</PreferenceScreen>

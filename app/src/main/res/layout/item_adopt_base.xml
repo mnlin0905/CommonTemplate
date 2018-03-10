@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="20px"
+        android:paddingLeft="32px"
+        android:paddingRight="32px"
+        android:paddingTop="32px">
+
+        <CheckBox
+            android:id="@+id/cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12px"
+            android:layout_marginTop="12px"
+            android:background="@null"
+            android:button="@drawable/cb_agreement_bg"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HDS01-0001"
+                android:textColor="@color/color_33"
+                android:textSize="34px" />
+
+            <TextView
+                android:id="@+id/tv_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16px"
+                android:text="被领养"
+                android:textColor="@color/color_99"
+                android:textSize="26px" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_video_monitor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawablePadding="12px"
+            android:drawableTop="@drawable/icon_jiankong"
+            android:text="视频监控"
+            android:textColor="@color/blue_40"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/tv_picture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16px"
+            android:drawablePadding="12px"
+            android:drawableTop="@drawable/icon_xiangce"
+            android:text="实景相册"
+            android:textColor="@color/blue_40"
+            android:textSize="24px" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="32px"
+        android:layout_marginRight="32px"
+        android:background="@color/divider_e5" />
+</LinearLayout>

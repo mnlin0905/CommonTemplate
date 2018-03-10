@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    <!---->
+    <include layout="@layout/layout_top_bar"/>
+
+    <!--头部-->
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/view_padding_margin_24dp"
+        tools:src="@drawable/icon_certification_fail"/>
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/view_padding_margin_16dp"
+        android:gravity="center"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:paddingStart="@dimen/view_padding_margin_16dp"
+        tools:text="您的实名认证审核不成功"/>
+
+    <!--姓名-->
+    <com.acchain.community.view.LineMenuView
+        android:layout_marginTop="@dimen/view_padding_margin_24dp"
+        android:id="@+id/lmv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_background_5"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:paddingStart="@dimen/view_padding_margin_16dp"
+        app:LineMenuView_brief_text_color="@color/white_text_alpha_60"
+        app:LineMenuView_brief_text_size="@dimen/text_size_normal_14sp"
+        app:LineMenuView_menu="@string/activity_show_certification_result_menu_name"
+        app:LineMenuView_menu_text_color="@color/white_selected_1"
+        app:LineMenuView_menu_text_size="@dimen/text_size_title_15sp"
+        app:LineMenuView_plugin="text"
+        tools:LineMenuView_brief="**梅"/>
+
+    <com.acchain.community.view.DividerView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_line_width_1px"
+        android:background="@color/white_background_5"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:paddingStart="@dimen/view_padding_margin_16dp"/>
+
+    <!--证件类型-->
+    <com.acchain.community.view.LineMenuView
+        android:id="@+id/lmv_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_background_5"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:paddingStart="@dimen/view_padding_margin_16dp"
+        app:LineMenuView_brief_text_color="@color/white_text_alpha_60"
+        app:LineMenuView_brief_text_size="@dimen/text_size_normal_14sp"
+        app:LineMenuView_menu="@string/activity_show_certification_result_type"
+        app:LineMenuView_menu_text_color="@color/white_selected_1"
+        app:LineMenuView_menu_text_size="@dimen/text_size_title_15sp"
+        app:LineMenuView_plugin="text"
+        tools:LineMenuView_brief="身份证"/>
+
+    <com.acchain.community.view.DividerView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_line_width_1px"
+        android:background="@color/white_background_5"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:paddingStart="@dimen/view_padding_margin_16dp"/>
+
+    <!--证件号码-->
+    <com.acchain.community.view.LineMenuView
+        android:id="@+id/lmv_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_background_5"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:paddingStart="@dimen/view_padding_margin_16dp"
+        app:LineMenuView_brief_text_color="@color/white_text_alpha_60"
+        app:LineMenuView_brief_text_size="@dimen/text_size_normal_14sp"
+        app:LineMenuView_menu="@string/activity_show_certification_result_number"
+        app:LineMenuView_menu_text_color="@color/white_selected_1"
+        app:LineMenuView_menu_text_size="@dimen/text_size_title_15sp"
+        app:LineMenuView_plugin="text"
+        tools:LineMenuView_brief="1*************4324"/>
+
+    <com.acchain.community.view.DividerView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_line_width_1px"
+        android:background="@color/white_background_5"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:paddingStart="@dimen/view_padding_margin_16dp"/>
+
+    <!--证件信息-->
+    <com.acchain.community.view.LineMenuView
+        android:id="@+id/lmv_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_background_5"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:paddingStart="@dimen/view_padding_margin_16dp"
+        app:LineMenuView_brief_text_color="@color/white_text_alpha_60"
+        app:LineMenuView_brief_text_size="@dimen/text_size_normal_14sp"
+        app:LineMenuView_menu="@string/activity_show_certification_result_info"
+        app:LineMenuView_menu_text_color="@color/white_selected_1"
+        app:LineMenuView_menu_text_size="@dimen/text_size_title_15sp"
+        app:LineMenuView_plugin="text"
+        tools:LineMenuView_brief="查看原因"/>
+
+</LinearLayout>

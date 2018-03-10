@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_top_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_0d"
+        android:padding="@dimen/view_padding_margin_16dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/headImg"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/default_head_img"
+            app:riv_corner_radius="5dp" />
+
+        <TextView
+            android:id="@+id/nikeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/view_padding_margin_16dp"
+            android:text="昵称"
+            android:textSize="@dimen/text_size_title_15sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rela_setRemark"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height_default"
+        android:layout_marginTop="@dimen/view_padding_margin_8dp"
+        android:background="@color/white_0d">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/view_padding_margin_16dp"
+            android:text="@string/setRemark" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/view_padding_margin_16dp"
+            android:src="@drawable/arrow_right" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height_default"
+        android:layout_marginTop="@dimen/view_padding_margin_8dp"
+        android:background="@color/white_0d"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/view_padding_margin_16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/from"
+            android:textColor="@color/white_99"
+            android:textSize="@dimen/text_size_normal_14sp" />
+
+        <TextView
+            android:id="@+id/from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/view_padding_margin_16dp"
+            android:text="来自手机号搜索"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_normal_14sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/add"
+        style="@style/style_Btn_default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:text="@string/add_to_contact" />
+</LinearLayout>

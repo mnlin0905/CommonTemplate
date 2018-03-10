@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_flower"
+        android:layout_width="360dp"
+        android:layout_height="360dp"
+        android:src="@drawable/rotate_flower"/>
+
+    <ImageView
+        android:id="@+id/iv_first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bg_first"/>
+</FrameLayout>

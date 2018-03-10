@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="280px"
+    android:layout_marginTop="10dp"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/test_panic" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/white_0d"
+        android:orientation="vertical"
+        android:paddingLeft="24px">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24px"
+            android:text="长白山野山参"
+            android:textColor="@color/blue_3f"
+            android:textSize="32px" />
+
+        <TextView
+            android:id="@+id/describe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8px"
+            android:lines="1"
+            android:text="集长白之精华，采天地之灵"
+            android:textColor="@color/white_99"
+            android:textSize="28px" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="16px"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tip_now_time_price"
+                android:textColor="@color/white"
+                android:textSize="24px" />
+
+            <TextView
+                android:id="@+id/now_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16px"
+                android:layout_weight="1"
+                android:text="@string/test_money"
+                android:textColor="@color/white"
+                android:textSize="30px" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="原价"
+                android:textColor="@color/white_33"
+                android:textSize="20px" />
+
+            <TextView
+                android:id="@+id/before_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4px"
+                android:layout_marginRight="32px"
+                android:text="￥299"
+                android:textColor="@color/white_33"
+                android:textSize="20px" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="24px"
+            android:layout_marginRight="32px"
+            android:layout_marginTop="24px">
+
+            <TextView
+                android:id="@+id/last_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="仅剩1235件"
+                android:textColor="@color/white_66"
+                android:textSize="20px" />
+
+            <TextView
+                android:id="@+id/to_panic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/btn"
+                android:gravity="center"
+                android:text="@string/tip_panic_buy_now"
+                android:textColor="@color/white"
+                android:textSize="30px" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

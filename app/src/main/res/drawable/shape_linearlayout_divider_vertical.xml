@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:bottom="@dimen/view_padding_margin_16dp"
+        android:top="@dimen/view_padding_margin_16dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white_color_divider_vertical_40"/>
+            <size
+                android:width="@dimen/divider_line_width_1px"/>
+        </shape>
+    </item>
+</layer-list>

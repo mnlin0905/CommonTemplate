@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:navigationIcon="@drawable/icon_back"
+        >
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:minHeight= "?attr/actionBarSize"
+            app:tabIndicatorColor="#4076FE"
+            app:tabSelectedTextColor="@color/white_selected_1"
+            app:tabTextAppearance="@style/TabLayoutTextStyle"
+            app:tabTextColor="@color/gray"
+            app:tabIndicatorHeight="@dimen/tab_layout_indicator_height_2dp"
+            app:tabMode="fixed"
+            app:tabGravity="center"
+            />
+    </android.support.v7.widget.Toolbar>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_above="@id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar" />
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/blue_25"
+        android:gravity="center_vertical"
+        >
+        <TextView
+            android:id="@+id/tv_index"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/main_navigation_home"
+            android:textColor="@color/white_selected_1"
+            android:textSize="24px"
+            android:drawableTop="@drawable/icon_home"
+            android:drawablePadding="4px"
+            />
+        <TextView
+            android:id="@+id/tv_collect"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/collect"
+            android:textColor="@color/white_selected_1"
+            android:textSize="24px"
+            android:drawableTop="@drawable/icon_collect"
+            android:drawablePadding="4px"
+            />
+        <TextView
+            android:id="@+id/tv_customer_service"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/service"
+            android:textColor="@color/white_selected_1"
+            android:textSize="24px"
+            android:drawableTop="@drawable/icon_cust"
+            android:drawablePadding="4px"
+
+            />
+        <TextView
+            android:id="@+id/tv_exercise_now"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_panic_goods_gradient2"
+            android:text="@string/tip_exercise_now"
+            android:gravity="center"
+            android:textSize="34px"
+            android:textColor="@color/white_selected_1"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

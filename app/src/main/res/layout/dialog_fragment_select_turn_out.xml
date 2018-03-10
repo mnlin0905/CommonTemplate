@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/white_selected_1"
+    android:orientation="vertical"
+    app:cardCornerRadius="@dimen/drawable_shape_normal_radius_10dp">
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|top"
+        android:paddingTop="@dimen/view_padding_margin_16dp"
+        android:paddingRight="@dimen/view_padding_margin_16dp"
+        android:src="@drawable/icon_close_blue"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/view_padding_margin_32dp"
+        android:layout_marginLeft="@dimen/view_padding_margin_24dp"
+        android:layout_marginRight="@dimen/view_padding_margin_24dp"
+        android:layout_marginTop="@dimen/view_padding_margin_48dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_friends"
+            style="@style/TextViewStandard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/view_padding_margin_24dp"
+            android:background="@drawable/shape_transparent_border_blue_radius_5dp"
+            android:gravity="center"
+            android:text="@string/dialog_fragment_select_turn_out_friends"
+            android:textColor="@color/blue_text_color"/>
+
+        <TextView
+            android:id="@+id/tv_platform"
+            style="@style/TextViewStandard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_blue_radius_5dp"
+            android:gravity="center"
+            android:text="@string/dialog_fragment_select_turn_out_platform"/>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

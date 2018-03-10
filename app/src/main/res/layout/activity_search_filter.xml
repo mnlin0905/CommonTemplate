@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <!--搜索栏-->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:gravity="center_vertical"
+        android:minHeight="?attr/actionBarSize"
+        app:navigationIcon="@drawable/icon_back"
+        android:theme="@style/ToolbarTheme">
+        <EditText
+            android:drawablePadding="@dimen/view_padding_margin_12dp"
+            android:drawableStart="@drawable/icon_search"
+            android:id="@+id/et_filter"
+            android:textSize="@dimen/text_size_small_12sp"
+            android:paddingTop="@dimen/view_padding_margin_8dp"
+            android:paddingBottom="@dimen/view_padding_margin_8dp"
+            android:paddingStart="@dimen/view_padding_margin_16dp"
+            android:paddingEnd="@dimen/view_padding_margin_16dp"
+            android:maxLines="1"
+            android:background="@color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </android.support.v7.widget.Toolbar>
+
+    <!--添加一条分割线-->
+    <com.acchain.community.view.DividerView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_line_width_1px"/>
+
+    <ListView
+        android:id="@+id/lv_record"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

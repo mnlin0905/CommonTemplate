@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ll">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="662px"
+                android:scaleType="fitXY"
+                android:src="@drawable/test_goods_bg" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#0Dffffff"
+                android:orientation="vertical"
+                android:paddingLeft="30px"
+                android:paddingRight="30px"
+                >
+                <TextView
+                    android:id="@+id/tv_share"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/icon_share_blue"
+                    android:paddingTop="30px"
+                    tools:text="红豆杉 第1期"
+                    android:textColor="@color/blue_3f"
+                    android:textSize="30px" />
+
+                <com.acchain.community.view.NumberProgressView
+                    android:id="@+id/number_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        >
+                        <TextView
+                            android:id="@+id/tv_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="199元/株"
+                            android:textColor="@color/yellow"
+                            android:textSize="34px"
+                            />
+                        <TextView
+                            android:layout_marginTop="6px"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="领养价格"
+                            android:textColor="@color/white_99"
+                            android:textSize="22px"
+
+                            />
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="1px"
+                        android:layout_marginTop="8px"
+                        android:background="@color/white_4d"
+                        android:layout_height="match_parent"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        >
+                        <TextView
+                            android:id="@+id/time_limit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="12个月"
+                            android:textColor="@color/yellow"
+                            android:textSize="34px"
+                            />
+                        <TextView
+                            android:layout_marginTop="6px"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="领养期限"
+                            android:textColor="@color/white_99"
+                            android:textSize="22px"
+
+                            />
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="1px"
+                        android:layout_marginTop="8px"
+                        android:background="@color/white_4d"
+                        android:layout_height="match_parent"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        >
+                        <TextView
+                            android:id="@+id/count_limit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="100株"
+                            android:textColor="@color/yellow"
+                            android:textSize="34px"
+                            />
+                        <TextView
+                            android:layout_marginTop="6px"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="单次领养限量"
+                            android:textColor="@color/white_99"
+                            android:textSize="22px"
+
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="30px"
+                    android:background="@color/divider_26" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100px"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_news"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/icon_new"
+                        android:drawablePadding="12px"
+                        android:gravity="center_vertical"
+                        android:text="新闻"
+                        android:textColor="@color/white_cc"
+                        android:textSize="30px"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_video_monitor"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/icon_chakanshipin"
+                        android:drawablePadding="12px"
+                        android:gravity="center_vertical"
+                        android:text="视频监控"
+                        android:textColor="@color/white_cc"
+                        android:textSize="30px"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_pre_sell_record"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/icon_record_clock"
+                        android:drawablePadding="12px"
+                        android:gravity="center_vertical"
+                        android:text="领养记录"
+                        android:textColor="@color/white_cc"
+                        android:textSize="30px"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/rl_random_number"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:layout_marginTop="20px"
+                android:background="@color/white_0d"
+                android:paddingLeft="30px"
+                android:paddingRight="30px"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="100px"
+                    android:text="已选标的"
+                    android:gravity="center_vertical"
+                    android:textSize="30px"
+                    android:textColor="@color/white_99"
+                    android:drawableRight="@drawable/more"
+                    />
+                <TextView
+                    android:id="@+id/tv_default_num"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="60px"
+                    android:layout_height="wrap_content"
+                    tools:text="“初始的一个随机号”"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:textSize="30px"
+                    android:lines="1"
+                    android:layout_marginLeft="160px"
+                    android:textColor="@color/white"
+                    />
+            </RelativeLayout>
+
+            <CheckBox
+                android:id="@+id/cb_agreement"
+                android:layout_width="wrap_content"
+                android:layout_height="80px"
+                android:layout_marginLeft="28px"
+                android:button="@null"
+                android:background="@null"
+                android:drawablePadding="12px"
+                android:drawableLeft="@drawable/cb_agreement_bg"
+                android:text="同意《华茶一号服务协议》"
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_0d"
+                android:orientation="vertical"
+                android:paddingLeft="30px"
+                android:paddingRight="30px"
+
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="24px"
+                    android:paddingTop="36px">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="开始时间"
+                        android:textColor="@color/white_cc"
+                        android:textSize="30px" />
+
+                    <TextView
+                        android:id="@+id/start_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        tools:text="2017-12-15"
+                        android:textColor="@color/white"
+                        android:textSize="30px" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1px"
+                    android:background="@color/divider_26" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="24px"
+                    android:paddingTop="36px">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="结束时间"
+                        android:textColor="@color/white_cc"
+                        android:textSize="30px" />
+
+                    <TextView
+                        android:id="@+id/end_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        tools:text="2018-12-15"
+                        android:textColor="@color/white"
+                        android:textSize="30px" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center_vertical"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/iv_icon"
+        tools:src="@drawable/icon_wallet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:paddingTop="@dimen/view_padding_margin_8dp"
+        android:paddingBottom="@dimen/view_padding_margin_8dp"
+        android:paddingLeft="@dimen/view_padding_margin_12dp"
+        android:paddingRight="@dimen/view_padding_margin_12dp"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_title"
+            android:textSize="@dimen/text_size_title_15sp"
+            tools:text="仅退款"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tv_subtitle"
+            android:textSize="@dimen/text_size_small_12sp"
+            android:textColor="@color/white_no_selected_40"
+            android:layout_marginTop="@dimen/view_padding_margin_4dp"
+            tools:text="未收到货（包含未签收）"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_navigation"
+        tools:src="@drawable/icon_arrow_right_gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</merge>

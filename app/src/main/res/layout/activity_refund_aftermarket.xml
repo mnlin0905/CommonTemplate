@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <!---->
+    <include layout="@layout/layout_top_bar"/>
+
+    <!---->
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:layout_marginTop="@dimen/view_padding_margin_minus_12dp"
+        android:layout_width="match_parent"
+        android:id="@+id/xrv_record"
+        android:layout_height="wrap_content"/>
+
+    <com.acchain.community.view.RecyclerEmptyView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

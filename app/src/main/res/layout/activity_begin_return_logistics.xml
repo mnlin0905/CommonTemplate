@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <!---->
+    <include layout="@layout/layout_top_bar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <!--商品展示-->
+            <include layout="@layout/layout_goods_splash"/>
+
+            <!--物流公司,物流单号-->
+            <com.acchain.community.view.LineMenuView
+                android:layout_marginTop="@dimen/view_padding_margin_12dp"
+                android:id="@+id/lmv_flow_company"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_background_5"
+                android:paddingEnd="@dimen/view_padding_margin_16dp"
+                android:paddingStart="@dimen/view_padding_margin_16dp"
+                app:LineMenuView_brief_text_color="@color/white_no_selected_40"
+                app:LineMenuView_brief_text_size="@dimen/text_size_13sp"
+                app:LineMenuView_menu="物流公司"
+                app:LineMenuView_brief="请选择物流公司"
+                app:LineMenuView_menu_text_size="@dimen/text_size_normal_14sp"
+                app:LineMenuView_navigation="@drawable/icon_arrow_right_gray"
+                app:LineMenuView_plugin="text"/>
+            <com.acchain.community.view.DividerView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_line_width_1px"/>
+            <LinearLayout
+                style="@style/TextViewStandard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_background_5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="物流单号："
+                    android:textSize="@dimen/text_size_title_15sp"/>
+
+                <TextView
+                    android:id="@+id/et_flow_serial"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingEnd="@dimen/view_padding_margin_16dp"
+                    android:paddingStart="@dimen/view_padding_margin_12dp"
+                    android:textColor="@color/yellow_text_color_ff"
+                    android:hint="请填写物流号码"
+                    android:textColorHint="@color/white_no_selected_40"
+                    android:textSize="@dimen/text_size_small_12sp"/>
+
+                <ImageView
+                    android:id="@+id/iv_scan"
+                    android:paddingStart="@dimen/view_padding_margin_16dp"
+                    android:src="@drawable/icon_scan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!--退款金额,退款说明-->
+            <LinearLayout
+                style="@style/TextViewStandard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/view_padding_margin_12dp"
+                android:background="@color/white_background_5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="联系电话："
+                    android:textSize="@dimen/text_size_title_15sp"/>
+
+                <TextView
+                    android:id="@+id/et_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="请填写手机号码"
+                    android:paddingEnd="@dimen/view_padding_margin_16dp"
+                    android:paddingStart="@dimen/view_padding_margin_12dp"
+                    android:textColor="@color/white_no_selected_40"
+                    android:textSize="@dimen/text_size_13sp"/>
+            </LinearLayout>
+
+            <com.acchain.community.view.DividerView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_line_width_1px"/>
+
+            <LinearLayout
+                style="@style/TextViewStandard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_background_5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="退款说明："
+                    android:textSize="@dimen/text_size_title_15sp"/>
+
+                <EditText
+                    android:id="@+id/et_refund_reason"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:hint="填写"
+                    android:maxLines="@integer/max_lines_number"
+                    android:paddingEnd="@dimen/view_padding_margin_16dp"
+                    android:paddingStart="@dimen/view_padding_margin_12dp"
+                    android:textColorHint="@color/white_no_selected_40"
+                    android:textSize="@dimen/text_size_small_12sp"/>
+            </LinearLayout>
+
+            <!--上传照片-->
+            <TextView
+                style="@style/TextViewStandard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="上传照片"
+                android:textColor="@color/white_no_selected_40"
+                android:textSize="@dimen/text_size_title_15sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height_80dp"
+                android:layout_marginTop="@dimen/view_padding_margin_12dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <ImageView
+                    android:id="@+id/iv_picture_one"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/view_padding_margin_16dp"
+                    android:layout_weight="1"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/iv_picture_two"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/view_padding_margin_16dp"
+                    android:layout_weight="1"
+                    android:visibility="gone"
+                    tools:visibility="visible"/>
+
+                <ImageView
+                    android:id="@+id/iv_picture_three"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/view_padding_margin_16dp"
+                    android:layout_weight="1"
+                    android:visibility="gone"
+                    tools:visibility="visible"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_upload"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/view_padding_margin_16dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_transparent_border_blue_radius_5dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/view_padding_margin_12dp"
+                        android:src="@drawable/icon_photo"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|bottom"
+                        android:paddingBottom="@dimen/view_padding_margin_8dp"
+                        android:text="上传凭证\n(最多三张)"
+                        android:textSize="@dimen/text_size_small_12sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--按钮-->
+            <Button
+                android:id="@+id/bt_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/view_padding_margin_48dp"
+                android:layout_marginTop="@dimen/view_padding_margin_48dp"
+                android:background="@drawable/btn_bg"
+                android:text="提交"
+                android:textSize="@dimen/text_size_17sp"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

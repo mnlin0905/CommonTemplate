@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!---->
+    <include layout="@layout/layout_top_bar"/>
+
+    <!--地址信息-->
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:id="@+id/xrv_record"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white_background_5"/>
+
+    <!--空布局-->
+    <com.acchain.community.view.RecyclerEmptyView
+        android:id="@+id/empty_view"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <!--新增地址-->
+    <Button
+        android:id="@+id/bt_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/view_padding_margin_16dp"
+        android:layout_marginTop="@dimen/view_padding_margin_16dp"
+        android:background="@drawable/btn_bg"
+        android:text="@string/activity_change_delivery_address_add"
+        android:textSize="@dimen/text_size_17sp"/>
+</LinearLayout>

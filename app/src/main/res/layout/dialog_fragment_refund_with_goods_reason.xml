@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingEnd="@dimen/view_padding_margin_14dp"
+    android:maxHeight="@dimen/view_height_400dp"
+    android:paddingStart="@dimen/view_padding_margin_14dp">
+
+    <!--上部按钮-->
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:cardBackgroundColor="@color/white_selected_1"
+        app:cardCornerRadius="@dimen/drawable_shape_normal_radius_12dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <!--标题-->
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/view_padding_margin_20dp"
+                    android:paddingTop="@dimen/view_padding_margin_20dp"
+                    android:text="@string/dialog_fragment_refund_reason_with_goods_title"
+                    android:textColor="@color/black_text_333_1"
+                    android:textSize="@dimen/text_size_title_15sp"/>
+
+                <com.acchain.community.view.DividerView
+                    android:background="@color/gray_background_f2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_line_width_1px"/>
+
+                <!--具体原因-->
+                <com.acchain.community.view.LineMenuView
+                    android:id="@+id/lmv_radio_0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/view_padding_margin_20dp"
+                    android:paddingEnd="@dimen/view_padding_margin_32dp"
+                    android:paddingStart="@dimen/view_padding_margin_32dp"
+                    android:paddingTop="@dimen/view_padding_margin_20dp"
+                    app:LineMenuView_disable_bind_listener="true"
+                    app:LineMenuView_menu="@string/dialog_fragment_refund_reason_with_goods_radio_0"
+                    app:LineMenuView_menu_text_color="@color/black_text_333_1"
+                    app:LineMenuView_menu_text_size="@dimen/text_size_normal_14sp"
+                    app:LineMenuView_plugin="radio"
+                    app:LineMenuView_radio="off"/>
+
+                <com.acchain.community.view.DividerView
+                    android:background="@color/gray_background_f2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_line_width_1px"/>
+
+                <com.acchain.community.view.LineMenuView
+                    android:id="@+id/lmv_radio_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/view_padding_margin_20dp"
+                    android:paddingEnd="@dimen/view_padding_margin_32dp"
+                    android:paddingStart="@dimen/view_padding_margin_32dp"
+                    android:paddingTop="@dimen/view_padding_margin_20dp"
+                    app:LineMenuView_disable_bind_listener="true"
+                    app:LineMenuView_menu="@string/dialog_fragment_refund_reason_with_goods_radio_1"
+                    app:LineMenuView_menu_text_color="@color/black_text_333_1"
+                    app:LineMenuView_menu_text_size="@dimen/text_size_normal_14sp"
+                    app:LineMenuView_plugin="radio"
+                    app:LineMenuView_radio="off"/>
+
+                <com.acchain.community.view.DividerView
+                    android:background="@color/gray_background_f2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_line_width_1px"/>
+
+                <com.acchain.community.view.LineMenuView
+                    android:layout_width="match_parent"
+                    android:id="@+id/lmv_radio_2"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/view_padding_margin_20dp"
+                    android:paddingEnd="@dimen/view_padding_margin_32dp"
+                    android:paddingStart="@dimen/view_padding_margin_32dp"
+                    android:paddingTop="@dimen/view_padding_margin_20dp"
+                    app:LineMenuView_disable_bind_listener="true"
+                    app:LineMenuView_menu="@string/dialog_fragment_refund_reason_with_goods_radio_2"
+                    app:LineMenuView_menu_text_color="@color/black_text_333_1"
+                    app:LineMenuView_menu_text_size="@dimen/text_size_normal_14sp"
+                    app:LineMenuView_plugin="radio"
+                    app:LineMenuView_radio="off"/>
+
+                <com.acchain.community.view.DividerView
+                    android:background="@color/gray_background_f2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_line_width_1px"/>
+
+                <com.acchain.community.view.LineMenuView
+                    android:layout_width="match_parent"
+                    android:id="@+id/lmv_radio_3"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/view_padding_margin_20dp"
+                    android:paddingEnd="@dimen/view_padding_margin_32dp"
+                    android:paddingStart="@dimen/view_padding_margin_32dp"
+                    android:paddingTop="@dimen/view_padding_margin_20dp"
+                    app:LineMenuView_disable_bind_listener="true"
+                    app:LineMenuView_menu="@string/dialog_fragment_refund_reason_with_goods_radio_3"
+                    app:LineMenuView_menu_text_color="@color/black_text_333_1"
+                    app:LineMenuView_menu_text_size="@dimen/text_size_normal_14sp"
+                    app:LineMenuView_plugin="radio"
+                    app:LineMenuView_radio="off"/>
+
+                <com.acchain.community.view.DividerView
+                    android:background="@color/gray_background_f2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_line_width_1px"/>
+
+                <com.acchain.community.view.LineMenuView
+                    android:id="@+id/lmv_radio_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/view_padding_margin_20dp"
+                    android:paddingEnd="@dimen/view_padding_margin_32dp"
+                    android:paddingStart="@dimen/view_padding_margin_32dp"
+                    android:paddingTop="@dimen/view_padding_margin_20dp"
+                    app:LineMenuView_disable_bind_listener="true"
+                    app:LineMenuView_menu="@string/dialog_fragment_refund_reason_with_goods_radio_4"
+                    app:LineMenuView_menu_text_color="@color/black_text_333_1"
+                    app:LineMenuView_menu_text_size="@dimen/text_size_normal_14sp"
+                    app:LineMenuView_plugin="radio"
+                    app:LineMenuView_radio="off"/>
+
+                <com.acchain.community.view.DividerView
+                    android:background="@color/gray_background_f2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_line_width_1px"/>
+
+                <com.acchain.community.view.LineMenuView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lmv_radio_5"
+                    android:paddingBottom="@dimen/view_padding_margin_20dp"
+                    android:paddingEnd="@dimen/view_padding_margin_32dp"
+                    android:paddingStart="@dimen/view_padding_margin_32dp"
+                    android:paddingTop="@dimen/view_padding_margin_20dp"
+                    app:LineMenuView_disable_bind_listener="true"
+                    app:LineMenuView_menu="@string/dialog_fragment_refund_reason_with_goods_radio_5"
+                    app:LineMenuView_menu_text_color="@color/black_text_333_1"
+                    app:LineMenuView_menu_text_size="@dimen/text_size_normal_14sp"
+                    app:LineMenuView_plugin="radio"
+                    app:LineMenuView_radio="off"/>
+
+                <com.acchain.community.view.DividerView
+                    android:background="@color/gray_background_f2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_line_width_1px"/>
+
+                <com.acchain.community.view.LineMenuView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lmv_radio_6"
+                    android:paddingBottom="@dimen/view_padding_margin_20dp"
+                    android:paddingEnd="@dimen/view_padding_margin_32dp"
+                    android:paddingStart="@dimen/view_padding_margin_32dp"
+                    android:paddingTop="@dimen/view_padding_margin_20dp"
+                    app:LineMenuView_disable_bind_listener="true"
+                    app:LineMenuView_menu="@string/dialog_fragment_refund_reason_with_goods_radio_6"
+                    app:LineMenuView_menu_text_color="@color/black_text_333_1"
+                    app:LineMenuView_menu_text_size="@dimen/text_size_normal_14sp"
+                    app:LineMenuView_plugin="radio"
+                    app:LineMenuView_radio="off"/>
+
+                <com.acchain.community.view.DividerView
+                    android:background="@color/gray_background_f2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_line_width_1px"/>
+
+                <com.acchain.community.view.LineMenuView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/view_padding_margin_20dp"
+                    android:id="@+id/lmv_radio_7"
+                    android:paddingEnd="@dimen/view_padding_margin_32dp"
+                    android:paddingStart="@dimen/view_padding_margin_32dp"
+                    android:paddingTop="@dimen/view_padding_margin_20dp"
+                    app:LineMenuView_disable_bind_listener="true"
+                    app:LineMenuView_menu="@string/dialog_fragment_refund_reason_with_goods_radio_7"
+                    app:LineMenuView_menu_text_color="@color/black_text_333_1"
+                    app:LineMenuView_menu_text_size="@dimen/text_size_normal_14sp"
+                    app:LineMenuView_plugin="radio"
+                    app:LineMenuView_radio="off"/>
+            </LinearLayout>
+        </ScrollView>
+    </android.support.v7.widget.CardView>
+
+    <!--取消-->
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/view_padding_margin_8dp"
+        app:cardBackgroundColor="@color/white_selected_1"
+        app:cardCornerRadius="@dimen/drawable_shape_normal_radius_12dp">
+
+        <TextView
+            android:id="@+id/tv_close"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="@dimen/view_padding_margin_20dp"
+            android:paddingTop="@dimen/view_padding_margin_20dp"
+            android:text="@string/dialog_fragment_refund_reason_with_goods_close"
+            android:textColor="@color/blue_text_color"
+            android:textSize="@dimen/text_size_17sp"/>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

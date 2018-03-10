@@ -1,0 +1,13 @@
+<form name="punchout_form"
+      method="post"
+      action="https://openapi.alipay.com/gateway.do?charset=utf-8&method=alipay.trade.page.pay&sign=e922Zc%2FusePjak5%2Fcmlt0g0JSERp4GcZAmmEiGkHtJEwWW4tQCvwwZvG%2FNGSpn0m0s%2FIWoWXZGG%2BGCn4qYruCeZHg4oFii7s%2FRJdTiuTWpxCReWrsaT%2FoMA3MMeSK4NiB0OZMWefekdZAKzuhMBxWHxnbewNFLx0EH0iajPYspZdrsgcObau6XXEgnqmOm9vmITqBnT7fthWbdqgJ%2Fe9b%2BcPL0KrAsYNO5wKefzzJRQrxbvXhkcHYicGgHZ1Y560e0OsnG3PsNzOWzs3wGbwqjByXNOVpfKSF4LfjfV%2F4k7imA1MXHY9BMeSUun67NQC8uHl2WNlRLO%2FyqDBP0jhaw%3D%3D&return_url=http%3A%2F%2Flocalhost%3A8080%2FwantBuyPay.do%3Faction%3DaliPayCallBack&notify_url=http%3A%2F%2Flocalhost%3A8080%2FwantBuyPay.do%3Faction%3DaliPayCallBack&version=1.0&app_id=2018012602079572&sign_type=RSA2&timestamp=2018-03-07+13%3A48%3A08&alipay_sdk=alipay-sdk-java-dynamicVersionNo&format=json">
+    \n
+    <input type="hidden"
+           name="biz_content"
+           value="[{&quot;out_trade_no&quot;:&quot;SC_20180307134808268&quot;,&quot;total_amount&quot;:&quot;0.01&quot;,&quot;subject&quot;:&quot;订单名称&quot;,&quot;timeout_express&quot;:&quot;15m&quot;,&quot;disable_paymethod&quot;:&quot;creditCardExpress&quot;,&quot;body&quot;:&quot;商品描述&quot;,&quot;product_code&quot;:&quot;FAST_INSTANT_TRADE_PAY&quot;}]">
+    \n
+    <input type="submit" value="立即支付" style="display:none">
+    \n
+</form>
+\n
+<script>document.forms[0].submit();</script>

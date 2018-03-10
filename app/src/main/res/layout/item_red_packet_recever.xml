@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"
+    android:background="@color/white_background_5"
+    android:text="252222222222"
+    android:textSize="@dimen/text_size_small_12sp"
+    android:padding="5dp"
+    android:gravity="center_vertical"
+    android:drawablePadding="5dp"
+    android:drawableLeft="@drawable/red_packet_smail"
+    android:layout_height="wrap_content">
+
+</TextView>

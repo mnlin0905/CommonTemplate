@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!---->
+    <include layout="@layout/layout_top_bar"/>
+
+    <!--head-->
+    <com.acchain.community.view.LineMenuView
+        android:id="@+id/lmv_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/prefer_view_height_48dp"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:background="@color/white_background_5"
+        android:paddingStart="@dimen/view_padding_margin_16dp"
+        app:LineMenuView_brief=""
+        app:LineMenuView_menu_text_color="@color/white_no_selected_40"
+        app:LineMenuView_menu_text_size="@dimen/text_size_13sp"
+        app:LineMenuView_navigation="@drawable/icon_date_picker"
+        app:LineMenuView_plugin="text"/>
+
+    <com.acchain.community.view.DividerView
+        android:paddingStart="@dimen/view_padding_margin_16dp"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:background="@color/white_background_5"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_line_width_1px"/>
+
+    <!--输入与支出-->
+    <LinearLayout
+        android:background="@color/white_background_5"
+        style="@style/TextViewStandard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/activity_take_flow_record_expense"
+            android:textColor="@color/blue_text_color"
+            android:textSize="@dimen/text_size_13sp"/>
+
+        <TextView
+            android:id="@+id/tv_expense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue_text_color"
+            android:textSize="@dimen/text_size_13sp"
+            tool:text="118"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/view_padding_margin_16dp"
+            android:text="@string/activity_take_flow_record_income"
+            android:textColor="@color/blue_text_color"
+            android:textSize="@dimen/text_size_13sp"/>
+
+        <TextView
+            android:id="@+id/tv_income"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue_text_color"
+            android:textSize="@dimen/text_size_13sp"
+            tool:text="115"/>
+    </LinearLayout>
+
+    <!--list-->
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:id="@+id/xrv_record"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.acchain.community.view.RecyclerEmptyView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!---->
+    <include layout="@layout/layout_top_bar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--创建时间,交易类型,交易ID,-->
+            <com.acchain.community.view.LineMenuView
+                android:id="@+id/lmv_create_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_background_5"
+                android:paddingEnd="@dimen/view_padding_margin_16dp"
+                android:paddingStart="@dimen/view_padding_margin_16dp"
+                app:LineMenuView_brief_text_size="@dimen/text_size_title_15sp"
+                app:LineMenuView_menu="@string/activity_transaction_detail_lmv_0"
+                app:LineMenuView_menu_text_color="@color/white_text_alpha_80"
+                app:LineMenuView_menu_text_size="@dimen/text_size_title_15sp"
+                app:LineMenuView_plugin="text"
+                tools:LineMenuView_brief="2017-09-14 16:22:30"/>
+
+            <com.acchain.community.view.DividerView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_line_width_1px"
+                android:background="@color/white_background_5"
+                android:paddingEnd="@dimen/view_padding_margin_16dp"
+                android:paddingStart="@dimen/view_padding_margin_16dp"/>
+
+            <com.acchain.community.view.LineMenuView
+                android:id="@+id/lmv_transaction_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_background_5"
+                android:paddingEnd="@dimen/view_padding_margin_16dp"
+                android:paddingStart="@dimen/view_padding_margin_16dp"
+                app:LineMenuView_brief_text_size="@dimen/text_size_title_15sp"
+                app:LineMenuView_menu="@string/activity_transaction_detail_lmv_1"
+                app:LineMenuView_menu_text_color="@color/white_text_alpha_80"
+                app:LineMenuView_menu_text_size="@dimen/text_size_title_15sp"
+                app:LineMenuView_plugin="text"
+                tools:LineMenuView_brief="2017-09-14 16:22:30"/>
+
+            <TextView
+                style="@style/TextViewStandard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_transaction_detail_label_id"
+                android:textColor="@color/white_no_selected_40"
+                android:textSize="@dimen/text_size_13sp"/>
+
+            <TextView
+                android:id="@+id/tv_id"
+                style="@style/TextViewStandard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_background_5"
+                android:lineSpacingMultiplier="1.5"
+                android:textColor="@color/white_text_alpha_80"
+                android:textSize="@dimen/text_size_title_15sp"
+                tools:text="b1235445DS154664114EEWGG24646445RI1641
+DF64646144F454B"/>
+
+            <!--资产名称,买入价格,买入数量,到账数量,状态,应付款,支付方式-->
+            <com.acchain.community.view.LineMenuView
+                android:id="@+id/lmv_currency_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/view_padding_margin_8dp"
+                android:background="@color/white_background_5"
+                android:paddingEnd="@dimen/view_padding_margin_16dp"
+                android:paddingStart="@dimen/view_padding_margin_16dp"
+                app:LineMenuView_brief_text_size="@dimen/text_size_title_15sp"
+                app:LineMenuView_menu="@string/activity_transaction_detail_lmv_2"
+                app:LineMenuView_menu_text_color="@color/white_text_alpha_80"
+                app:LineMenuView_menu_text_size="@dimen/text_size_normal_14sp"
+                app:LineMenuView_plugin="text"
+                tools:LineMenuView_brief="2017-09-14 16:22:30"/>
+
+            <com.acchain.community.view.DividerView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_line_width_1px"
+                android:background="@color/white_background_5"
+                android:paddingEnd="@dimen/view_padding_margin_16dp"
+                android:paddingStart="@dimen/view_padding_margin_16dp"/>
+
+            <com.acchain.community.view.LineMenuView
+                android:id="@+id/lmv_buy_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_background_5"
+                android:paddingEnd="@dimen/view_padding_margin_16dp"
+                android:paddingStart="@dimen/view_padding_margin_16dp"
+                app:LineMenuView_brief_text_size="@dimen/text_size_title_15sp"
+                app:LineMenuView_menu="@string/activity_transaction_detail_3"
+                app:LineMenuView_menu_text_color="@color/white_text_alpha_80"
+                app:LineMenuView_menu_text_size="@dimen/text_size_normal_14sp"
+                app:LineMenuView_plugin="text"
+                tools:LineMenuView_brief="2017-09-14 16:22:30"/>
+
+            <com.acchain.community.view.DividerView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_line_width_1px"
+                android:background="@color/white_background_5"
+                android:paddingEnd="@dimen/view_padding_margin_16dp"
+                android:paddingStart="@dimen/view_padding_margin_16dp"/>
+
+            <com.acchain.community.view.LineMenuView
+                android:id="@+id/lmv_buy_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_background_5"
+                android:paddingEnd="@dimen/view_padding_margin_16dp"
+                android:paddingStart="@dimen/view_padding_margin_16dp"
+                app:LineMenuView_brief_text_size="@dimen/text_size_title_15sp"
+                app:LineMenuView_menu="@string/activity_transaction_detail_lmv_4"
+                app:LineMenuView_menu_text_color="@color/white_text_alpha_80"
+                app:LineMenuView_menu_text_size="@dimen/text_size_normal_14sp"
+                app:LineMenuView_plugin="text"
+                tools:LineMenuView_brief="2017-09-14 16:22:30"/>
+
+            <com.acchain.community.view.DividerView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_line_width_1px"
+                android:background="@color/white_background_5"
+                android:paddingEnd="@dimen/view_padding_margin_16dp"
+                android:paddingStart="@dimen/view_padding_margin_16dp"/>
+
+            <com.acchain.community.view.LineMenuView
+                android:id="@+id/lmv_arrive_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_background_5"
+                android:paddingEnd="@dimen/view_padding_margin_16dp"
+                android:paddingStart="@dimen/view_padding_margin_16dp"
+                app:LineMenuView_brief_text_size="@dimen/text_size_title_15sp"
+                app:LineMenuView_menu="@string/activity_transaction_detail_lmv_5"
+                app:LineMenuView_menu_text_color="@color/white_text_alpha_80"
+                app:LineMenuView_menu_text_size="@dimen/text_size_normal_14sp"
+                app:LineMenuView_plugin="text"
+                tools:LineMenuView_brief="2017-09-14 16:22:30"/>
+
+            <com.acchain.community.view.DividerView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_line_width_1px"
+                android:background="@color/white_background_5"
+                android:paddingEnd="@dimen/view_padding_margin_16dp"
+                android:paddingStart="@dimen/view_padding_margin_16dp"/>
+
+            <com.acchain.community.view.LineMenuView
+                android:id="@+id/lmv_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_background_5"
+                android:paddingEnd="@dimen/view_padding_margin_16dp"
+                android:paddingStart="@dimen/view_padding_margin_16dp"
+                app:LineMenuView_brief_text_size="@dimen/text_size_title_15sp"
+                app:LineMenuView_menu="@string/activity_transaction_detail_lmv_6"
+                app:LineMenuView_menu_text_color="@color/white_text_alpha_80"
+                app:LineMenuView_menu_text_size="@dimen/text_size_normal_14sp"
+                app:LineMenuView_plugin="text"
+                tools:LineMenuView_brief="2017-09-14 16:22:30"/>
+
+            <com.acchain.community.view.DividerView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_line_width_1px"
+                android:background="@color/white_background_5"
+                android:paddingEnd="@dimen/view_padding_margin_16dp"
+                android:paddingStart="@dimen/view_padding_margin_16dp"/>
+
+            <com.acchain.community.view.LineMenuView
+                android:id="@+id/lmv_total_money"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_background_5"
+                android:paddingEnd="@dimen/view_padding_margin_16dp"
+                android:paddingStart="@dimen/view_padding_margin_16dp"
+                app:LineMenuView_brief_text_color="@color/yellow_text_color_ff"
+                app:LineMenuView_brief_text_size="@dimen/text_size_title_15sp"
+                app:LineMenuView_menu="@string/activity_transaction_detail_lmv_7"
+                app:LineMenuView_menu_text_color="@color/white_text_alpha_80"
+                app:LineMenuView_menu_text_size="@dimen/text_size_normal_14sp"
+                app:LineMenuView_plugin="text"
+                tools:LineMenuView_brief="2017-09-14 16:22:30"/>
+
+            <com.acchain.community.view.DividerView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_line_width_1px"
+                android:background="@color/white_background_5"
+                android:paddingEnd="@dimen/view_padding_margin_16dp"
+                android:paddingStart="@dimen/view_padding_margin_16dp"/>
+
+            <!--分割线,当未付款时需要显示-->
+            <View
+                android:id="@+id/iv_divider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_padding_margin_12dp"
+                android:visibility="gone"
+                tools:visibility="visible"/>
+
+            <com.acchain.community.view.LineMenuView
+                android:id="@+id/lmv_pay_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_background_5"
+                android:paddingEnd="@dimen/view_padding_margin_16dp"
+                android:paddingStart="@dimen/view_padding_margin_16dp"
+                app:LineMenuView_brief_text_size="@dimen/text_size_title_15sp"
+                app:LineMenuView_menu="@string/activity_transaction_detail_lmv8"
+                app:LineMenuView_menu_text_color="@color/white_selected_1"
+                app:LineMenuView_menu_text_size="@dimen/text_size_title_15sp"
+                app:LineMenuView_plugin="text"
+                tools:LineMenuView_brief="2017-09-14 16:22:30"/>
+
+            <!--取消支付,立即付款-->
+            <LinearLayout
+                android:id="@+id/ll_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="@dimen/view_padding_margin_16dp"
+                android:paddingTop="@dimen/view_padding_margin_12dp"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tv_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_transparent_border_blue_radius_5dp"
+                    android:paddingBottom="@dimen/view_padding_margin_8dp"
+                    android:paddingLeft="@dimen/view_padding_margin_32dp"
+                    android:paddingRight="@dimen/view_padding_margin_32dp"
+                    android:paddingTop="@dimen/view_padding_margin_8dp"
+                    android:text="@string/activity_transaction_detail_cancel"
+                    android:textSize="@dimen/text_size_title_15sp"/>
+
+                <TextView
+                    android:id="@+id/tv_to_pay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/view_padding_margin_20dp"
+                    android:background="@drawable/shape_transparent_border_blue_radius_5dp"
+                    android:paddingBottom="@dimen/view_padding_margin_8dp"
+                    android:paddingLeft="@dimen/view_padding_margin_32dp"
+                    android:paddingRight="@dimen/view_padding_margin_32dp"
+                    android:paddingTop="@dimen/view_padding_margin_8dp"
+                    android:text="@string/activity_transaction_detail_lmv_to_pay"
+                    android:textSize="@dimen/text_size_title_15sp"/>
+            </LinearLayout>
+
+            <!--商品信息展示区域:分 预购/领养 不同,显示不同信息-->
+            <ViewStub
+                android:id="@+id/ts_placeholder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

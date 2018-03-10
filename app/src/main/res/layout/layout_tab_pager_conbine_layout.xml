@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_marginLeft="@dimen/view_padding_margin_12dp"
+        android:layout_marginRight="@dimen/view_padding_margin_12dp"
+        android:layout_marginTop="@dimen/view_padding_margin_16dp"
+        android:background="@drawable/img_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.acchain.community.view.DisallowClickTabLayout
+            android:layout_gravity="center"
+            android:id="@+id/tl_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:tabGravity="center"
+            app:tabTextAppearance="@style/TextViewTabLayout"
+            app:tabPaddingBottom="@dimen/view_padding_margin_8dp"
+            app:tabPaddingTop="@dimen/view_padding_margin_8dp"
+            app:tabPaddingStart="@dimen/view_padding_margin_16dp"
+            app:tabPaddingEnd="@dimen/view_padding_margin_16dp"
+            app:tabIndicatorColor="@color/blue_3f"
+            app:tabIndicatorHeight="@dimen/tab_layout_indicator_height_2dp"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/white_selected_1"
+            app:tabTextColor="@color/blue_7c"/>
+    </FrameLayout>
+
+    <com.acchain.community.view.DisableScrollViewPager
+        android:id="@+id/vp_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

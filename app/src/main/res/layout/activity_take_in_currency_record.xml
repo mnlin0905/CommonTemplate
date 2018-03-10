@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!---->
+    <include layout="@layout/layout_top_bar"/>
+
+    <!--表头-->
+    <LinearLayout
+        style="@style/TextViewStandard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_label_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/activity_take_in_currency_record_time"
+            android:textSize="@dimen/text_size_title_15sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/activity_take_in_currency_record_pay"
+            android:textSize="@dimen/text_size_title_15sp"/>
+
+        <TextView
+            android:id="@+id/tv_label_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/activity_take_in_currency_record_status"
+            android:textSize="@dimen/text_size_title_15sp"/>
+
+        <ImageView
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/view_padding_margin_16dp"
+            android:src="@drawable/icon_arrow_right_gray"/>
+    </LinearLayout>
+
+    <!--列表-->
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:background="@color/white_background_5"
+        android:id="@+id/xrv_record"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!--空-->
+    <com.acchain.community.view.RecyclerEmptyView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

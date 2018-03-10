@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--软件功能菜单-->
+    <string-array name="activity_menu">
+        <item>版本更新</item>
+        <item>意见反馈</item>
+        <item>退出软件</item>
+    </string-array>
+
+    <!--钱包碎片中功能选项-->
+    <string-array name="wallet_function_filter_tabs">
+        <item>转入</item>
+        <item>燃料</item>
+        <item>转出</item>
+    </string-array>
+
+    <!--数字资产分类-->
+    <string-array name="wallet_currency_filter_tabs">
+        <!--<item>全部</item>-->
+        <item>预购类</item>
+        <item>领养类</item>
+    </string-array>
+    <!--抢购商品-->
+    <string-array name="index_panic_goods">
+        <item>商品</item>
+        <item>详情</item>
+    </string-array>
+    <!--预售商品-->
+    <string-array name="index_pre_sell_goods">
+        <item>商品</item>
+        <item>详情</item>
+        <item>溯源</item>
+    </string-array>
+    <!--购物车-->
+    <string-array name="shopping_cart">
+        <item>抢购</item>
+        <item>预购</item>
+        <item>领养</item>
+    </string-array>
+    <!--抢购商品弹窗-->
+    <string-array name="popup_panic_goods">
+        <item>消息</item>
+        <item>搜索</item>
+        <item>分享</item>
+        <item>足迹</item>
+    </string-array>
+    <!--地址默认/非默认-->
+    <string-array name="delivery_address_default">
+        <item>默认地址</item>
+        <item>设置默认地址</item>
+    </string-array>
+    <!--证件类型-->
+    <string-array name="person_card_type">
+        <item>身份证</item>
+        <item>军官证</item>
+        <item>护照</item>
+    </string-array>
+    <!--商品种类-->
+    <string-array name="goods_kind">
+        <item>全部</item>
+        <item>预购</item>
+        <item>领养</item>
+        <item>行权</item>
+    </string-array>
+    <!--商品收藏/足迹/交易列表中popwindow的menu功能-->
+    <string-array name="goods_transaction_foot_pop_menu">
+        <item>消息</item>
+        <item>首页</item>
+        <item>在线客服</item>
+        <item>我的评价</item>
+    </string-array>
+    <!--交易记录种类-->
+    <string-array name="transaction_record_kind">
+        <item>全部</item>
+        <item>预购</item>
+        <item>领养</item>
+    </string-array>
+    <!--订单记录种类-->
+    <string-array name="order_form_record_kind_arrays">
+        <item>全部</item>
+        <item>待付款</item>
+        <item>待发货</item>
+        <item>待收货</item>
+        <item>交易完成</item>
+        <item>交易关闭</item>
+    </string-array>
+
+    <!--退货退款原因-->
+    <string-array name="dialog_fragment_refund_reason_with_goods_arrays">
+        <item>@string/dialog_fragment_refund_reason_with_goods_radio_0</item>
+        <item>@string/dialog_fragment_refund_reason_with_goods_radio_1</item>
+        <item>@string/dialog_fragment_refund_reason_with_goods_radio_2</item>
+        <item>@string/dialog_fragment_refund_reason_with_goods_radio_3</item>
+        <item>@string/dialog_fragment_refund_reason_with_goods_radio_4</item>
+        <item>@string/dialog_fragment_refund_reason_with_goods_radio_5</item>
+        <item>@string/dialog_fragment_refund_reason_with_goods_radio_6</item>
+        <item>@string/dialog_fragment_refund_reason_with_goods_radio_7</item>
+    </string-array>
+    <string-array name="dialog_fragment_refund_reason_no_goods_arrays">
+        <item>@string/dialog_fragment_refund_no_goods_reason_radio_0</item>
+        <item>@string/dialog_fragment_refund_no_goods_reason_radio_1</item>
+    </string-array>
+
+    <!--退款时货物状态-->
+    <string-array name="dialog_fragment_goods_status_arrays">
+        <item>@string/dialog_fragment_goods_status_select_0</item>
+        <item>@string/dialog_fragment_goods_status_select_1</item>
+    </string-array>
+</resources>

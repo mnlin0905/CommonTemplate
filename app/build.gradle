@@ -1,0 +1,604 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion '27.0.1'
+
+    /*签名打包时过滤掉英文国际化*/
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    defaultConfig {
+        applicationId "com.acchain.community"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 100
+        multiDexEnabled true
+        versionName "1.0.0"
+
+        /*manifestPlaceholders = [UMENG_CHANNEL_VALUE: "channel_name"]*/
+
+        //支持svg图形
+        vectorDrawables.useSupportLibrary = true
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+        vectorDrawables.useSupportLibrary = true
+        ndk {
+            abiFilters "armeabi", "x86", "arm64-v8a", "armebi-v7a"
+        }
+    }
+    sourceSets {
+        main {
+            jni.srcDirs = []
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    signingConfigs {
+        debug {
+            keyAlias 'acchain'
+            keyPassword 'password1'
+            storeFile file('/digital_mall.jks')
+            storePassword 'password1'
+            v2SigningEnabled false
+        }
+        release {
+            keyAlias 'acchain'
+            keyPassword 'password1'
+            storeFile file('/digital_mall.jks')
+            storePassword 'password1'
+            v2SigningEnabled true
+        }
+    }
+    buildTypes {
+        release {
+            buildConfigField('boolean', 'INJECT', 'false')
+            signingConfig signingConfigs.release
+            shrinkResources true
+            zipAlignEnabled true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro', 'proguard-android.txt'
+
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        /*def fileName = "DigitalMall_${variant.productFlavors[0].name}_${releaseTime()}_v${defaultConfig.versionName}.apk"*/
+                        def fileName = "DigitalMall_${releaseTime()}_v${defaultConfig.versionName}.apk"
+                        //output.outputFile = new File(outputFile.parent, fileName)
+                    }
+                }
+            }
+        }
+        debug {
+            pseudoLocalesEnabled true
+            buildConfigField('boolean', 'INJECT', 'false')
+            signingConfig signingConfigs.debug
+            minifyEnabled false
+            proguardFile 'proguard-android.txt'
+        }
+    }
+/*    tasks.whenTaskAdded{ task ->
+        if(task.name.contains("lint")
+                //|| task.name == "clean"
+                || task.name.contains("Aidl")
+                || task.name.contains("mockableAndroidJar")
+                || task.name.contains("UnitTest")
+                || task.name.contains("AndroidTest")
+                || task.name.contains("Ndk")
+                || task.name.contains("Jni")
+        ){
+            task.enabled =false
+        }
+    }*/
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+    /*   // 友盟多渠道打包
+    productFlavors {
+        puercoin {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "puercoin"]
+        }
+        qihoo {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "qihoo"]
+        }
+        baidu {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "baidu"]
+        }
+        wandoujia {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "wandoujia"]
+        }
+        qq {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "qq"]
+        }
+        androidmarket {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "androidmarket"]
+        }
+        vivo {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "vivo"]
+        }
+        oppo {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "oppo"]
+        }
+        xiaomi {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "xiaomi"]
+        }
+    }
+    productFlavors.all { flavor ->
+        flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }*/
+    dexOptions {
+        //最大堆内存
+        javaMaxHeapSize "8g"
+        //是否支持大工程模式
+        jumboMode = true
+        //预编译
+        preDexLibraries = true
+        //线程数
+        threadCount = 8
+    }
+    productFlavors {
+    }
+}
+
+static def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    implementation 'com.android.support:support-vector-drawable:26.1.0'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:palette-v7:26.1.0'
+    compile 'com.android.support:cardview-v7:26.1.0'
+    provided 'org.glassfish:javax.annotation:10.0-b28'
+
+    //noinspection GradleCompatible
+    compile 'com.android.support:appcompat-v7:26.1.0'
+
+    //multidex:dex分包
+    compile 'com.android.support:multidex:1.0.2'
+
+    //litepal,数据库框架,通过在assets中创建xml文件来配置
+    compile 'org.litepal.android:core:1.6.0'
+
+    //Dagger:基础包,dagger编译器,Javax标注
+    compile 'com.google.dagger:dagger:2.11'
+    provided 'com.google.dagger:dagger-compiler:2.11'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.11'
+
+    //RxJava与RxAndroid
+    compile('io.reactivex.rxjava2:rxjava:2.1.3') {
+        force = true
+    }
+    compile('io.reactivex.rxjava2:rxandroid:2.0.1') {
+        force = true
+    }
+    compile 'com.android.support:design:26.1.0'
+    compile 'com.android.support:support-v4:26.1.0'
+    compile 'com.android.support:support-v13:26.1.0'
+
+    //retrofit;
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+
+    //使用GSON库将http返回的数据转换为对象
+    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
+
+    //使用RxJava将返回的数据对象转为Observable(T);
+    compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+
+    //引入OkHttp框架
+    compile 'com.squareup.okhttp3:okhttp:3.9.0'
+
+    //okhttp打印日志
+    compile 'com.squareup.okhttp3:logging-interceptor:3.9.0'
+
+    //用于使用chrome调试应用
+    compile 'com.facebook.stetho:stetho:1.5.0'
+    compile 'com.facebook.stetho:stetho-okhttp3:1.5.0'
+
+    //包含okhttp
+    compile 'com.squareup.okhttp3:okhttp:3.9.0'
+
+    //ButterKnife
+    compile 'com.jakewharton:butterknife:8.8.1'
+    provided 'com.jakewharton:butterknife-compiler:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    //Glide
+    compile 'com.github.bumptech.glide:glide:4.1.1'
+    provided 'com.github.bumptech.glide:compiler:4.1.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.1.1'
+
+    //AndroidUtilCode
+    compile 'com.blankj:utilcode:1.12.1'
+
+    //内存泄漏 监视工具
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+
+    //Logger
+    compile 'com.orhanobut:logger:2.1.1'
+
+    //二维码
+    compile 'cn.yipianfengye.android:zxing-library:2.2'
+
+    //圆形图片
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+
+    //图片选择
+    compile('com.jph.takephoto:takephoto_library:4.0.3') {
+        transitive false
+    }
+
+    //statubarutil,状态栏控制器
+    compile 'com.jaeger.statusbaruitl:library:1.3.6'
+
+    //时间,城市等选择器
+    compile 'com.contrarywind:Android-PickerView:3.2.6'
+
+    //权限请求框架
+    compile('com.github.hotchemi:permissionsdispatcher:3.0.1') {
+        // if you don't use android.app.Fragment you can exclude support for them
+        exclude module: "support-v13"
+    }
+    provided 'com.github.hotchemi:permissionsdispatcher-processor:3.0.1'
+    annotationProcessor "com.github.hotchemi:permissionsdispatcher-processor:3.0.1"
+
+    //activity路由跳转
+    compile 'com.alibaba:arouter-api:1.3.1'
+    provided 'com.alibaba:arouter-compiler:1.1.4'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.1.4'
+
+    //友盟统计
+    compile 'com.umeng.analytics:analytics:6.1.2'
+
+    //友盟消息推送
+    compile project(':PushSDK')
+
+    //tag布局
+    compile 'com.hyman:flowlayout-lib:1.1.2'
+
+    //动态权限管理
+    compile('com.github.hotchemi:permissionsdispatcher:3.1.0') {
+        exclude module: 'support-v13'
+    }
+    provided 'com.github.hotchemi:permissionsdispatcher-processor:3.1.0'
+    annotationProcessor 'com.github.hotchemi:permissionsdispatcher-processor:3.1.0'
+
+    //XRecycleView
+    compile 'com.jcodecraeer:xrecyclerview:1.3.2'
+
+    //sweet-alert-dialog
+    compile 'cn.pedant.sweetalert:library:1.3'
+
+    //方法注入器
+
+    /*annotationProcessor 'com.knowledge.mnlin:methodinject-compiler:0.0.1'
+            compile 'com.knowledge.mnlin:methodinject:0.0.1'*/
+
+    //banner图
+    compile 'com.bigkoo:convenientbanner:2.0.5'
+
+    //底部导航栏
+    compile 'com.github.ittianyu:BottomNavigationViewEx:1.2.4'
+
+    /*鸿洋的自适应布局*/
+    compile 'com.zhy:autolayout:1.4.5'
+
+    //圆角头像,可包含边框
+    compile 'com.makeramen:roundedimageview:2.3.0'
+
+    //密码框
+    compile 'com.jungly:gridPasswordView:0.3'
+
+    /*鸿洋的流式布局，适用于产品标签*/
+    //compile 'com.hyman:flowlayout-lib:1.1.2'
+
+    //角标库
+    compile 'com.github.nekocode:Badge:2.0'
+
+    /*compile('org.hibernate:hibernate:3.1') {
+                        // 冲突时优先使用该版本
+                        force = true
+
+                        // 依据构建名称排除
+                        exclude module: 'cglib'
+                        // 依据组织名称排除
+                        exclude group: 'org.jmock'
+                        // 依据组织名称+构件名称排除
+                        exclude group: 'org.unwanted', module: 'iAmBuggy'
+
+                        // 为本依赖关闭依赖传递特性
+                        transitive = false
+                    }*/
+
+    //download
+    compile 'zlc.season:rxdownload3:1.2.0'
+}
+
+/**
+ * 生成MVP Activity系列类
+ */
+class GenerateMVPActivity extends DefaultTask {
+    String domain
+    String uiPath
+    private String rootPath = project.getRootDir().getAbsolutePath()
+    private String basePath = '/app/src/main/java/com/acchain/community'
+    private String packageName = "com.acchain.community"
+
+    static def releaseTime() {
+        return new Date().format("yyyy/MM/dd HH:mm:ss (Z)", TimeZone.getTimeZone("UTC"))
+    }
+
+    @TaskAction
+    void generateContract() {
+        if (domain == null) {
+            throw new Exception("domain is empty, buddy!!")
+        }
+
+        def contractName = domain + "Contract"
+        def path = rootPath + basePath + "/contract"
+        def contractFile = new File(path, "${contractName}.java")
+        contractFile.createNewFile()
+        contractFile.text = "package ${packageName}.contract;\n" +
+                "\n" +
+                "/**\n" +
+                " * function---- ${contractName}\n" +
+                " * <p>\n" +
+                " * Created(Gradle default create) by ACChain on ${releaseTime()}.\n" +
+                " */\n" +
+                "public interface ${contractName} {\n" +
+                "    interface Presenter{\n" +
+                "\n" +
+                "    }\n" +
+                "\n" +
+                "    interface View{\n" +
+                "\n" +
+                "    }\n" +
+                "}"
+        println "\n--------generateContract-------- \n" + "path:" + path + "\n" + "fileName: " + contractName
+    }
+
+    @TaskAction
+    void generatePresenter() {
+        if (domain == null) {
+            throw new Exception("domain is empty, buddy!!")
+        }
+
+        def presenterName = domain + "Presenter"
+        def path = rootPath + basePath + "/presenter"
+        def contractFile = new File(path, "${presenterName}.java")
+        contractFile.createNewFile()
+        contractFile.text = "package ${packageName}.presenter;\n" +
+                "\n" +
+                "\n" +
+                "import ${packageName}.base.BasePresenter;\n" +
+                "import ${packageName}.contract.${domain}Contract;\n" +
+                "import ${packageName}.activity.${domain}Activity;\n" +
+                "\n" +
+                "import javax.inject.Inject;\n" +
+                "\n" +
+                "/**\n" +
+                " * function---- ${presenterName}\n" +
+                " * <p>\n" +
+                " * Created(Gradle default create) by ACChain on ${releaseTime()}.\n" +
+                " */\n" +
+                "public class ${presenterName} extends BasePresenter<${domain}Activity> implements ${domain}Contract.Presenter{\n" +
+                "    @Inject\n" +
+                "    public ${presenterName}() {}\n" +
+                "\n" +
+                "}"
+        println "\n--------generatePresenter-------- \n" + "path:" + path + "\n" + "fileName: " + presenterName
+    }
+
+    @TaskAction
+    void generateActivity() {
+        if (domain == null) {
+            throw new Exception("domain is empty, buddy!!")
+        }
+
+        def activityName = domain + "Activity"
+        def path = rootPath + basePath + uiPath
+        def activityFile = new File(path, "${activityName}.java")
+        activityFile.createNewFile();
+        activityFile.text = "package  ${packageName}.activity;\n" +
+                "\n" +
+                "import ${packageName}.presenter.${domain}Presenter;\n" +
+                "import  ${packageName}.contract.${domain}Contract;\n" +
+                "import com.alibaba.android.arouter.facade.annotation.Route;\n" +
+                "import  ${packageName}.base.BaseActivity;\n" +
+                "import android.os.Bundle;\n" +
+                "import  ${packageName}.arouter.ARouterConst;\n" +
+                "\n" +
+                "/**\n" +
+                " * function---- ${activityName}\n" +
+                " * <p>\n" +
+                " * Created(Gradle default create) by ACChain on ${releaseTime()}.\n" +
+                " */\n" +
+                "@Route(path = ARouterConst.Activity_${activityName})" +
+                "\n" +
+                "public class ${activityName} extends BaseActivity<${domain}Presenter> implements ${domain}Contract.View{\n" +
+                "\n" +
+                "    @Override\n" +
+                "    protected int getContentViewId() {\n" +
+                "        return 0;\n" +
+                "    }" +
+                "\n\n" +
+                "    @Override\n" +
+                "    protected void initData(Bundle savedInstanceState) {}" +
+                "\n\n" +
+                "    @Override\n" +
+                "    protected void injectSelf() {\n" +
+                "        activityComponent.inject(this);\n" +
+                "    }\n" +
+                "\n}"
+        println "\n--------generateActivity-------- \n" + "path:" + path + "\n" + "fileName: " + activityName
+    }
+}
+
+/**
+ * 生成MVP Fragment系列类
+ */
+class GenerateMVPFragment extends DefaultTask {
+    String domain
+    String uiPath
+    private String rootPath = project.getRootDir().getAbsolutePath()
+    private String basePath = '/app/src/main/java/com/acchain/community'
+    private String packageName = "com.acchain.community"
+
+    static def releaseTime() {
+        return new Date().format("yyyy/MM/dd HH:mm:ss (Z)", TimeZone.getTimeZone("UTC"))
+    }
+
+    @TaskAction
+    void generateContract() {
+        if (domain == null) {
+            throw new Exception("domain is empty, buddy!!")
+        }
+
+        def contractName = domain + "Contract"
+        def path = rootPath + basePath + "/contract"
+        def contractFile = new File(path, "${contractName}.java")
+        contractFile.createNewFile()
+        contractFile.text = "package ${packageName}.contract;\n" +
+                "\n" +
+                "/**\n" +
+                " * function---- ${contractName}\n" +
+                " * <p>\n" +
+                " * Created(Gradle default create) by ACChain on ${releaseTime()}.\n" +
+                " */\n" +
+                "public interface ${contractName} {\n" +
+                "    interface Presenter{\n" +
+                "\n" +
+                "    }\n" +
+                "\n" +
+                "     interface View{\n" +
+                "\n" +
+                "    }\n" +
+                "}"
+        println "\n--------generateContract-------- \n" + "path:" + path + "\n" + "fileName: " + contractName
+    }
+
+    @TaskAction
+    void generatePresenter() {
+        if (domain == null) {
+            throw new Exception("domain is empty, buddy!!")
+        }
+
+        def presenterName = domain + "Presenter"
+        def path = rootPath + basePath + "/presenter"
+        def contractFile = new File(path, "${presenterName}.java")
+        contractFile.createNewFile()
+        contractFile.text = "package ${packageName}.presenter;\n" +
+                "\n" +
+                "\n" +
+                "import ${packageName}.base.BasePresenter;\n" +
+                "import ${packageName}.contract.${domain}Contract;\n" +
+                "import ${packageName}.fragment.${domain}Fragment;\n" +
+                "\n" +
+                "import javax.inject.Inject;\n" +
+                "\n" +
+                "/**\n" +
+                " * function---- ${presenterName}\n" +
+                " * <p>\n" +
+                " * Created(Gradle default create) by ACChain on ${releaseTime()}.\n" +
+                " */\n" +
+                "public class ${presenterName} extends BasePresenter<${domain}Fragment> implements ${domain}Contract.Presenter{\n" +
+                "    @Inject\n" +
+                "    public ${presenterName}() {}\n" +
+                "\n" +
+                "}"
+        println "\n--------generatePresenter-------- \n" + "path:" + path + "\n" + "fileName: " + presenterName
+    }
+
+    @TaskAction
+    void generateFragment() {
+        if (domain == null) {
+            throw new Exception("domain is empty, buddy!!")
+        }
+
+        def fragmentName = domain + "Fragment"
+        def path = rootPath + basePath + uiPath
+        def FragmentFile = new File(path, "${fragmentName}.java")
+        FragmentFile.createNewFile();
+        FragmentFile.text = "package  ${packageName}.fragment;\n" +
+                "\n" +
+                "import ${packageName}.presenter.${domain}Presenter;\n" +
+                "import  ${packageName}.contract.${domain}Contract;\n" +
+                "import  ${packageName}.base.BaseFragment;\n" +
+                "import android.os.Bundle;\n" +
+                "import com.alibaba.android.arouter.facade.annotation.Route;\n" +
+                "import  ${packageName}.arouter.ARouterConst;\n" +
+                "\n" +
+                "/**\n" +
+                " * function---- ${fragmentName}\n" +
+                " * <p>\n" +
+                " * Created(Gradle default create) by ACChain on ${releaseTime()}.\n" +
+                " */\n" +
+                "@Route(path = ARouterConst.Fragment_${fragmentName})" +
+                "\n" +
+                "public class ${fragmentName} extends BaseFragment<${domain}Presenter> implements ${domain}Contract.View{\n" +
+                "\n" +
+                "    @Override\n" +
+                "    protected int getContentViewId() {\n" +
+                "        return 0;\n" +
+                "    }" +
+                "\n\n" +
+                "    @Override\n" +
+                "    protected void initData(Bundle savedInstanceState) {}" +
+                "\n\n" +
+                "    @Override\n" +
+                "    protected void injectSelf() {\n" +
+                "        fragmentComponent.inject(this);\n" +
+                "    }\n" +
+                "\n}"
+        println "\n--------generateFragment-------- \n" + "path:" + path + "\n" + "fileName: " + fragmentName
+    }
+}
+
+/**
+ * Desc: generate mvp architecture code automatically
+ * For example: gradle mvp -D domain="Test" -D path="/activity"
+ * */
+task mvp_activity(type: GenerateMVPActivity) {
+    group 'personal'
+    description 'generate java code for MVP-Activity architecture'
+/*    def domainParam = System.getProperty('domain')
+    def pathParam = System.getProperty('path')*/
+    def domainParam = "AliPay"
+    def pathParam = "/activity"
+    if (domainParam && pathParam) {
+        domain domainParam
+        uiPath pathParam
+    }
+}
+
+/**
+ * Desc: generate mvp architecture code automatically
+ * */
+task mvp_fragment(type: GenerateMVPFragment) {
+    group 'personal'
+    description 'generate java code for MVP-Fragment architecture'
+    def domainParam = "CartAdopt"
+    def pathParam = "/fragment"
+    if (domainParam && pathParam) {
+        domain domainParam
+        uiPath pathParam
+    }
+}
+
+
+

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!---->
+    <include layout="@layout/layout_top_bar"/>
+
+    <EditText
+        android:id="@+id/et_introduce"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:gravity="start|top"
+        android:hint="@string/activity_company_introduce_hint_introduce"
+        android:padding="@dimen/view_padding_margin_16dp"
+        android:textColorHint="@color/white_text_alpha_20"
+        android:textSize="@dimen/text_size_normal_14sp"/>
+
+</LinearLayout>

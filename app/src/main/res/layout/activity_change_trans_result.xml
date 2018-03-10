@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!---->
+    <include layout="@layout/layout_top_bar"/>
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="@dimen/view_height_80dp"
+        android:layout_height="@dimen/view_height_80dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/view_padding_margin_32dp"
+        android:src="@drawable/icon_change_trans_result"/>
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/view_padding_margin_24dp"
+        android:textSize="@dimen/text_size_title_15sp"
+        tools:text="您已经申请了服务"/>
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/view_padding_margin_8dp"
+        android:textColor="@color/white_no_selected_40"
+        android:textSize="@dimen/text_size_title_15sp"
+        tools:text="重置交易密码"/>
+
+    <!--按钮-->
+    <Button
+        android:id="@+id/bt_cancel_apply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/view_padding_margin_42dp"
+        android:background="@drawable/btn_bg"
+        tools:text="取消并重新申请"
+        android:textSize="@dimen/text_size_17sp"/>
+
+    <TextView
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:id="@+id/tv_change"
+        style="@style/TextViewStandard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="@dimen/view_padding_margin_16dp"
+        android:text="@string/activity_change_trans_result_change"
+        android:textColor="@color/blue_text_color"
+        android:textSize="@dimen/text_size_normal_14sp"/>
+    
+    <!--提醒重置-->
+    <TextView
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_marginBottom="@dimen/view_padding_margin_16dp"
+        android:id="@+id/tv_declare"
+        style="@style/TextViewStandard"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="bottom"
+        android:lineSpacingMultiplier="1.5"
+        android:text="@string/activity_change_trans_result_declare"
+        android:textColor="@color/white_text_alpha_60"
+        android:textSize="@dimen/text_size_small_12sp"/>
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--编辑框或文本框最大行数-->
+    <integer name="max_lines_number">5</integer>
+
+    <!--行高设定-->
+    <fraction name="edit_text_multiplier">1.5</fraction>
+
+    <!--seekBar星数-->
+    <integer name="num_rating_bar">5</integer>
+
+    <!--行高设定-->
+    <fraction name="step_rating_bar">0.5</fraction>
+
+</resources>

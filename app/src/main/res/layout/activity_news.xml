@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!---->
+    <include layout="@layout/layout_top_bar"/>
+
+    <!--消息信息-->
+    <com.acchain.community.view.NewsConstraintLayout
+        android:id="@+id/nll_notification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_background_5"
+        app:NewsLinearLayout_icon="@drawable/icon_notification"
+        app:NewsLinearLayout_subtitle="Hi，欢迎加入ACChainMall！在这里我们带领你走..."
+        app:NewsLinearLayout_title="@string/activity_news_title_notification"
+        tools:NewsLinearLayout_time="2017-12-12"/>
+
+    <com.acchain.community.view.DividerView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_line_width_1px"
+        android:background="@color/white_background_5"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:paddingStart="@dimen/view_padding_margin_16dp"/>
+
+    <com.acchain.community.view.NewsConstraintLayout
+        android:id="@+id/nll_logistics"
+        android:background="@color/white_background_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:NewsLinearLayout_icon="@drawable/icon_logistics"
+        app:NewsLinearLayout_title="@string/activity_news_logistics"
+        tools:NewsLinearLayout_subtitle="Hi，欢迎加入ACChainMall！在这里我们带领你走..."
+        tools:NewsLinearLayout_time="2017-12-12"/>
+
+    <com.acchain.community.view.DividerView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_line_width_1px"
+        android:background="@color/white_background_5"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:paddingStart="@dimen/view_padding_margin_16dp"/>
+
+
+    <com.acchain.community.view.NewsConstraintLayout
+        android:id="@+id/nll_wallet"
+        android:layout_width="match_parent"
+        android:background="@color/white_background_5"
+        android:layout_height="wrap_content"
+        app:NewsLinearLayout_icon="@drawable/icon_wallet"
+        app:NewsLinearLayout_title="@string/activity_news_wallet"
+        tools:NewsLinearLayout_subtitle="Hi，欢迎加入ACChainMall！在这里我们带领你走..."
+        tools:NewsLinearLayout_time="2017-12-12"/>
+
+    <com.acchain.community.view.DividerView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_line_width_1px"
+        android:background="@color/white_background_5"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:paddingStart="@dimen/view_padding_margin_16dp"/>
+
+
+    <com.acchain.community.view.NewsConstraintLayout
+        android:id="@+id/nll_online_chat"
+        android:layout_width="match_parent"
+        android:background="@color/white_background_5"
+        android:layout_height="wrap_content"
+        app:NewsLinearLayout_icon="@drawable/icon_online_chat"
+        app:NewsLinearLayout_title="@string/activity_news_online_chat"
+        tools:NewsLinearLayout_subtitle="Hi，欢迎加入ACChainMall！在这里我们带领你走..."
+        tools:NewsLinearLayout_time="2017-12-12"/>
+
+    <!--在线客服-->
+    <com.acchain.community.view.NewsConstraintLayout
+        android:id="@+id/nll_online_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/view_padding_margin_12dp"
+        android:background="@color/white_background_5"
+        app:NewsLinearLayout_icon="@drawable/icon_online_service"
+        app:NewsLinearLayout_title="@string/activity_news_title_service"
+        tools:NewsLinearLayout_subtitle="查看与客服的沟通记录"/>
+</LinearLayout>

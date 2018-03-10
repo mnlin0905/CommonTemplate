@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!---->
+    <include layout="@layout/layout_top_bar"/>
+
+    <!--消息提醒-->
+    <com.acchain.community.view.LineMenuView
+        android:id="@+id/lmv_message_alert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_background_5"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:paddingStart="@dimen/view_padding_margin_16dp"
+        app:LineMenuView_menu="@string/activity_message_settings_message_alert"
+        app:LineMenuView_menu_text_size="@dimen/text_size_title_15sp"
+        app:LineMenuView_plugin="transition"/>
+
+    <!--互动消息,接收语音和视频聊天邀请通知,通知显示消息详情-->
+    <com.acchain.community.view.LineMenuView
+        android:id="@+id/lmv_message_interactive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/view_padding_margin_12dp"
+        android:background="@color/white_background_5"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:paddingStart="@dimen/view_padding_margin_16dp"
+        app:LineMenuView_menu="@string/activity_message_settings_interactive"
+        app:LineMenuView_menu_text_size="@dimen/text_size_title_15sp"
+        app:LineMenuView_plugin="transition"/>
+
+    <com.acchain.community.view.DividerView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_line_width_1px"
+        android:background="@color/white_background_5"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:paddingStart="@dimen/view_padding_margin_16dp"/>
+
+    <com.acchain.community.view.LineMenuView
+        android:id="@+id/lmv_receive_ask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_background_5"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:paddingStart="@dimen/view_padding_margin_16dp"
+        app:LineMenuView_menu="@string/activity_message_settings_receive_ask"
+        app:LineMenuView_menu_text_size="@dimen/text_size_title_15sp"
+        app:LineMenuView_plugin="transition"/>
+
+    <com.acchain.community.view.DividerView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_line_width_1px"
+        android:background="@color/white_background_5"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:paddingStart="@dimen/view_padding_margin_16dp"/>
+
+    <com.acchain.community.view.LineMenuView
+        android:id="@+id/lmv_notification_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_background_5"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:paddingStart="@dimen/view_padding_margin_16dp"
+        app:LineMenuView_menu="@string/activity_message_settings_notification_detail"
+        app:LineMenuView_menu_text_size="@dimen/text_size_title_15sp"
+        app:LineMenuView_plugin="transition"/>
+
+    <!--通知消息,物流消息-->
+    <TextView
+        style="@style/TextViewStandard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start|top"
+        android:lineSpacingMultiplier="1.5"
+        android:text="@string/activity_message_settings_label_notifacation"
+        android:textColor="@color/white_no_selected_40"
+        android:textSize="@dimen/text_size_small_12sp"/>
+
+    <com.acchain.community.view.LineMenuView
+        android:id="@+id/lmv_remind_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_background_5"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:paddingStart="@dimen/view_padding_margin_16dp"
+        app:LineMenuView_menu="@string/activity_message_settings_remind_message"
+        app:LineMenuView_menu_text_size="@dimen/text_size_title_15sp"
+        app:LineMenuView_plugin="transition"/>
+
+    <com.acchain.community.view.DividerView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_line_width_1px"
+        android:background="@color/white_background_5"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:paddingStart="@dimen/view_padding_margin_16dp"/>
+
+    <com.acchain.community.view.LineMenuView
+        android:id="@+id/lmv_logistics_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_background_5"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:paddingStart="@dimen/view_padding_margin_16dp"
+        app:LineMenuView_menu="@string/activity_message_settings_logistic_message"
+        app:LineMenuView_menu_text_size="@dimen/text_size_title_15sp"
+        app:LineMenuView_plugin="transition"/>
+
+    <!--声音,震动-->
+    <com.acchain.community.view.LineMenuView
+        android:id="@+id/lmv_voice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/view_padding_margin_12dp"
+        android:background="@color/white_background_5"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:paddingStart="@dimen/view_padding_margin_16dp"
+        app:LineMenuView_menu="@string/activity_message_settings_voice"
+        app:LineMenuView_menu_text_size="@dimen/text_size_title_15sp"
+        app:LineMenuView_plugin="transition"/>
+
+    <com.acchain.community.view.DividerView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_line_width_1px"
+        android:background="@color/white_background_5"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:paddingStart="@dimen/view_padding_margin_16dp"/>
+
+    <com.acchain.community.view.LineMenuView
+        android:id="@+id/lmv_vibration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_background_5"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:paddingStart="@dimen/view_padding_margin_16dp"
+        app:LineMenuView_menu="@string/activity_message_settings_vibration"
+        app:LineMenuView_menu_text_size="@dimen/text_size_title_15sp"
+        app:LineMenuView_plugin="transition"/>
+
+    <TextView
+        style="@style/TextViewStandard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start|top"
+        android:text="@string/activity_message_settings_label_voice_vibration"
+        android:textColor="@color/white_no_selected_40"
+        android:textSize="@dimen/text_size_small_12sp"/>
+</LinearLayout>

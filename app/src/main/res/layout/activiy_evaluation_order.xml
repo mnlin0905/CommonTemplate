@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!-- -->
+    <include layout="@layout/layout_top_bar"/>
+
+    <!--评价等级-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_background_5"
+        android:gravity="center_vertical"
+        android:padding="@dimen/view_padding_margin_16dp">
+        <!--商品图片-->
+        <ImageView
+            android:layout_width="@dimen/view_height_40dp"
+            android:layout_height="@dimen/view_height_40dp"
+            tools:src="@drawable/background_goods_collection"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/view_padding_margin_8dp"
+            android:text="描述相符"
+            android:textSize="@dimen/text_size_normal_14sp"/>
+
+        <!--评价星级-->
+        <RatingBar
+            android:id="@+id/rb_comment"
+            style="@style/customRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/view_height_20dp"
+            android:isIndicator="false"
+            android:numStars="@integer/num_rating_bar"
+            android:rating="@integer/num_rating_bar"
+            android:stepSize="@fraction/step_rating_bar"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/white_no_selected_40"
+            android:textSize="@dimen/text_size_small_12sp"
+            tools:text="非常好"/>
+    </LinearLayout>
+
+    <com.acchain.community.view.DividerView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_line_width_1px"/>
+
+    <!--评价信息-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_background_5"
+        android:paddingBottom="@dimen/view_padding_margin_48dp">
+
+        <EditText
+            style="@style/TextViewStandard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:hint="分享您的购物心得~"
+            android:textColor="@color/white_text_alpha_20"
+            android:textSize="@dimen/text_size_13sp"/>
+
+        <ImageView
+            style="@style/TextViewStandard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_voice_blue"/>
+    </LinearLayout>
+
+    <!--上传图片-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_background_5"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/view_padding_margin_16dp"
+        android:weightSum="4">
+
+        <ImageView
+            android:id="@+id/iv_picture_one"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/view_padding_margin_16dp"
+            android:layout_weight="1"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/ll_upload"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/view_padding_margin_16dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_gray_border_blue_radius_5dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/view_padding_margin_12dp"
+                android:src="@drawable/icon_photo"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|bottom"
+                android:paddingBottom="@dimen/view_padding_margin_8dp"
+                android:paddingTop="@dimen/view_padding_margin_16dp"
+                android:text="添加图片"
+                android:textColor="@color/white_no_selected_40"
+                android:textSize="@dimen/text_size_10sp"/>
+        </LinearLayout>
+
+        <TextView
+            style="@style/TextViewStandard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="3"
+            android:text="带照片更容易获得赞哦~"
+            android:textColor="@color/blue_3f"
+            android:textSize="@dimen/text_size_13sp"/>
+    </LinearLayout>
+
+    <!--物流/客服评价-->
+    <LinearLayout
+        style="@style/TextViewStandard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/view_padding_margin_12dp"
+        android:background="@color/white_background_5">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="客服态度"
+            android:textSize="@dimen/text_size_title_15sp"/>
+
+        <RatingBar
+            android:id="@+id/rb_service"
+            style="@style/customRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/view_height_20dp"
+            android:layout_marginStart="@dimen/view_padding_margin_24dp"
+            android:isIndicator="false"
+            android:numStars="@integer/num_rating_bar"
+            android:rating="0"
+            android:stepSize="@fraction/step_rating_bar"/>
+    </LinearLayout>
+
+    <com.acchain.community.view.DividerView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_line_width_1px"/>
+
+    <LinearLayout
+        style="@style/TextViewStandard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_background_5">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="物流服务"
+            android:textSize="@dimen/text_size_title_15sp"/>
+
+        <RatingBar
+            android:id="@+id/rb_logistic"
+            style="@style/customRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/view_height_20dp"
+            android:layout_marginStart="@dimen/view_padding_margin_24dp"
+            android:isIndicator="false"
+            android:numStars="@integer/num_rating_bar"
+            android:rating="0"
+            android:stepSize="@fraction/step_rating_bar"/>
+    </LinearLayout>
+
+    <com.acchain.community.view.DividerView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_line_width_1px"/>
+
+    <!--同步朋友圈-->
+    <LinearLayout
+        style="@style/TextViewStandard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_background_5">
+
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@drawable/selector_radio_checked"
+            android:checked="true"
+            android:paddingStart="@dimen/view_padding_margin_12dp"
+            android:text="同步到朋友圈"
+            android:textSize="@dimen/text_size_title_15sp"/>
+
+        <com.acchain.community.view.LineMenuView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/view_height_36dp"
+            android:paddingStart="@dimen/view_padding_margin_16dp"
+            app:LineMenuView_menu="匿名评论"
+            app:LineMenuView_menu_text_size="@dimen/text_size_title_15sp"
+            app:LineMenuView_plugin="transition"/>
+    </LinearLayout>
+</LinearLayout>

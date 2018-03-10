@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_height="match_parent">
+
+    <!---->
+    <include layout="@layout/layout_top_bar"/>
+
+    <!--内容-->
+    <TextView
+        android:text="@string/activity_show_mobile_number"
+        android:layout_marginEnd="@dimen/view_padding_margin_16dp"
+        android:layout_marginStart="@dimen/view_padding_margin_16dp"
+        android:textSize="@dimen/text_size_13sp"
+        android:textColor="@color/white_no_selected_40"
+        android:layout_marginTop="@dimen/view_padding_margin_24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_phone"
+        android:textSize="@dimen/text_size_title_15sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/view_padding_margin_16dp"
+        android:layout_marginStart="@dimen/view_padding_margin_16dp"
+        android:layout_marginTop="@dimen/view_padding_margin_12dp"
+        tools:text="158****9303"/>
+
+    <!--按钮-->
+    <Button
+        android:id="@+id/bt_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/view_padding_margin_42dp"
+        android:background="@drawable/btn_bg"
+        android:text="@string/activity_show_mobile_change"
+        android:textSize="@dimen/text_size_17sp"/>
+</LinearLayout>

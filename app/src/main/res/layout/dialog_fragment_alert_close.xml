@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/white_selected_1"
+    app:cardCornerRadius="@dimen/drawable_shape_normal_radius_10dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="@dimen/view_padding_margin_16dp"
+            android:paddingLeft="@dimen/view_padding_margin_16dp"
+            android:paddingTop="@dimen/view_padding_margin_12dp"
+            android:paddingBottom="@dimen/view_padding_margin_16dp"
+            android:src="@drawable/icon_close_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/view_padding_margin_24dp"
+            android:layout_marginTop="@dimen/view_padding_margin_24dp"
+            android:gravity="center"
+            android:paddingEnd="@dimen/view_padding_margin_16dp"
+            android:paddingStart="@dimen/view_padding_margin_16dp"
+            android:textColor="@color/black_text_333_1"
+            android:textSize="@dimen/text_size_normal_14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_close"
+            tools:text="您填写的证件号码与上传照片中的不符"/>
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            style="@style/TextViewStandard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_padding_margin_48dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/blue_text_color"
+            android:textSize="@dimen/text_size_17sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            tools:text="重新认证"/>
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>

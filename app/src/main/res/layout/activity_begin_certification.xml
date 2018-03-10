@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!---->
+    <include layout="@layout/layout_top_bar"/>
+
+    <!--地区-->
+    <com.acchain.community.view.LineMenuView
+        android:id="@+id/lmv_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:paddingStart="@dimen/view_padding_margin_16dp"
+        app:LineMenuView_brief=""
+        app:LineMenuView_menu_text_size="@dimen/text_size_title_15sp"
+        android:background="@color/white_background_5"
+        app:LineMenuView_menu="@string/activity_begin_certification_location"
+        app:LineMenuView_brief_text_color="@color/text_label_hacker"
+        app:LineMenuView_brief_text_size="@dimen/text_size_title_15sp"
+        app:LineMenuView_navigation="@drawable/icon_arrow_right_gray"
+        app:LineMenuView_plugin="text"/>
+
+    <com.acchain.community.view.DividerView
+        android:layout_width="match_parent"
+        android:paddingStart="@dimen/view_padding_margin_16dp"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:background="@color/white_background_5"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/et_name"
+        android:background="@color/white_background_5"
+        android:paddingStart="@dimen/view_padding_margin_16dp"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        style="@style/TextViewStandard"
+        android:hint="@string/activity_begin_certification_name"
+        android:textColorHint="@color/white_text_alpha_20"
+        android:textSize="@dimen/text_size_normal_14sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.acchain.community.view.DividerView
+        android:layout_width="match_parent"
+        android:paddingStart="@dimen/view_padding_margin_16dp"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:background="@color/white_background_5"
+        android:layout_height="wrap_content"/>
+
+    <!--证件-->
+    <com.acchain.community.view.LineMenuView
+        android:id="@+id/lmv_card_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:paddingStart="@dimen/view_padding_margin_16dp"
+        app:LineMenuView_brief=""
+        app:LineMenuView_brief_text_color="@color/text_label_hacker"
+        app:LineMenuView_brief_text_size="@dimen/text_size_title_15sp"
+        app:LineMenuView_menu_text_size="@dimen/text_size_title_15sp"
+        android:background="@color/white_background_5"
+        app:LineMenuView_menu="@string/activity_begin_certification_card_type"
+        app:LineMenuView_navigation="@drawable/icon_arrow_right_gray"
+        app:LineMenuView_plugin="text"/>
+
+    <com.acchain.community.view.DividerView
+        android:layout_width="match_parent"
+        android:paddingStart="@dimen/view_padding_margin_16dp"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:background="@color/white_background_5"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/et_card_number"
+        android:background="@color/white_background_5"
+        android:paddingStart="@dimen/view_padding_margin_16dp"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        style="@style/TextViewStandard"
+        android:hint="@string/activity_begin_certification_card_number"
+        android:textColorHint="@color/white_text_alpha_20"
+        android:textSize="@dimen/text_size_normal_14sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.acchain.community.view.DividerView
+        android:layout_width="match_parent"
+        android:paddingStart="@dimen/view_padding_margin_16dp"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:background="@color/white_background_5"
+        android:layout_height="wrap_content"/>
+
+    <!--上传照片-->
+    <com.acchain.community.view.LineMenuView
+        android:id="@+id/lmv_upload_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:paddingStart="@dimen/view_padding_margin_16dp"
+        app:LineMenuView_brief_text_color="@color/text_label_hacker"
+        app:LineMenuView_brief_text_size="@dimen/text_size_title_15sp"
+        app:LineMenuView_brief=""
+        app:LineMenuView_menu_text_size="@dimen/text_size_title_15sp"
+        android:background="@color/white_background_5"
+        app:LineMenuView_menu="@string/activity_begin_certification_upload_photo"
+        app:LineMenuView_navigation="@drawable/icon_arrow_right_gray"
+        app:LineMenuView_plugin="text"/>
+
+    <com.acchain.community.view.DividerView
+        android:layout_width="match_parent"
+        android:paddingStart="@dimen/view_padding_margin_16dp"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:background="@color/white_background_5"
+        android:layout_height="wrap_content"/>
+
+    <!--手机号-->
+    <EditText
+        android:id="@+id/et_phone"
+        android:background="@color/white_background_5"
+        android:paddingStart="@dimen/view_padding_margin_16dp"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        style="@style/TextViewStandard"
+        android:hint="@string/activity_begin_certification_phone"
+        android:textColorHint="@color/white_text_alpha_20"
+        android:textSize="@dimen/text_size_normal_14sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.acchain.community.view.DividerView
+        android:layout_width="match_parent"
+        android:paddingStart="@dimen/view_padding_margin_16dp"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:background="@color/white_background_5"
+        android:layout_height="wrap_content"/>
+
+    <!--手机验证码-->
+    <LinearLayout
+        android:background="@color/white_background_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:background="@color/transparent"
+            android:id="@+id/et_verify_code"
+            android:paddingStart="@dimen/view_padding_margin_16dp"
+            android:paddingEnd="@dimen/view_padding_margin_16dp"
+            style="@style/TextViewStandard"
+            android:hint="@string/activity_begin_certification_verity_code"
+            android:textColorHint="@color/white_text_alpha_20"
+            android:textSize="@dimen/text_size_normal_14sp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+        <com.acchain.community.view.RandomCodeTextView
+            android:id="@+id/rctv_get_code"
+            android:textSize="@dimen/text_size_title_15sp"
+            android:paddingEnd="@dimen/view_padding_margin_16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!--按钮-->
+    <Button
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/bt_take_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/view_padding_margin_48dp"
+        android:background="@drawable/btn_bg"
+        android:text="@string/activity_begin_certification_submit"
+        android:textSize="@dimen/text_size_17sp"/>
+</LinearLayout>

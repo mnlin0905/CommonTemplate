@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_0d"
+    android:layout_marginTop="20px"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/test_panic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24px"
+        android:layout_marginTop="16px"
+        android:text="长白山野山参"
+        android:textColor="@color/blue_3f"
+        android:textSize="32px"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/describe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12px"
+        android:lines="1"
+        android:text="集长白之精华，采天地之灵"
+        android:textColor="@color/white_99"
+        android:textSize="28px"
+        app:layout_constraintStart_toStartOf="@id/name"
+        app:layout_constraintTop_toBottomOf="@id/name" />
+
+    <TextView
+        android:id="@+id/tv0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18px"
+        android:text="行权规格"
+        android:textColor="@color/white"
+        android:textSize="24px"
+        app:layout_constraintStart_toStartOf="@id/describe"
+        app:layout_constraintTop_toBottomOf="@id/describe" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px"
+        android:text="20NHGH"
+        android:textColor="@color/white"
+        android:textSize="30px"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv0"
+        app:layout_constraintStart_toEndOf="@id/tv0" />
+
+    <TextView
+        android:id="@+id/tv_repertory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14px"
+        android:text="库存 23564"
+        android:textColor="@color/white_66"
+        android:textSize="20px"
+        app:layout_constraintStart_toStartOf="@id/tv0"
+        app:layout_constraintTop_toBottomOf="@id/tv0" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px"
+        android:text="102 人已行权"
+        android:textColor="@color/white_66"
+        android:textSize="20px"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_repertory"
+        app:layout_constraintStart_toEndOf="@id/tv_repertory" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14px"
+        android:text="行权截止时间:"
+        android:textColor="@color/white_99"
+        android:textSize="20px"
+        app:layout_constraintStart_toStartOf="@id/tv_repertory"
+        app:layout_constraintTop_toBottomOf="@id/tv_repertory" />
+
+    <TextView
+        android:id="@+id/tv_stop_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2018-12-23 23:30:12"
+        android:textColor="@color/white_99"
+        android:textSize="20px"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv1"
+        app:layout_constraintStart_toEndOf="@id/tv1" />
+
+    <TextView
+        android:id="@+id/to_exercise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24px"
+        android:layout_marginRight="32px"
+        android:layout_marginTop="24px"
+        android:background="@drawable/btn"
+        android:gravity="center"
+        android:text="@string/tip_exercise_now"
+        android:textColor="@color/white"
+        android:textSize="30px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv1" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+</android.support.constraint.ConstraintLayout>

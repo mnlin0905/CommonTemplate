@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_with_view_pager"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent">
+
+    <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+        android:id="@+id/bnve_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemTextColor="@color/selector_main_color"
+        android:background="@color/blue_bottom_navigation_background"
+        app:itemIconTint="@color/selector_main_color"
+        app:menu="@menu/menu_main_navigation"/>
+
+
+    <com.acchain.community.view.DisableScrollViewPager
+        android:id="@+id/vp_fragments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bnve_navigation"/>
+
+    <!--屏蔽二维码-->
+    <!--<android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:backgroundTint="@android:color/white"
+        app:borderWidth="0dp"
+        app:elevation="@dimen/float_action_tab_elevation"
+        app:srcCompat="@drawable/ic_network_wifi_black_24dp"/>-->
+
+</RelativeLayout>

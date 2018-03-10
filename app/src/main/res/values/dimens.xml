@@ -1,0 +1,118 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <!--浮动按钮的margin值-->
+    <dimen name="fab_margin_16dp">16dp</dimen>
+
+    <!--PickerView的高度-->
+    <dimen name="prefer_picker_view_height_150dp">150dp</dimen>
+
+    <!--头像边框宽度-->
+    <dimen name="prefer_head_icon_border_width">5dp</dimen>
+
+
+    <!--定义view高度,最大,适中,最小-->
+    <dimen name="label_view_width_64dp">64dp</dimen>
+    <dimen name="max_view_height_64dp">64dp</dimen>
+    <dimen name="prefer_view_height_48dp">48dp</dimen>
+    <dimen name="smallest_view_height_24dp">24dp</dimen>
+    <dimen name="view_height_20dp">20dp</dimen>
+    <dimen name="view_height_16dp">16dp</dimen>
+    <dimen name="view_height_40dp">40dp</dimen>
+    <dimen name="view_height_50dp">50dp</dimen>
+    <dimen name="view_height_56dp">56dp</dimen>
+    <dimen name="view_height_80dp">80dp</dimen>
+    <dimen name="view_height_90dp">90dp</dimen>
+    <dimen name="view_height_111dp">111dp</dimen>
+    <dimen name="view_height_200dp">200dp</dimen>
+    <dimen name="view_height_250dp">250dp</dimen>
+    <dimen name="view_height_400dp">400dp</dimen>
+    <dimen name="view_height_150dp">150dp</dimen>
+    <dimen name="view_height_36dp">36dp</dimen>
+    <dimen name="view_height_4dp">4dp</dimen>
+    <dimen name="view_height_76dp">76dp</dimen>
+
+    <!--自定义padding以及margin值;可适用与控件之间的divider等-->
+    <dimen name="view_padding_margin_2dp">2dp</dimen>
+    <dimen name="view_padding_margin_4dp">4dp</dimen>
+    <dimen name="view_padding_margin_8dp">8dp</dimen>
+    <dimen name="view_padding_margin_minus_8dp">-8dp</dimen>
+    <dimen name="view_padding_margin_12dp">12dp</dimen>
+    <dimen name="view_padding_margin_minus_12dp">-12dp</dimen>
+    <dimen name="view_padding_margin_14dp">14dp</dimen>
+    <dimen name="view_padding_margin_16dp">16dp</dimen>
+    <dimen name="view_padding_margin_minus_16dp">-16dp</dimen>
+    <dimen name="view_padding_margin_20dp">20dp</dimen>
+    <dimen name="view_padding_margin_32dp">32dp</dimen>
+    <dimen name="view_padding_margin_24dp">24dp</dimen>
+    <dimen name="view_padding_margin_36dp">36dp</dimen>
+    <dimen name="view_padding_margin_40dp">40dp</dimen>
+    <dimen name="view_padding_margin_42dp">42dp</dimen>
+    <dimen name="view_padding_margin_48dp">48dp</dimen>
+
+    <!--view模块之间大缩进的距离-->
+    <dimen name="prefer_block_shift_retract_64dp">64dp</dimen>
+
+    <!--定义文字的大小,若有相似直接从中选取-->
+    <dimen name="text_size_9sp">9sp</dimen>
+    <dimen name="text_size_10sp">10sp</dimen>
+    <dimen name="text_size_smallest_11sp">11sp</dimen>
+    <dimen name="text_size_small_12sp">12sp</dimen>
+    <dimen name="text_size_13sp">13sp</dimen>
+    <dimen name="text_size_normal_14sp">14sp</dimen>
+    <dimen name="text_size_title_15sp">15sp</dimen>
+    <dimen name="text_size_16sp">16sp</dimen>
+    <dimen name="text_size_17sp">17sp</dimen>
+    <dimen name="text_size_large_18sp">18sp</dimen>
+    <dimen name="text_size_large_19sp">19sp</dimen>
+    <dimen name="text_size_large_20sp">20sp</dimen>
+    <dimen name="text_size_24sp">24sp</dimen>
+    <dimen name="text_size_biggest_26sp">26sp</dimen>
+
+
+    <!--间隔线宽度或高度,一般用于listView或者划线等地方-->
+    <dimen name="divider_line_width_1px">1px</dimen>
+    <dimen name="divider_line_width_1dp">1dp</dimen>
+    <dimen name="divider_line_width_6dp">6dp</dimen>
+
+
+    <!--控件z轴高度设置,默认不同控件的z轴高度不同,如toolbar,floatButton等-->
+    <!--悬浮按钮-->
+    <dimen name="float_action_tab_elevation_9dp">9dp</dimen>
+
+
+    <!--自定义shape角弧度-->
+    <dimen name="drawable_shape_normal_radius_2dp">2dp</dimen>
+    <dimen name="drawable_shape_normal_radius_3dp">3dp</dimen>
+    <dimen name="drawable_shape_normal_radius_5dp">5dp</dimen>
+    <dimen name="drawable_shape_normal_radius_10dp">10dp</dimen>
+    <dimen name="drawable_shape_normal_radius_12dp">12dp</dimen>
+
+    <!--tabLayout下标高度-->
+    <dimen name="tab_layout_indicator_height_2dp">2dp</dimen>
+
+    <!--搜索框距离上下高度值-->
+    <dimen name="search_view_margin_vertical_4dp">4dp</dimen>
+
+    <!--自定义shape,边框border宽度-->
+    <dimen name="background_border_width_1px">1px</dimen>
+    <dimen name="background_border_width_1dp">1dp</dimen>
+
+    <!--***************************-->
+    <!--**********之后部分暂未使用***********-->
+    <!--***************************-->
+
+    <!--侧滑栏的宽度,默认为:300/360-->
+    <dimen name="prefer_slide_width">300dp</dimen>
+
+    <!--侧滑栏中头像的高度-->
+    <dimen name="prefer_slide_header_height">185.4dp</dimen>
+
+    <!--搜索栏最大高度-->
+    <dimen name="toolbar_search_view_max_height">40dp</dimen>
+
+    <dimen name="item_height_default">50dp</dimen>
+    <dimen name="view_height_35dp">35dp</dimen>
+
+
+</resources>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/gray_color_33e2e2e2"
+    app:cardCornerRadius="@dimen/drawable_shape_normal_radius_10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/view_padding_margin_16dp">
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_padding_margin_16dp"
+            android:gravity="center"
+            android:paddingEnd="@dimen/view_padding_margin_16dp"
+            android:paddingStart="@dimen/view_padding_margin_16dp"
+            android:textColor="@color/white_text_alpha_60"
+            android:textSize="@dimen/text_size_normal_14sp"
+            tools:text="正在加载..."/>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

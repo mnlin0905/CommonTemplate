@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60px"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="261px">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="16px"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="￥"
+                        android:textColor="#ff7008"
+                        android:textSize="26px" />
+                    <TextView
+                        android:id="@+id/tv_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4px"
+                        android:text="199"
+                        android:textColor="#ff7008"
+                        android:textSize="40px" />
+                </LinearLayout>
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="horizontal"
+                     android:layout_marginTop="12px"
+                     android:visibility="invisible"
+                     >
+                     <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+
+                         android:text="剩余标的"
+                         android:textColor="#333333"
+                         android:textSize="28px"
+                         />
+                     <TextView
+                         android:id="@+id/repertory"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginLeft="8px"
+                         android:text="258"
+                         android:textColor="#333333"
+                         android:textSize="28px"
+                         />
+
+                 </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:drawableLeft="@drawable/icon_guanbi"
+                android:padding="30px" />
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="56px"
+            android:background="#e5e5e5" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="30px"
+            android:text="领养标的"
+            android:textColor="@color/color_33"
+            android:textSize="30px" />
+
+       <android.support.v7.widget.RecyclerView
+           android:id="@+id/recycler"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:scrollbars="none"
+           android:fadeScrollbars="true"
+           android:fadingEdge="none"
+           android:fastScrollEnabled="false"
+           android:listSelector="@android:color/transparent"
+           android:scrollingCache="false"
+           android:transcriptMode="disabled"
+           />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24px"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32px"
+                android:text="领养数量"
+                android:textColor="@color/color_33"
+                android:textSize="30px"
+                android:layout_centerVertical="true"
+                />
+            <TextView
+                android:id="@+id/tv_acount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="32px"
+                android:text="3"
+                android:textColor="@color/color_33"
+                android:textSize="30px"
+                android:layout_centerVertical="true"
+                />
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="40px"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/tv_add_object"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_panic_goods_gradient1"
+                android:gravity="center"
+                android:text="添加标的"
+                android:textColor="@color/white_selected_1"
+                android:textSize="40px"
+                />
+            <TextView
+                android:id="@+id/tv_sure"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/prefer_view_height_48dp"
+                android:background="@drawable/shape_panic_goods_gradient2"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/white_selected_1"
+                android:textSize="40px"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="211px"
+        android:layout_height="215px"
+        android:layout_marginLeft="30px"
+        android:scaleType="fitXY"
+        android:src="@drawable/test_goods_bg" />
+</RelativeLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/layout_top_bar" />
+
+        <TextView
+            android:id="@+id/type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/text_size_17sp"
+            android:text="收到的红包" />
+    </RelativeLayout>
+    <LinearLayout
+        android:background="@color/white_background_5"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/view_padding_margin_16dp"
+        android:paddingBottom="@dimen/view_padding_margin_16dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_gravity="right"
+            android:text="2018"
+            android:textSize="@dimen/text_size_title_15sp"
+            android:layout_marginRight="@dimen/view_padding_margin_16dp"
+            android:layout_height="wrap_content" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/headImg"
+            android:layout_width="@dimen/view_height_80dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/default_head_img"
+            android:layout_height="@dimen/view_height_80dp" />
+        <TextView
+            android:id="@+id/title"
+            android:layout_marginTop="@dimen/view_padding_margin_8dp"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="共收到"
+            android:textSize="@dimen/text_size_17sp"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:paddingTop="@dimen/view_padding_margin_8dp"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/view_padding_margin_8dp"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/left_Value"
+                    android:text="2"
+                    android:textSize="@dimen/text_size_title_15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textSize="@dimen/text_size_title_15sp"
+                    android:id="@+id/left_title"
+                    android:text="收到红包"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/divider_line_width_1px"
+                android:background="@color/white_99"
+                android:layout_marginTop="@dimen/view_padding_margin_8dp"
+                android:layout_marginBottom="@dimen/view_padding_margin_8dp"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/right_value"
+                    android:text="2"
+                    android:textSize="@dimen/text_size_title_15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/right_title"
+                    android:textSize="@dimen/text_size_title_15sp"
+                    android:text="资产种类"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:id="@+id/xrcy"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></com.jcodecraeer.xrecyclerview.XRecyclerView>
+</LinearLayout>

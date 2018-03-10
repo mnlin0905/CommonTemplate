@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_introduce"
+        style="@style/TextViewStandard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/viewstub_transaction_detail_preorder_label_introduce"
+        android:textColor="@color/white_no_selected_40"
+        android:textSize="@dimen/text_size_title_15sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_background_5"
+        android:gravity="center_vertical"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:paddingStart="@dimen/view_padding_margin_16dp">
+
+        <ImageView
+            android:id="@+id/iv_head"
+            android:layout_width="@dimen/smallest_view_height_24dp"
+            android:layout_height="@dimen/smallest_view_height_24dp"
+            android:src="@drawable/icon_transaction_record"/>
+
+        <TextView
+            android:id="@+id/tv_head"
+            style="@style/TextViewStandard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/view_padding_margin_4dp"
+            android:textSize="@dimen/text_size_title_15sp"
+            tools:text="太姥山"/>
+    </LinearLayout>
+
+    <com.acchain.community.view.DividerView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_line_width_1px"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_background_5">
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="@dimen/view_height_90dp"
+            android:layout_height="@dimen/view_height_90dp"
+            android:layout_marginBottom="@dimen/view_padding_margin_12dp"
+            android:layout_marginStart="@dimen/view_padding_margin_12dp"
+            android:layout_marginTop="@dimen/view_padding_margin_12dp"
+            android:src="@drawable/box"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/view_padding_margin_16dp"
+            android:layout_marginStart="@dimen/view_padding_margin_12dp"
+            android:textColor="@color/blue_3f"
+            android:textSize="@dimen/text_size_16sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_brief"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="华茶一号"/>
+
+        <com.acchain.community.view.MarqueeTextView
+            android:id="@+id/tv_brief"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_padding_margin_4dp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:textColor="@color/white_text_alpha_60"
+            android:textSize="@dimen/text_size_normal_14sp"
+            app:layout_constraintBottom_toTopOf="@id/label_specification"
+            app:layout_constraintEnd_toEndOf="@id/tv_name"
+            app:layout_constraintStart_toStartOf="@id/tv_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_name"
+            tools:text="太姥山华茶一号，韵如白芷香如兰"/>
+
+        <TextView
+            android:id="@+id/label_specification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_padding_margin_20dp"
+            android:textColor="@color/white_text_alpha_60"
+            android:textSize="@dimen/text_size_small_12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_brief"
+            app:layout_constraintTop_toBottomOf="@id/tv_brief"
+            android:text="@string/viewstub_transaction_detail_preorder_label_specification"/>
+
+        <TextView
+            android:id="@+id/tv_specification"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingEnd="0dp"
+            android:paddingStart="@dimen/view_padding_margin_8dp"
+            android:textColor="@color/white_text_alpha_60"
+            android:textSize="@dimen/text_size_small_12sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/label_specification"
+            app:layout_constraintEnd_toEndOf="@id/tv_brief"
+            app:layout_constraintStart_toEndOf="@id/label_specification"
+            tools:text="350g/饼"/>
+    </android.support.constraint.ConstraintLayout>
+
+    <com.acchain.community.view.DividerView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_line_width_1px"/>
+
+    <LinearLayout
+        style="@style/TextViewStandard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_background_5"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/viewstub_transaction_detail_preorder_label_time"
+            android:textSize="@dimen/text_size_title_15sp"/>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_title_15sp"
+            tools:text="2017-09-14 00:00:00"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/layout_top_bar" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/view_padding_margin_16dp"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/headImg"
+            android:layout_width="@dimen/view_height_50dp"
+            android:src="@drawable/default_head_img"
+            android:layout_height="@dimen/view_height_50dp" />
+        <TextView
+            android:id="@+id/nikeName"
+            android:layout_width="wrap_content"
+            android:text=""
+            android:layout_marginLeft="@dimen/view_padding_margin_8dp"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/amount"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:text="10 NHGH"
+        android:textSize="@dimen/text_size_24sp"
+        android:layout_marginTop="@dimen/view_padding_margin_16dp"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:text="@string/tranfer_success"
+        android:layout_marginTop="@dimen/view_padding_margin_8dp"
+        android:textColor="@color/text_color_gray"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/white_background_5"
+        android:paddingLeft="@dimen/view_padding_margin_16dp"
+        android:paddingRight="@dimen/view_padding_margin_16dp"
+        android:layout_marginTop="@dimen/view_padding_margin_24dp"
+        android:layout_height="@dimen/item_height_default">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/pay_type"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/pay_type"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:text=""
+            android:textColor="@color/white"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <com.acchain.community.view.DividerView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_line_width_1px" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/white_background_5"
+        android:paddingLeft="@dimen/view_padding_margin_16dp"
+        android:paddingRight="@dimen/view_padding_margin_16dp"
+        android:layout_height="@dimen/item_height_default">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/toAccount"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/toAccount"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:text=""
+            android:textColor="@color/white"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <com.acchain.community.view.DividerView
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/divider_line_width_1px" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/white_background_5"
+        android:paddingLeft="@dimen/view_padding_margin_16dp"
+        android:paddingRight="@dimen/view_padding_margin_16dp"
+        android:layout_height="@dimen/item_height_default">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/createTime"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/createTime"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:text=""
+            android:textColor="@color/white"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <TextView
+        android:textColor="@color/text_color_gray"
+        android:text="@string/tranferId"
+        android:layout_margin="@dimen/view_padding_margin_8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/tranferId"
+        android:text=""
+        android:padding="@dimen/view_padding_margin_16dp"
+        android:background="@color/white_background_5"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:textColor="@color/text_color_gray"
+        android:text="@string/remark"
+        android:layout_margin="@dimen/view_padding_margin_8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/remark"
+        android:layout_width="match_parent"
+        android:text=""
+        android:padding="@dimen/view_padding_margin_16dp"
+        android:background="@color/white_background_5"
+        android:layout_height="wrap_content" />
+</LinearLayout>

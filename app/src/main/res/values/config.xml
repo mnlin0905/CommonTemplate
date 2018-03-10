@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--"￥"-->
+
+    <!--文件存储目录-->
+    <string name="note_directory">/digital/note_picture</string>
+    <string name="qr_directory">/digital/qr_image</string>
+    <string name="head_directory">/digital/head_image</string>
+    <string name="verify_directory">/digital/verify_directory</string>
+    <string name="password_directory">/digital/password_directory</string>
+
+    <!--测试网络地址-->
+    <string name="test_base_net_address">http://192.168.1.250:8080/web/</string>
+    <string name="test_base_image_address">http://192.168.1.253:90/</string>
+
+    <!--真实网络地址-->
+    <string name="base_net_address">http://58.61.30.138/web/</string>
+    <string name="base_image_address">http://192.168.1.253:90/</string>
+</resources>

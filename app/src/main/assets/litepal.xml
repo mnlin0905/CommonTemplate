@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<litepal>
+    <!--数据库名称-->
+    <dbname value="litepal_hotchpotch"/>
+
+    <!--数据库版本号，升级数据库时候需要累加-->
+    <version value="3"/>
+
+    <!--创建表-->
+    <list>
+        <!--表对应的实体对象-->
+        <mapping class="com.acchain.community.bean.Friend"/>
+        <mapping class="com.acchain.community.bean.ContactAddRequest"/>
+    </list>
+
+    <!--keep表示按照类和字段名大小写作为表名和列名-->
+    <!--upper表示将所有的类和字段名称以大写的方式作为表名和列名-->
+    <!--lower表示将所有的类和字段名称以小写的方式作为表名和列名-->
+    <cases value="keep"/>
+
+    <!--internal表示将数据库dataSetddataSetdata/包名/databases下，external表示存储在/storage/sdcard1/AndrdataSetdata/包名/files/databases下-->
+    <storage value="internal"/>
+</litepal>

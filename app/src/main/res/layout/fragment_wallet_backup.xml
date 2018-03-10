@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--toolBar内容-->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="top"
+        app:layout_collapseMode="pin"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/Base.ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <TextView
+            android:id="@+id/tv_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/view_padding_margin_16dp"
+            android:drawableStart="@drawable/icon_search"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/view_padding_margin_8dp"
+            android:paddingStart="@dimen/view_padding_margin_16dp"
+            android:paddingTop="@dimen/view_padding_margin_8dp"
+            android:text="@string/fragment_wallet_tv_search"
+            android:textColor="@color/blue_text_color"
+            android:textSize="@dimen/text_size_small_12sp"/>
+    </android.support.v7.widget.Toolbar>
+
+    <!--此部分在滑动后会折叠-->
+    <RelativeLayout
+        android:id="@+id/ll_controlShow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <!--分割线-->
+        <com.acchain.community.view.DividerView
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_line_width_1px"/>
+
+        <!--功能入口:转入,燃料,转出-->
+        <com.acchain.community.view.DisableChildGridView
+            android:id="@+id/gv_mainFunction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider"
+            android:background="@drawable/picture_texture_background"
+            android:minHeight="@dimen/prefer_view_height_48dp"
+            android:numColumns="3"
+            android:paddingEnd="@dimen/view_padding_margin_32dp"
+            android:paddingStart="@dimen/view_padding_margin_32dp"/>
+
+        <!--间距-->
+        <com.acchain.community.view.DividerView
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_line_width_6dp"
+            android:layout_below="@id/gv_mainFunction"/>
+
+        <!--数字资产分类-->
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tl_currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider2"
+            android:layout_marginEnd="@dimen/view_padding_margin_16dp"
+            android:layout_marginTop="@dimen/view_padding_margin_8dp"
+            android:layout_toEndOf="@id/tv_currencyAmount"
+            android:background="@drawable/tab_switch_background"
+            app:tabGravity="center"
+            app:tabIndicatorColor="@color/white_selected_1"
+            app:tabIndicatorHeight="@dimen/tab_layout_indicator_height_2dp"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/white_selected_1"
+            app:tabTextColor="@color/white_no_selected_40"/>
+
+        <!--数字资产图片-->
+        <ImageView
+            android:id="@+id/iv_text_currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/tl_currency"
+            android:layout_below="@id/divider2"
+            android:layout_marginStart="@dimen/view_padding_margin_16dp"
+            android:layout_marginTop="@dimen/view_padding_margin_8dp"
+            android:src="@drawable/icon_text_currency"/>
+
+        <!--数字资产总量-->
+        <TextView
+            android:id="@+id/tv_currencyAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_alignBottom="@id/iv_text_currency"
+            android:layout_alignTop="@id/iv_text_currency"
+            android:layout_toEndOf="@id/iv_text_currency"
+            android:gravity="center_vertical"
+            android:paddingEnd="@dimen/view_padding_margin_8dp"
+            android:paddingStart="@dimen/view_padding_margin_8dp"
+            android:text="共计0种"
+            android:textColor="@color/white_text_alpha_60"/>
+
+        <!--收益部分,暂不使用-->
+        <TextView
+            android:id="@+id/tv_income"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:maxWidth="@dimen/max_view_height_64dp"
+            tools:text="总收益"
+            android:textColor="@color/blue_text_color"
+            android:textSize="@dimen/text_size_small_12sp"
+            android:visibility="gone"
+            app:layout_constraintLeft_toRightOf="@id/tl_currency"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:visibility="visible"/>
+    </RelativeLayout>
+
+    <!--信息展示区域-->
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_fragments"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

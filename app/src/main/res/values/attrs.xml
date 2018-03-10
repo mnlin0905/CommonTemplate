@@ -1,0 +1,107 @@
+<resources>
+
+    <!-- Declare custom theme attributes that allow changing which styles are
+         used for button bars depending on the API level.
+         ?android:attr/buttonBarStyle is new as of API 11 so this is
+         necessary to support previous API levels. -->
+    <declare-styleable name="ButtonBarContainerTheme">
+        <attr name="metaButtonBarStyle" format="reference"/>
+        <attr name="metaButtonBarButtonStyle" format="reference"/>
+    </declare-styleable>
+
+    <!--单行菜单对应的参数：switch状态、menu文本、icon图标-->
+    <declare-styleable name="LineMenuView">
+        <attr name="LineMenuView_plugin" format="enum">
+            <enum name="none" value="0"/>
+            <enum name="text" value="1"/>
+            <enum name="switch_" value="2"/>
+            <enum name="radio" value="3"/>
+            <enum name="select" value="4"/>
+            <enum name="transition" value="5"/>
+            <enum name="edit" value="6"/>
+        </attr>
+        <attr name="LineMenuView_switch" format="enum">
+            <enum name="off" value="0"/>
+            <enum name="on" value="1"/>
+        </attr>
+        <attr name="LineMenuView_radio" format="enum">
+            <enum name="off" value="0"/>
+            <enum name="on" value="1"/>
+        </attr>
+        <attr name="LineMenuView_transition" format="enum">
+            <enum name="off" value="0"/>
+            <enum name="on" value="1"/>
+        </attr>
+        <attr name="LineMenuView_disable_bind_listener" format="boolean"/>
+        <attr name="LineMenuView_badge" format="reference"/>
+        <attr name="LineMenuView_navigation" format="reference"/>
+        <attr name="LineMenuView_icon" format="reference"/>
+        <attr name="LineMenuView_brief" format="string"/>
+        <attr name="LineMenuView_menu" format="string"/>
+        <attr name="LineMenuView_edit_hint" format="string"/>
+        <attr name="LineMenuView_edit_hint_color" format="color"/>
+        <attr name="LineMenuView_edit_text_color" format="color"/>
+        <attr name="LineMenuView_brief_text_color" format="color"/>
+        <attr name="LineMenuView_menu_text_color" format="color"/>
+        <attr name="LineMenuView_edit_text_size" format="dimension"/>
+        <attr name="LineMenuView_brief_text_size" format="dimension"/>
+        <attr name="LineMenuView_menu_text_size" format="dimension"/>
+    </declare-styleable>
+
+    <!--菜单栏-->
+    <declare-styleable name="MenuTitleSubTitleView">
+        <attr name="MenuTitleSubTitleView_navigation" format="reference"/>
+        <attr name="MenuTitleSubTitleView_icon" format="reference"/>
+        <attr name="MenuTitleSubTitleView_title" format="string"/>
+        <attr name="MenuTitleSubTitleView_subtitle" format="string"/>
+    </declare-styleable>
+
+    <!--消息列表view-->
+    <declare-styleable name="NewsConstraintLayout">
+        <attr name="NewsLinearLayout_icon" format="reference"/>
+        <attr name="NewsLinearLayout_title" format="string"/>
+        <attr name="NewsLinearLayout_time" format="string"/>
+        <attr name="NewsLinearLayout_subtitle" format="string"/>
+    </declare-styleable>
+
+    <!--单行输入框对应的参数：hint文字、menu文本、icon图标-->
+    <declare-styleable name="LineInputView">
+        <attr name="LineInputView_hint" format="string"/>
+        <attr name="LineInputView_menu" format="string"/>
+        <attr name="LineInputView_icon" format="reference"/>
+    </declare-styleable>
+    <declare-styleable name="HeaderImageBehavior">
+        <attr name="finalHeight" format="dimension"/>
+    </declare-styleable>
+
+    <!--timeView-->
+    <declare-styleable name="TimeView">
+        <attr name="textSize" format="dimension"/>
+        <attr name="textColor" format="color"/>
+        <attr name="time" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="AmountView">
+        <!--用哪一种类型-->
+        <attr name="type" format="enum">
+            <enum name="white_small" value="0"/>
+            <enum name="blue_small" value="1"/>
+            <enum name="blue_big" value="2"/>
+        </attr>
+        <!-- 左右2边+-按钮的宽度 -->
+        <attr name="btWidth" format="dimension"/>
+        <!-- 中间TextView的宽度 -->
+        <attr name="etWidth" format="dimension"/>
+        <attr name="etColor" format="color"/>
+        <attr name="etSize" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="TagFlowLayout">
+        <attr name="max_select" format="integer"></attr>
+        <attr name="tag_gravity">
+            <enum name="left" value="-1"/>
+            <enum name="center" value="0"/>
+            <enum name="right" value="1"/>
+        </attr>
+    </declare-styleable>
+</resources>

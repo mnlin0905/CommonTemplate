@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/view_padding_margin_8dp"
+    android:paddingBottom="@dimen/view_padding_margin_8dp"
+    android:layout_height="@dimen/item_height_default">
+    <io.rong.imkit.widget.AsyncImageView
+        android:id="@+id/headImg"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="12dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/rc_default_portrait"
+        android:background="@android:color/transparent"
+        app:RCCornerRadius="5dp"
+        app:RCDefDrawable="@drawable/rc_default_portrait"
+        app:RCShape="square"
+        />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/view_padding_margin_8dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/phoneName"
+            android:layout_width="wrap_content"
+            android:text="昵称"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/nikeName"
+            android:layout_width="wrap_content"
+            android:text="微脉号:"
+            android:textColor="@color/text_color_gray"
+            android:textSize="@dimen/text_size_small_12sp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/new_friend_btn_bg"
+        android:gravity="center"
+        android:text="添加" />
+</LinearLayout>

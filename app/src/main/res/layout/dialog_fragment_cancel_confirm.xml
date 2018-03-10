@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/white_selected_1"
+    app:cardCornerRadius="@dimen/drawable_shape_normal_radius_10dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/view_padding_margin_24dp"
+            android:layout_marginTop="@dimen/view_padding_margin_24dp"
+            android:gravity="center"
+            android:paddingEnd="@dimen/view_padding_margin_16dp"
+            android:paddingStart="@dimen/view_padding_margin_16dp"
+            android:textColor="@color/black_text_333_1"
+            android:textSize="@dimen/text_size_title_15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="确认要修改该地址么?"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_padding_margin_24dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_title">
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                style="@style/TextViewStandard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/blue_text_color"
+                android:textSize="@dimen/text_size_17sp"
+                tools:text="取消"/>
+
+            <TextView
+                android:id="@+id/tv_confirm"
+                style="@style/TextViewStandard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/blue_text_color"
+                android:textSize="@dimen/text_size_17sp"
+                tools:text="删除"/>
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>

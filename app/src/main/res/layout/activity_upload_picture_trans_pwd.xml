@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!---->
+    <include layout="@layout/layout_top_bar"/>
+
+    <!---->
+    <TextView
+        android:id="@+id/tv_label"
+        style="@style/TextViewStandard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white_no_selected_40"
+        android:textSize="@dimen/text_size_small_12sp"
+        android:text="@string/activity_upload_picture_trans_pwd_label"/>
+
+    <!--选择证件类型-->
+    <com.acchain.community.view.LineMenuView
+        android:id="@+id/lmv_card_type"
+        android:layout_width="match_parent"
+        android:background="@color/white_background_5"
+        android:layout_height="wrap_content"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:paddingStart="@dimen/view_padding_margin_16dp"
+        tools:LineMenuView_brief="二代身份证"
+        app:LineMenuView_brief_text_color="@color/white_text_alpha_20"
+        app:LineMenuView_brief_text_size="@dimen/text_size_normal_14sp"
+        app:LineMenuView_menu="@string/activity_upload_picture_trans_pwd_type"
+        app:LineMenuView_menu_text_size="@dimen/text_size_normal_14sp"
+        app:LineMenuView_navigation="@drawable/icon_arrow_right_gray"
+        app:LineMenuView_plugin="text"/>
+
+    <!--上传图片-->
+    <include layout="@layout/layout_upload_picture"/>
+
+    <!--按钮-->
+    <Button
+        android:id="@+id/bt_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/view_padding_margin_42dp"
+        android:background="@drawable/btn_bg"
+        android:text="@string/activity_upload_picture_trans_pwd_submit"
+        android:textSize="@dimen/text_size_17sp"/>
+</LinearLayout>

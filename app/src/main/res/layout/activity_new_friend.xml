@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/layout_top_bar" />
+    <EditText
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/view_padding_margin_16dp"
+        android:layout_marginRight="@dimen/view_padding_margin_16dp"
+        android:drawableLeft="@drawable/icon_search"
+        android:hint="@string/activity_take_out_currency_search"
+        android:enabled="false"
+        android:textColorHint="@color/blue_text_color"
+        android:textSize="@dimen/text_size_smallest_11sp"
+        android:layout_marginTop="10dp"
+        android:layout_height="35dp" />
+    <LinearLayout
+        android:id="@+id/add_phone_Contact"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@color/white_background_5"
+        android:paddingTop="@dimen/view_padding_margin_16dp"
+        android:paddingBottom="@dimen/view_padding_margin_16dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:src="@drawable/phone"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="@string/add_phone_contact"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <ListView
+        android:id="@+id/listView"
+        android:scrollbars="none"
+        android:divider="@null"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+</LinearLayout>

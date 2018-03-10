@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/layout_top_bar" />
+    <EditText
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/view_padding_margin_16dp"
+        android:layout_marginRight="@dimen/view_padding_margin_16dp"
+        android:drawableLeft="@drawable/icon_search"
+        android:hint="@string/name_phone"
+        android:enabled="false"
+        android:textColorHint="@color/blue_text_color"
+        android:textSize="@dimen/text_size_smallest_11sp"
+        android:layout_marginTop="@dimen/drawable_shape_normal_radius_10dp"
+        android:layout_height="35dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/drawable_shape_normal_radius_10dp"
+        android:paddingBottom="@dimen/drawable_shape_normal_radius_10dp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/linear_qrcode"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:src="@drawable/my_code"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:text="@string/my_code"
+                android:textSize="@dimen/text_size_title_15sp"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:text="@string/saoyisao"
+                android:textSize="@dimen/text_size_small_12sp"
+                android:textColor="@color/text_color_gray"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <com.acchain.community.view.DividerView
+            android:layout_width="@dimen/background_border_width_1px"
+            android:layout_height="match_parent" />
+        <LinearLayout
+            android:id="@+id/linear_koulin"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:src="@drawable/koulin"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:text="@string/koulin"
+                android:textSize="@dimen/text_size_title_15sp"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:text="@string/qq_wechat"
+                android:textSize="@dimen/text_size_small_12sp"
+                android:textColor="@color/text_color_gray"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linear_add_phone_contact"
+        android:layout_width="match_parent"
+        android:background="@color/white_background_5"
+        android:gravity="center_vertical"
+        android:layout_height="@dimen/item_height_default">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:src="@drawable/phone_contact"
+            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="手机联系人"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="添加通讯录中朋友"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="@dimen/text_size_small_12sp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/arrow_right"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/view_padding_margin_16dp"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </LinearLayout>
+    <com.acchain.community.view.DividerView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_line_width_1px" />
+    <LinearLayout
+        android:id="@+id/linear_saoyisao"
+        android:layout_width="match_parent"
+        android:background="@color/white_background_5"
+        android:gravity="center_vertical"
+        android:layout_height="@dimen/item_height_default">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:src="@drawable/saoyisao"
+            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="扫一扫"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="扫描二维码名片"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="@dimen/text_size_small_12sp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/arrow_right"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/view_padding_margin_16dp"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

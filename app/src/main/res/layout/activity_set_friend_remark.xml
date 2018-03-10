@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/layout_top_bar" />
+    <EditText
+        android:id="@+id/remark"
+        android:layout_width="match_parent"
+        android:text="请输入备注名称"
+        android:layout_marginTop="@dimen/view_padding_margin_16dp"
+        android:textSize="@dimen/text_size_normal_14sp"
+        android:background="@color/white_0d"
+        android:paddingLeft="@dimen/view_padding_margin_8dp"
+        android:layout_height="@dimen/item_height_default" />
+    <Button
+        android:id="@+id/confirm_button"
+        android:layout_width="wrap_content"
+        style="@style/style_Btn_default"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:text="@string/confirm"
+        android:layout_height="wrap_content" />
+</LinearLayout>

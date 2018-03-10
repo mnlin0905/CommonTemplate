@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <!--toolbar-->
+    <android.support.design.widget.AppBarLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:stateListAnimator="@null"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="@color/transparent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            >
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:layout_collapseMode="pin">
+
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="center"
+        android:text="@string/friend"
+        android:textColor="@color/white_selected_1"
+        android:textSize="18sp"
+        app:layout_behavior=".behavior.FriendTitleBehavior"/>
+    <ImageView
+        android:id="@+id/Ivsearch"
+        android:layout_width="wrap_content"
+        app:srcCompat="@drawable/icon_search"
+        android:alpha="0"
+        app:layout_behavior=".behavior.FriendSearchShowBehavior"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:id="@+id/linear_friend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_behavior=".behavior.FriendBehavior">
+        <TextView
+            android:paddingStart="@dimen/view_padding_margin_16dp"
+            android:paddingTop="@dimen/view_padding_margin_8dp"
+            android:paddingBottom="@dimen/view_padding_margin_8dp"
+            android:id="@+id/tv_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/icon_search"
+            android:drawablePadding="@dimen/view_padding_margin_16dp"
+            android:layout_marginLeft="@dimen/view_padding_margin_16dp"
+            android:layout_marginRight="@dimen/view_padding_margin_16dp"
+            android:gravity="center_vertical"
+            android:text="@string/fragment_wallet_tv_search"
+            android:layout_marginBottom="@dimen/view_padding_margin_8dp"
+            android:textColor="@color/blue_text_color"/>
+        <LinearLayout
+            android:id="@+id/sub_view"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:background="@drawable/picture_texture_background"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/linear_Share"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/share"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/share_circle"
+                    android:layout_marginTop="@dimen/view_padding_margin_8dp"
+                    android:textColor="@color/white_selected_1"
+                    android:textSize="@dimen/text_size_13sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/linear_mingpian"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/mingpian"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/carte"
+                    android:layout_marginTop="@dimen/view_padding_margin_8dp"
+                    android:textColor="@color/white_selected_1"
+                    android:textSize="@dimen/text_size_13sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/linear_contract"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/contract"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/contract"
+                    android:layout_marginTop="@dimen/view_padding_margin_8dp"
+                    android:textColor="@color/white_selected_1"
+                    android:textSize="@dimen/text_size_13sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <!--信息展示区域:朋友列表-->
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/xrv_friends"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/view_padding_margin_8dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="@dimen/view_padding_margin_16dp"
+                android:src="@drawable/friend_list"
+                android:layout_marginBottom="@dimen/view_padding_margin_8dp"
+                android:layout_height="wrap_content"/>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:id="@+id/messageList"
+                android:layout_height="match_parent"></FrameLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

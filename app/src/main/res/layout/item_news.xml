@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_background_5"
+    android:padding="@dimen/view_padding_margin_16dp">
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/view_height_40dp"
+        tools:src="@drawable/icon_notification"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/view_padding_margin_16dp"
+        android:textSize="@dimen/text_size_title_15sp"
+        app:layout_constraintBottom_toTopOf="@id/tv_subtitle"
+        app:layout_constraintLeft_toRightOf="@id/iv_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="title"/>
+
+    <TextView
+        android:id="@+id/tv_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/view_padding_margin_8dp"
+        android:paddingRight="@dimen/view_padding_margin_8dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_title"
+        app:layout_constraintLeft_toRightOf="@id/tv_title"
+        tools:text="badge"/>
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:textColor="@color/white_text_alpha_20"
+        android:textSize="@dimen/text_size_smallest_11sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_title"
+        app:layout_constraintLeft_toRightOf="@id/tv_badge"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="time"/>
+
+    <TextView
+        android:id="@+id/tv_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/white_no_selected_40"
+        android:textSize="@dimen/text_size_small_12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        tools:text="subtitle"/>
+
+
+</merge>

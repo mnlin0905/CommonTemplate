@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <!---->
+    <include layout="@layout/layout_top_bar"/>
+
+    <!--物品信息-->
+    <LinearLayout
+        android:background="@color/white_background_5"
+        android:paddingStart="@dimen/view_height_16dp"
+        android:paddingBottom="@dimen/view_padding_margin_12dp"
+        android:paddingTop="@dimen/view_padding_margin_12dp"
+        android:paddingEnd="@dimen/view_height_16dp"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:src="@drawable/background_goods_collection"
+            android:layout_width="@dimen/view_height_90dp"
+            android:layout_height="@dimen/view_height_90dp"/>
+
+        <!--文字信息-->
+        <android.support.constraint.ConstraintLayout
+            android:layout_marginStart="@dimen/view_padding_margin_12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--状态-->
+            <TextView
+                android:id="@+id/label_status"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="物流状态"
+                android:textSize="@dimen/text_size_16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_marginStart="@dimen/view_padding_margin_8dp"
+                tools:text="已发货"
+                android:textColor="@color/yellow_text_color_ff"
+                android:textSize="@dimen/text_size_16sp"
+                app:layout_constraintStart_toEndOf="@id/label_status"
+                app:layout_constraintBaseline_toBaselineOf="@id/label_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <!--来源-->
+            <TextView
+                android:id="@+id/label_from"
+                android:textColor="@color/white_text_alpha_60"
+                app:layout_constraintStart_toStartOf="@id/label_status"
+                app:layout_constraintTop_toBottomOf="@id/label_status"
+                android:text="承运来源："
+                android:textSize="@dimen/text_size_normal_14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv_from"
+                android:layout_marginStart="@dimen/view_padding_margin_8dp"
+                tools:text="韵达快递"
+                android:textSize="@dimen/text_size_normal_14sp"
+                android:textColor="@color/white_text_alpha_60"
+                app:layout_constraintStart_toEndOf="@id/label_from"
+                app:layout_constraintBaseline_toBaselineOf="@id/label_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <!--运单编号-->
+            <TextView
+                android:id="@+id/label_serial_number"
+                android:textColor="@color/white_text_alpha_60"
+                app:layout_constraintStart_toStartOf="@id/label_from"
+                app:layout_constraintTop_toBottomOf="@id/label_from"
+                android:text="运单编号："
+                android:textSize="@dimen/text_size_normal_14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv_serial_number"
+                android:layout_marginStart="@dimen/view_padding_margin_8dp"
+                tools:text=" 3101113412595"
+                android:textSize="@dimen/text_size_normal_14sp"
+                android:textColor="@color/white_text_alpha_60"
+                app:layout_constraintStart_toEndOf="@id/label_serial_number"
+                app:layout_constraintBaseline_toBaselineOf="@id/label_serial_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <!--电话-->
+            <TextView
+                android:id="@+id/label_telephone"
+                android:textColor="@color/white_text_alpha_60"
+                app:layout_constraintStart_toStartOf="@id/label_serial_number"
+                app:layout_constraintTop_toBottomOf="@id/label_serial_number"
+                android:text="官方电话："
+                android:textSize="@dimen/text_size_normal_14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv_telephone"
+                android:layout_marginStart="@dimen/view_padding_margin_8dp"
+                tools:text=" 95546"
+                android:textSize="@dimen/text_size_normal_14sp"
+                android:textColor="@color/white_text_alpha_60"
+                app:layout_constraintStart_toEndOf="@id/label_telephone"
+                app:layout_constraintBaseline_toBaselineOf="@id/label_telephone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+
+    <!--物流列表-->
+    <com.acchain.community.view.FlowLinearLayout
+        android:layout_marginTop="@dimen/view_padding_margin_12dp"
+        android:id="@+id/fll_goods_flow"
+        android:background="@color/white_background_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

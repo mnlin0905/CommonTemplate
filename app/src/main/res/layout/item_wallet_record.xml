@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/prefer_view_height_48dp">
+
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/view_padding_margin_16dp"
+        android:layout_marginTop="@dimen/view_padding_margin_8dp"
+        android:gravity="center_vertical"
+        android:text="转出"
+        android:textSize="@dimen/text_size_title_15sp"
+        app:layout_constraintBottom_toTopOf="@id/tv_time"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/tv_time"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/view_padding_margin_8dp"
+        android:text="11-14 00:00:00"
+        android:textColor="@color/white_no_selected_40"
+        android:textSize="@dimen/text_size_smallest_11sp"
+        app:layout_constraintBottom_toTopOf="@id/dv_divider"
+        app:layout_constraintLeft_toLeftOf="@id/tv_type"
+        app:layout_constraintTop_toBottomOf="@id/tv_type"/>
+
+    <TextView
+        android:id="@+id/tv_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/view_padding_margin_16dp"
+        android:layout_marginEnd="@dimen/view_padding_margin_8dp"
+        android:background="@drawable/background_flow_record_currency"
+        android:gravity="center"
+        android:text="NHGH"
+        android:textSize="@dimen/text_size_title_15sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_time"
+        app:layout_constraintLeft_toRightOf="@id/tv_time"
+        app:layout_constraintTop_toTopOf="@id/tv_type"/>
+
+    <com.acchain.community.view.MarqueeTextView
+        android:id="@+id/tv_amount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:gravity="end"
+        android:text="-100"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:textSize="@dimen/text_size_17sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_currency"
+        app:layout_constraintLeft_toRightOf="@id/tv_currency"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_currency"/>
+
+    <!--分割线-->
+    <com.acchain.community.view.DividerView
+        android:id="@+id/dv_divider"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/divider_line_width_1px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/tv_type"
+        app:layout_constraintRight_toRightOf="@id/tv_amount"/>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!---->
+    <include layout="@layout/layout_top_bar"/>
+
+    <!--头部-->
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_about">
+
+        <ImageView
+            android:id="@+id/iv_mode_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/view_padding_margin_16dp"
+            android:src="@drawable/logo_about"/>
+
+        <TextView
+            android:id="@+id/tv_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="@dimen/view_padding_margin_32dp"
+            android:textSize="@dimen/text_size_title_15sp"
+            tools:text="V1.0"/>
+    </FrameLayout>
+
+    <!---->
+    <com.acchain.community.view.LineMenuView
+        android:id="@+id/lmv_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_background_5"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:paddingStart="@dimen/view_padding_margin_16dp"
+        app:LineMenuView_brief=""
+        app:LineMenuView_menu="@string/activity_about_service"
+        app:LineMenuView_menu_text_size="@dimen/text_size_title_15sp"
+        app:LineMenuView_navigation="@drawable/icon_arrow_right_gray"
+        app:LineMenuView_plugin="text"/>
+
+    <com.acchain.community.view.DividerView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_line_width_1px"
+        android:background="@color/white_background_5"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:paddingStart="@dimen/view_padding_margin_16dp"
+        app:layout_constraintTop_toBottomOf="@id/lmv_location"/>
+
+    <com.acchain.community.view.LineMenuView
+        android:id="@+id/lmv_copyright"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_background_5"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:paddingStart="@dimen/view_padding_margin_16dp"
+        app:LineMenuView_brief=""
+        app:LineMenuView_menu="@string/activity_about_copyright"
+        app:LineMenuView_menu_text_size="@dimen/text_size_title_15sp"
+        app:LineMenuView_navigation="@drawable/icon_arrow_right_gray"
+        app:LineMenuView_plugin="text"/>
+
+    <com.acchain.community.view.DividerView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_line_width_1px"
+        android:background="@color/white_background_5"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:paddingStart="@dimen/view_padding_margin_16dp"
+        app:layout_constraintTop_toBottomOf="@id/lmv_location"/>
+
+    <com.acchain.community.view.LineMenuView
+        android:id="@+id/lmv_check_version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_background_5"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:paddingStart="@dimen/view_padding_margin_16dp"
+        app:LineMenuView_brief=""
+        app:LineMenuView_menu="@string/activity_about_check_version"
+        app:LineMenuView_menu_text_size="@dimen/text_size_title_15sp"
+        app:LineMenuView_navigation="@drawable/icon_arrow_right_gray"
+        app:LineMenuView_plugin="text"/>
+
+    <!--切换正事或测试环境-->
+    <com.acchain.community.view.LineMenuView
+        android:id="@+id/lmv_switch_mode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/view_padding_margin_12dp"
+        android:background="@color/white_background_5"
+        android:paddingEnd="@dimen/view_padding_margin_16dp"
+        android:paddingStart="@dimen/view_padding_margin_16dp"
+        android:visibility="gone"
+        app:LineMenuView_brief_text_color="@color/blue_text_color"
+        app:LineMenuView_menu="@string/activity_about_change_ip_address"
+        app:LineMenuView_menu_text_size="@dimen/text_size_title_15sp"
+        app:LineMenuView_navigation="@drawable/icon_arrow_right_gray"
+        app:LineMenuView_plugin="text"
+        tools:LineMenuView_brief="正式环境"
+        tools:visibility="visible"/>
+</LinearLayout>

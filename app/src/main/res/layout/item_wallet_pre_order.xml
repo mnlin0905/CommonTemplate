@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="15dp"
+    android:layout_marginEnd="15dp"
+    android:background="@drawable/background_item_currency"
+    android:layout_marginStart="15dp"
+    >
+    <!--android:background="@drawable/background_item_currency"-->
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        style="@style/ImageViewStandard"
+        android:layout_width="@dimen/view_height_76dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_take_in"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_currency_name"
+        app:srcCompat="@drawable/icon_eyu"/>
+
+    <TextView
+        android:id="@+id/tv_currency_name"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="宁红甘红"
+        android:textColor="@color/blue_label_title_selected_pressed_markedness"
+        android:textSize="@dimen/text_size_title_15sp"
+        app:layout_constraintStart_toEndOf="@+id/iv_icon"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.acchain.community.view.LightTextView
+        android:id="@+id/tv_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="62508"
+        android:textSize="@dimen/text_size_title_15sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_currency_name"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_label_buy_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/item_wallet_pre_order_tv_label_buy_price"
+        android:textColor="@color/white_text_alpha_60"
+        android:textSize="@dimen/text_size_smallest_11sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_currency_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_currency_name"/>
+
+    <TextView
+        android:id="@+id/tv_buy_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="$25"
+        android:textColor="@color/white_text_alpha_60"
+        android:textSize="@dimen/text_size_smallest_11sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_label_buy_price"
+        app:layout_constraintStart_toEndOf="@+id/tv_label_buy_price"/>
+
+    <TextView
+        android:id="@+id/tv_label_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/item_wallet_pre_order_tv_label_time"
+        android:textColor="@color/white_text_alpha_60"
+        android:textSize="@dimen/text_size_smallest_11sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_label_buy_price"
+        app:layout_constraintTop_toBottomOf="@+id/tv_label_buy_price"/>
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="2018-09-14 23:59:59"
+        android:textColor="@color/white_text_alpha_60"
+        android:textSize="@dimen/text_size_smallest_11sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_label_time"
+        app:layout_constraintStart_toEndOf="@+id/tv_label_time"/>
+
+    <com.acchain.community.view.RoundRectBorderTextView
+        android:id="@+id/tv_take_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/item_wallet_pre_order_tv_take_in"
+        android:textSize="@dimen/text_size_smallest_11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintRight_toLeftOf="@id/tv_take_out"
+        app:layout_constraintStart_toStartOf="@+id/tv_label_time"
+        app:layout_constraintTop_toBottomOf="@+id/tv_label_time"/>
+
+    <com.acchain.community.view.RoundRectBorderTextView
+        android:id="@+id/tv_take_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/item_wallet_pre_order_tv_take_out"
+        android:textSize="@dimen/text_size_smallest_11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_take_in"
+        app:layout_constraintLeft_toRightOf="@id/tv_take_in"
+        app:layout_constraintRight_toLeftOf="@id/tv_exercise"
+        app:layout_constraintTop_toTopOf="@+id/tv_take_in"/>
+
+    <com.acchain.community.view.RoundRectBorderTextView
+        android:id="@+id/tv_exercise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/item_wallet_pre_order_tv_exercise"
+        android:textSize="@dimen/text_size_smallest_11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_take_out"
+        app:layout_constraintLeft_toRightOf="@id/tv_take_out"
+        app:layout_constraintRight_toLeftOf="@id/tv_record"
+        app:layout_constraintTop_toTopOf="@+id/tv_take_out"/>
+
+    <com.acchain.community.view.RoundRectBorderTextView
+        android:id="@+id/tv_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/item_wallet_pre_order_tv_record"
+        android:textSize="@dimen/text_size_smallest_11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_exercise"
+        app:layout_constraintEnd_toEndOf="@+id/tv_amount"
+        app:layout_constraintLeft_toRightOf="@id/tv_exercise"
+        app:layout_constraintTop_toTopOf="@+id/tv_exercise"/>
+
+
+</android.support.constraint.ConstraintLayout>

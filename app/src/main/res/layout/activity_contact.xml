@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_top_bar" />
+
+    <EditText
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/view_padding_margin_16dp"
+        android:layout_marginRight="@dimen/view_padding_margin_16dp"
+        android:drawableLeft="@drawable/icon_search"
+        android:drawablePadding="5dp"
+        android:layout_marginTop="@dimen/drawable_shape_normal_radius_10dp"
+        android:layout_height="30dp" />
+
+    <LinearLayout
+        android:id="@+id/new_friend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/new_friend" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/new_friend"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_17sp" />
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/contactList"
+        android:name="com.acchain.community.fragment.ContactListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

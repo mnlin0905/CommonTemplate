@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--购物车3个fragment共用界面-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <ExpandableListView
+        android:id="@+id/exListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:childIndicator="@null"
+        android:groupIndicator="@null" />
+
+    <LinearLayout
+        android:id="@+id/ll_clearing"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.2"
+            android:background="@color/blue_25"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cb_clearing"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:button="@null"
+                android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                android:text="全选"
+                android:textColor="@color/white"
+                android:drawableLeft="@drawable/check_box_bg"
+                android:drawablePadding="26px"
+                android:paddingLeft="32px"
+                android:paddingRight="32px"
+                android:textSize="30px"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:orientation="horizontal"
+                android:layout_marginRight="60px"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:text="合计："
+                    android:textColor="@color/white"
+                    android:textSize="24px"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:text="￥"
+                    android:textColor="@color/yellow"
+                    android:textSize="26px" />
+                <TextView
+                    android:id="@+id/tv_all_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:layout_gravity="bottom"
+                    android:textColor="@color/yellow"
+                    android:textSize="40px" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_clearing"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_panic_goods_gradient2"
+            android:gravity="center"
+            android:text="@string/clearing"
+            android:textColor="@color/white"
+            android:textSize="34px" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_edit"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <CheckBox
+            android:id="@+id/cb_edit"
+            android:layout_width="0dp"
+            android:layout_weight="1.3"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:button="@null"
+            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+            android:text="全选"
+            android:textColor="@color/white"
+            android:drawableLeft="@drawable/check_box_bg"
+            android:drawablePadding="26px"
+            android:paddingLeft="32px"
+            android:paddingRight="32px"
+            android:textSize="30px"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_move_to_favorite"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_panic_goods_gradient1"
+            android:gravity="center"
+            android:text="移入收藏夹"
+            android:textColor="@color/white"
+            android:textSize="34px" />
+
+        <TextView
+            android:id="@+id/tv_all_delete"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_panic_goods_gradient2"
+            android:gravity="center"
+            android:text="删除"
+            android:textColor="@color/white"
+            android:textSize="34px" />
+
+    </LinearLayout>
+</LinearLayout>

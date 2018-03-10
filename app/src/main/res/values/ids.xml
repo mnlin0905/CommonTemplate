@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--特殊用途的id-->
+
+    <!--LineMenuView存储tag信息的key-->
+    <item type="id" name="LINE_MENU_VIEW_TAG_POSITION"/>
+</resources>
