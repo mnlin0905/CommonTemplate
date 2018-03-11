@@ -2,7 +2,9 @@
 
 **版本：1.0**
 
-[博客CSDN地址](!http://blog.csdn.net/lovingning/article/details/79508678)
+
+具体介绍可参考博客：[博客CSDN地址](http://blog.csdn.net/lovingning/article/details/79508678)
+
 
 **一些常用框架github地址:**
 
