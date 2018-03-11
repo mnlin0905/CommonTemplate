@@ -16,4 +16,5 @@ public class SelectFunctionPresenter extends BasePresenter<SelectFunctionActivit
     @Inject
     public SelectFunctionPresenter(){
     }
+
 }

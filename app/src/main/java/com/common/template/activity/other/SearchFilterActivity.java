@@ -65,9 +65,6 @@ public class SearchFilterActivity extends BaseActivity implements InputFilter, T
 
     /**
      * 处理搜索详情信息
-     * @param data
-     * @param requestDeal
-     * @param listener
      */
     public static void dealSearchResult(Intent data, boolean requestDeal, OnFilterResultListener listener) {
         if(requestDeal&&listener!=null){

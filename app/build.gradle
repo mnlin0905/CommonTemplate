@@ -565,13 +565,15 @@ class GenerateMVPFragment extends DefaultTask {
 
 /**
  * Desc: generate mvp architecture code automatically
- * For example: gradle mvp -D domain="Test" -D path="/activity"
+ *
+ * @Des For example: gradle mvp -D domain="Test" -D path="/activity"
+ * def domainParam = System.getProperty('domain')
+ * def pathParam = System.getProperty('path')
+ *
  * */
 task mvp_activity(type: GenerateMVPActivity) {
     group 'personal'
     description 'generate java code for MVP-Activity architecture'
-/*    def domainParam = System.getProperty('domain')
-    def pathParam = System.getProperty('path')*/
     def domainParam = "AliPay"
     def pathParam = "/activity"
     if (domainParam && pathParam) {

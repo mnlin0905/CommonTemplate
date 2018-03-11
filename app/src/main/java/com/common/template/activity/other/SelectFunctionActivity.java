@@ -19,12 +19,20 @@ import com.blankj.utilcode.util.BarUtils;
 import com.common.template.R;
 import com.common.template.arouter.ARouterConst;
 import com.common.template.base.BaseActivity;
+import com.common.template.base.BaseHttpBean;
 import com.common.template.contract.SelectFunctionContract;
 import com.common.template.presenter.SelectFunctionPresenter;
+import com.common.template.retrofit.HttpInterface;
 import com.jaeger.library.StatusBarUtil;
 
+import javax.inject.Inject;
+
 import butterknife.BindView;
+import butterknife.OnClick;
+import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.annotations.NonNull;
+import io.reactivex.functions.Consumer;
+import io.reactivex.schedulers.Schedulers;
 import permissions.dispatcher.NeedsPermission;
 import permissions.dispatcher.OnShowRationale;
 import permissions.dispatcher.PermissionRequest;
@@ -33,6 +41,11 @@ import permissions.dispatcher.RuntimePermissions;
 @RuntimePermissions
 @Route(path = ARouterConst.Activity_SelectFunctionActivity)
 public class SelectFunctionActivity extends BaseActivity<SelectFunctionPresenter> implements SelectFunctionContract.View {
+    /**
+     * 网络请求对象
+     */
+    @Inject
+    protected HttpInterface httpInterface;
     @BindView(R.id.toolbar)
     Toolbar mToolbar;
     @BindView(R.id.fab)
@@ -43,7 +56,6 @@ public class SelectFunctionActivity extends BaseActivity<SelectFunctionPresenter
     NavigationView mNvSlideBar;
     @BindView(R.id.dl_drawerLayout)
     DrawerLayout mDlDrawerLayout;
-
     //上次点击back时间
     private long lastPressBackTime;
 
@@ -79,7 +91,7 @@ public class SelectFunctionActivity extends BaseActivity<SelectFunctionPresenter
         };
 
         //设置padding
-        toolbar.post(() -> toolbar.setPadding(0,BarUtils.getStatusBarHeight(),0,0));
+        toolbar.post(() -> toolbar.setPadding(0, BarUtils.getStatusBarHeight(), 0, 0));
 
         //设置左上角的图标形状随着滑动发生变化；设置滑动之后应当出现遮罩窗口的地方现设为透明
         toggle.syncState();
@@ -135,5 +147,26 @@ public class SelectFunctionActivity extends BaseActivity<SelectFunctionPresenter
     void onShowRationaleMethod(final PermissionRequest request) {
         showToast("为了更安全的使用软件,请开启该权限");
         request.proceed();
+    }
+
+    /**
+     * 举例请求网络数据
+     */
+    @OnClick(R.id.fab)
+    public void onViewClicked() {
+        httpInterface.doLogin("name", "password")
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Consumer<BaseHttpBean<Object>>() {
+                    @Override
+                    public void accept(BaseHttpBean<Object> objectBaseHttpBean) throws Exception {
+                        // TODO: 2018/3/10 成功
+                    }
+                }, new Consumer<Throwable>() {
+                    @Override
+                    public void accept(Throwable throwable) throws Exception {
+                        // TODO: 2018/3/10 失败
+                    }
+                });
     }
 }

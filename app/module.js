@@ -2,7 +2,7 @@ var app={};
 module.exports=app;
 
 //项目名称
-app.name='mall';
+app.name='template';
 
 //项目版本号
 app.version='1.0.0';
@@ -17,7 +17,7 @@ app.minSdkVersion=16;
 app.createTime=new Date('2017.12.1 8:30:00');
 
 //最近一次更新时间
-app.updateTime=new Date('2017.12.1 8:30:00');
+app.updateTime=new Date('2018.3.10 8:30:00');
 
 //name为框架或者库的名称;introduce为功能说明;github为项目在git上的地址;若github为null,表示第三方库不在git上,会使用url字段给出项目的网址
 app.frames=[
@@ -166,7 +166,8 @@ app.frames=[
         introduce:'友盟统计',
         github:null,
         url:'http://dev.umeng.com/analytics/android-doc/integration'
-    },{
+    },
+    {
         name:'TBS',
         introduce:'腾讯浏览服务',
         url:'https://x5.tencent.com/tbs/guide/sdkInit.html'
@@ -223,20 +224,3 @@ app.catalogs={
     ]
 };
 
-app.shares={
-    weixin:{
-
-    }
-};
-
-//keystore.jks
-app.keystore={
-}
-
-高德地图开放平台：（绑定手机号：18948780828）
-账号：255778184@qq.com
-密码：g2535886
-
-融云账号：（绑定手机号：18948780828）
-账号：255778184@qq.com
-密码：g2535886

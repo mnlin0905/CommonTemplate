@@ -57,15 +57,16 @@ public class ApplicationModule {
     HttpInterface provideHttpInterface() {
         //网络请求的Host
         String baseUrl = BaseApplication.app.getBaseNetUrl();
-//        String baseUrl = "http://192.168.1.107:8080/mall-web-consumer/";//文彬本地地址
 
         //生成JSON转换的库
-        Gson gson = new GsonBuilder().serializeNulls().setDateFormat("yyyy:MM:dd HH:mm:ss").create();
+        Gson gson = new GsonBuilder()
+                .serializeNulls()
+                .setDateFormat("yyyy:MM:dd HH:mm:ss")
+                .create();
         GsonConverterFactory gsonConverterFactory = GsonConverterFactory.create(gson);
 
         //生成RxJava转换的adapter
         RxJava2CallAdapterFactory rxJava2CallAdapterFactory = RxJava2CallAdapterFactory.create();
-        // RxJavaCallAdapterFactory rxJavaCallAdapterFactory=RxJavaCallAdapterFactory.create();
 
         //生成OkHttp网络传输的客户端
         HashMap<String, List<Cookie>> cookieStore = new HashMap<>();
@@ -85,9 +86,7 @@ public class ApplicationModule {
                 .addInterceptor(chain -> {
                     Request request = chain.request()
                             .newBuilder()
-                            /*.removeHeader("User-Agent")
-                            .addHeader("User-Agent", "android")*/
-                            .addHeader("SDK", Build.VERSION.SDK_INT + "")
+                            .addHeader("SDK", String.valueOf(Build.VERSION.SDK_INT ))
                             .build();
                     return chain.proceed(request);
                 })
